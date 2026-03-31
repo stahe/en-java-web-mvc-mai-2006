@@ -1,0 +1,2087 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The basics of MVC web development in Java: a practical guide">
+      
+      
+        <meta name="author" content="Serge Tahé">
+      
+      
+        <link rel="canonical" href="https://stahe.github.io/en-java-web-mvc-mai-2006/mvc-web-application-person---version-2.html">
+      
+      
+        <link rel="prev" href="mvc-web-application-person---version-1.html">
+      
+      
+        <link rel="next" href="mvc-web-application-person---version-3.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>6. MVC Web Application [person] – Version 2 - The basics of MVC web development in Java: a practical guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/focus.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBZC3JVJNR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    var siteName = "The basics of MVC web development in Java: a practical guide";
+    gtag('config', 'G-EBZC3JVJNR', {
+        'page_title': siteName
+    });
+  </script>
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#6-mvc-web-application-person-version-2" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="The basics of MVC web development in Java: a practical guide" class="md-header__button md-logo" aria-label="The basics of MVC web development in Java: a practical guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            The basics of MVC web development in Java: a practical guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              6. MVC Web Application [person] – Version 2
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://stahe.github.io/en-java-web-mvc-mai-2006" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="The basics of MVC web development in Java: a practical guide" class="md-nav__button md-logo" aria-label="The basics of MVC web development in Java: a practical guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    The basics of MVC web development in Java: a practical guide
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://stahe.github.io/en-java-web-mvc-mai-2006" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="introduction.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tools-used-in-this-document.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Tools used in this document
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="the-basics-of-web-development-in-java.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. The Basics of Web Development in Java
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mvc-model-view-controller-development.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. MVC (Model–View–Controller) Development
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mvc-web-application-person---version-1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. MVC Web Application [person] – Version 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. MVC Web Application [person] – Version 2
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="mvc-web-application-person---version-2.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. MVC Web Application [person] – Version 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#61-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1. Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#62-the-eclipse-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2. The Eclipse Project
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#63-configuring-the-personne2-web-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3. Configuring the [personne2] web application
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#64-the-view-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4. The view code
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.4. The view code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#641-the-form-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4.1. The [form] view
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#642-the-response-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4.2. The [response] view
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#643-the-errors-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4.3. The [errors] view
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#65-testing-the-views" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5. Testing the Views
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#66-the-servletpersonne-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6. The [ServletPersonne] controller
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.6. The [ServletPersonne] controller">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#661-controller-skeleton" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6.1. Controller skeleton
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#662-initialization-of-the-init-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6.2. Initialization of the [init] controller
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#663-the-doget-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6.3. The [doGet] method
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#664-the-doinit-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6.4. The [doInit] method
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#665-the-dovalidationformulaire-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6.5. The [doValidationFormulaire] method
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#666-the-doretourformulaire-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6.6. The [doRetourFormulaire] method
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#67-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.7. Tests
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mvc-web-application-person---version-3.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. MVC Web Application [person] – Version 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="the-jstl-tag-library.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. The JSTL Tag Library
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mvc-web-application-person---version-4.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. MVC Web Application [person] – Version 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mvc-web-application-person---version-5.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. MVC Web Application [person] – Version 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mvc-web-application-person---version-6.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. MVC Web Application [person] – Version 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mvc-web-application-person---version-7.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. MVC Web Application [person] – Version 7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mvc-web-application-person---version-8.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. MVC Web Application [person] – Version 8
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mvc-web-application-in-a-3-tier-architecture---example-1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. MVC Web Application in a 3-Tier Architecture – Example 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="spring-ioc.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    15. Spring IoC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mvc-web-application-in-a-3-tier-architecture---example-2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    16. MVC Web Application in a 3-Tier Architecture – Example 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mvc-web-application-in-a-3-tier-architecture---example-3---firebird-dbms.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    17. MVC Web Application in a 3-Tier Architecture – Example 3 – Firebird DBMS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mvc-web-application-in-a-3-tier-architecture---example-4-postgres.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    18. MVC Web Application in a 3-Tier Architecture – Example 4, Postgres
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mvc-web-application-in-a-3-tier-architecture---example-5-mysql.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    19. MVC Web Application in a 3-Tier Architecture – Example 5, MySQL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mvc-web-application-in-a-3-tier-architecture---example-6-sql-server-express.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    20. MVC Web Application in a 3-Tier Architecture – Example 6, SQL Server Express
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="conclusion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    21. Conclusion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="the-code-from-the-article.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    22. The code from the article
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="6-mvc-web-application-person-version-2">6. <span style="color: #365f91">MVC Web Application [person] – Version 2</span></h1>
+<p>We will now introduce variants of the previous [/person1] application, which we will call [/person2, /person3, ...]. These variants do not alter the application’s original architecture, which remains as follows:</p>
+<p><img src="images/10000000000003A00000015986652AC2.png" style="width:12.277cm;height:4.563cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000003A00000015986652AC2.png" /></p>
+<p>For these variants, we will keep our explanations brief. We will only present the changes made compared to the previous version.</p>
+<p><a id="personne2-introduction"></a></p>
+<h2 id="61-introduction">6.1. <span style="color: #4f81bd">Introduction</span></h2>
+<p>We will now add session management to our application. Let’s review the following points:</p>
+<ul>
+  <li>The HTTP client-server dialogue is a series of request-response sequences that are independent of one another
+  </li>
+  <li>the session serves as a memory buffer between different request-response sequences from the same user. If there are N users, there are N sessions.
+  </li>
+</ul>
+
+<p>The following screen sequence shows what is now desired in the application’s operation:</p>
+<hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
+<p><strong>Exchange #1</strong></p>
+<hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>request
+</code></pre></div>
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Response
+</code></pre></div>
+</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001E900000104C748B2A1.png" style="display:inline-block; margin:4px;width:9.059cm;height:4.817cm;" class="odt-zoomable" data-zoom-src="images/10000000000001E900000104C748B2A1.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000019C000000D1B2564C9D.png" style="display:inline-block; margin:4px;width:7.59cm;height:3.851cm;" class="odt-zoomable" data-zoom-src="images/100000000000019C000000D1B2564C9D.png" /></td></tr></table>
+
+<p>The new feature is the link back to the form, which has been added to the [errors] view.</p>
+<hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
+<p><strong>Exchange #2</strong></p>
+<hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Question
+</code></pre></div>
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>response
+</code></pre></div>
+</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000019A000000DFBFBE406D.png" style="display:inline-block; margin:4px;width:7.56cm;height:4.112cm;" class="odt-zoomable" data-zoom-src="images/100000000000019A000000DFBFBE406D.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001EC000000FC44F8E75E.png" style="display:inline-block; margin:4px;width:9.11cm;height:4.665cm;" class="odt-zoomable" data-zoom-src="images/10000000000001EC000000FC44F8E75E.png" /></td></tr></table>
+
+<p>In <strong>exchange #1</strong>, the user provided the values (xx, yy) for the (name, age) pair. If the server became aware of these values during the exchange, it &quot;<strong>forgets</strong>&quot; them at the end of the exchange. However, we can see that during <strong>exchange #2</strong>, it is able to display their values again in its response. It is the concept of <strong>a session</strong> that, in this case, allows the web server to store data throughout successive client-server exchanges. There are other possible solutions to this problem.</p>
+<p>During exchange #1, the server will store the (name, age) pair that the client sent it in the session so that it can display it during exchange #2.</p>
+<p>Here is another example of implementing a session between two exchanges:</p>
+<hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
+<p><strong>Exchange #1</strong></p>
+<hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>request
+</code></pre></div>
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>response
+</code></pre></div>
+</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001EC000000FFAD06CFC9.png" style="display:inline-block; margin:4px;width:9.11cm;height:4.722cm;" class="odt-zoomable" data-zoom-src="images/10000000000001EC000000FFAD06CFC9.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000123000000EA529C15AC.png" style="display:inline-block; margin:4px;width:5.39cm;height:4.334cm;" class="odt-zoomable" data-zoom-src="images/1000000000000123000000EA529C15AC.png" /></td></tr></table>
+
+<p>The new feature is the link back to the form, which has been added to the response page.</p>
+<hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
+<p><strong>Exchange #2</strong></p>
+<hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>request
+</code></pre></div>
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>response
+</code></pre></div>
+</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000131000000F05A333C01.png" style="display:inline-block; margin:4px;width:5.65cm;height:4.447cm;" class="odt-zoomable" data-zoom-src="images/1000000000000131000000F05A333C01.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001F9000001010CAE6055.png" style="display:inline-block; margin:4px;width:9.35cm;height:4.757cm;" class="odt-zoomable" data-zoom-src="images/10000000000001F9000001010CAE6055.png" /></td></tr></table>
+
+<p><a id="personne2-eclipse"></a></p>
+<h2 id="62-the-eclipse-project">6.2. <span style="color: #4f81bd">The Eclipse Project</span></h2>
+<p>To create the Eclipse project [mvc-personne-02] for the web application [/personne2], we will duplicate the Eclipse project [mvc-personne-01] to reuse the existing code. To do this, follow these steps:</p>
+<p>[Right-click on the mvc-personne-01 project -&gt; Copy]:</p>
+<p><img src="images/10000000000000E9000000AE14A9F998.png" style="width:4.309cm;height:3.217cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000E9000000AE14A9F998.png" /></p>
+<p>then [right-click in Package Explorer -&gt; Paste]:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000A0000000ADB25BBDB0.png" style="display:inline-block; margin:4px;width:2.96cm;height:3.201cm;" class="odt-zoomable" data-zoom-src="images/10000000000000A0000000ADB25BBDB0.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002A50000010B64F80D02.png" style="display:inline-block; margin:4px;width:9.239cm;height:3.644cm;" class="odt-zoomable" data-zoom-src="images/10000000000002A50000010B64F80D02.png" /><div style="margin:0 0 0.5em 0">- enter the name of the new project in [1] and the name of an existing but empty folder in [2]</div></td></tr></table>
+
+<p>The [mvc-personne-02] project is then created:</p>
+<p><img src="images/10000000000000E70000018D86CE10C7.png" style="width:4.279cm;height:7.354cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000E70000018D86CE10C7.png" /></p>
+<p>For now, it is identical to the [mvc-personne-01] project. We will need to make a few manual changes before we can use it. Go to the [Servers] view and try to add this new application to those managed by Tomcat:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000016C00000167C989F3FA.png" style="display:inline-block; margin:4px;width:6.74cm;height:6.646cm;" class="odt-zoomable" data-zoom-src="images/100000000000016C00000167C989F3FA.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002B300000170A1D50A08.png" style="display:inline-block; margin:4px;width:9.13cm;height:4.861cm;" class="odt-zoomable" data-zoom-src="images/10000000000002B300000170A1D50A08.png" /></td></tr></table>
+
+<p>We can see that in [1], the new project [mvc-personne-02] is not recognized by Tomcat. For Tomcat to recognize it, a configuration file for the [mvc-personne-02] project must be modified. Use the [File / Open File] option to open the file [&lt;mvc-personne-02&gt;/.settings/.component]:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
+<span class="odt-code-line"><span style="color:#008080">&lt;?</span><span style="color:#3f7f7f">xml </span><span style="color:#000000">version=</span><span style="color:#2a00ff">&quot;1.0&quot; </span><span style="color:#000000">encoding=</span><span style="color:#2a00ff">&quot;UTF-8&quot;</span><span style="color:#008080">?&gt;</span></span>
+<span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">project-modules </span><span style="color:#000000">id=</span><span style="color:#2a00ff">&quot;moduleCoreId&quot;</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">wb-module </span><span style="color:#000000">deploy-name=</span><span style="color:#2a00ff">&quot;mvc-personne-01&quot;</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">wb-resource </span><span style="color:#000000">deploy-path=</span><span style="color:#2a00ff">&quot;/&quot; </span><span style="color:#000000">source-path=</span><span style="color:#2a00ff">&quot;/WebContent&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">wb-resource </span><span style="color:#000000">deploy-path=</span><span style="color:#2a00ff">&quot;/WEB-INF/classes&quot; </span><span style="color:#000000">source-path=</span><span style="color:#2a00ff">&quot;/src&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">property </span><span style="color:#000000">name=</span><span style="color:#2a00ff">&quot;java-output-path&quot; </span><span style="color:#000000">value=</span><span style="color:#2a00ff">&quot;/build/classes/&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">property </span><span style="color:#000000">name=</span><span style="color:#2a00ff">&quot;context-root&quot; </span><span style="color:#000000">value=</span><span style="color:#2a00ff">&quot;person1&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/wb-module</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/project-modules</span><span style="color:#008080">&gt;</span></span>
+</code></pre></div>
+
+<p>Line 3 specifies the name of the web module to be deployed within Tomcat. Here, this name is the same as that of the [mvc-personne-01] project. We change it to [mvc-personne-02]:</p>
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">wb-module </span><span style="color:#000000">deploy-name=</span><span style="color:#2a00ff">&quot;mvc-personne-02&quot;</span><span style="color:#008080">&gt;</span></span>
+</code></pre></div>
+
+<p>Additionally, we can take this opportunity to modify, on line 7, the name of the application context [mvc-personne-02], which conflicts with that of the project [mvc-personne-01]:</p>
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">property </span><span style="color:#000000">name=</span><span style="color:#2a00ff">&quot;context-root&quot; </span><span style="color:#000000">value=</span><span style="color:#2a00ff">&quot;personne2&quot;</span><span style="color:#008080">/&gt;</span></span>
+</code></pre></div>
+
+<p>This second change could have been made directly within Eclipse. However, I didn’t see how to make the first one without going through the configuration file.</p>
+<p>Once this is done, we save the new [.content] file, then exit and restart Eclipse so that the changes take effect.</p>
+<p>Once Eclipse has restarted, let’s try the operation that failed previously:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000016C00000167C989F3FA.png" style="display:inline-block; margin:4px;width:6.74cm;height:6.646cm;" class="odt-zoomable" data-zoom-src="images/100000000000016C00000167C989F3FA.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002B3000001666458E873.png" style="display:inline-block; margin:4px;width:9.13cm;height:4.731cm;" class="odt-zoomable" data-zoom-src="images/10000000000002B3000001666458E873.png" /></td></tr></table>
+
+<p>This time, the [mvc-personne-02] project is recognized. We add it to the projects configured to run on Tomcat:</p>
+<p><img src="images/100000000000017600000066B1B37FDB.png" style="width:6.93cm;height:1.889cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000017600000066B1B37FDB.png" /></p>
+<p><a id="personne1-web-xml1"></a></p>
+<h2 id="63-configuring-the-personne2-web-application">6.3. <span style="color: #4f81bd">Configuring the [personne2] web application</span></h2>
+<p>The <strong>web.xml</strong> file for the <strong>/personne2</strong> application is as follows:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
+<span class="odt-code-line"><span style="color:#008080">&lt;?</span><span style="color:#3f7f7f">xml </span><span style="color:#000000">version=</span><span style="color:#2a00ff">&quot;1.0&quot; </span><span style="color:#000000">encoding=</span><span style="color:#2a00ff">&quot;UTF-8&quot;</span><span style="color:#008080">?&gt;</span></span>
+<span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">web-app </span><span style="color:#000000">id=</span><span style="color:#2a00ff">&quot;WebApp_ID&quot; </span><span style="color:#000000">version=</span><span style="color:#2a00ff">&quot;2.4&quot;</span></span>
+<span class="odt-code-line"><span style="color:#2a00ff">    </span><span style="color:#000000">xmlns=</span><span style="color:#2a00ff">&quot;http://java.sun.com/xml/ns/j2ee&quot;</span></span>
+<span class="odt-code-line"><span style="color:#2a00ff">    </span><span style="color:#7f007f">xmlns:</span><span style="color:#000000">xsi=</span><span style="color:#2a00ff">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span>
+<span class="odt-code-line"><span style="color:#2a00ff">    </span><span style="color:#7f007f">xsi:</span><span style="color:#000000">schemaLocation=</span><span style="color:#2a00ff">&quot;http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd&quot;</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">display-name</span><span style="color:#008080">&gt;</span><span style="color:#000000">mvc-person-02</span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/display-name</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f5fbf">&lt;!--  ServletPerson --&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">servlet</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">servlet-name</span><span style="color:#008080">&gt;</span><span style="color:#000000">person</span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/servlet-name</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">servlet-class</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line">            istia.st.servlets.personne.PersonServlet</span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/servlet-class</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">init-param</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">param-name</span><span style="color:#008080">&gt;</span><span style="color:#000000">responseUrl</span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/param-name</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">param-value</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line">                /WEB-INF/views/response.jsp</span>
+<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/param-value</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/init-param</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">init-param</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">param-name</span><span style="color:#008080">&gt;</span><span style="color:#000000">errorUrl</span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/param-name</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">param-value</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line">                /WEB-INF/views/errors.jsp</span>
+<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/param-value</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/init-param</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">init-param</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">param-name</span><span style="color:#008080">&gt;</span><span style="color:#000000">form-url</span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/param-name</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">param-value</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line">                /WEB-INF/views/form.jsp</span>
+<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/param-value</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/init-param</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">init-param</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">param-name</span><span style="color:#008080">&gt;</span><span style="color:#000000">urlController</span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/param-name</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">param-value</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line">                main</span>
+<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/param-value</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/init-param</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">init-param</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">param-name</span><span style="color:#008080">&gt;</span><span style="color:#000000">formBackLink</span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/param-name</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">param-value</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line">                Return to form</span>
+<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/param-value</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/init-param</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/servlet</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f5fbf">&lt;!-- ServletPersonne mapping --&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">servlet-mapping</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">servlet-name</span><span style="color:#008080">&gt;</span><span style="color:#000000">person</span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/servlet-name</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">url-pattern</span><span style="color:#008080">&gt;</span><span style="color:#000000">/main</span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/url-pattern</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/servlet-mapping</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f5fbf">&lt;!--  welcome files --&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">welcome-file-list</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">welcome-file</span><span style="color:#008080">&gt;</span><span style="color:#000000">index.jsp</span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/welcome-file</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/welcome-file-list</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/web-app</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"></span>
+</code></pre></div>
+
+<p>This file is identical to the one in the previous version, except that it declares two new initialization parameters:</p>
+<ul>
+  <li>line 6: the display name of the web application has changed to [mvc-personne-02]
+  </li>
+  <li>lines 31–36: define the configuration parameter named [urlController], which is the [main] URL that leads to the [ServletPersonne] servlet
+  </li>
+  <li>lines 37–42: define a configuration parameter named [lienRetourFormulaire], which is the text of the link back to the form on the JSP pages [erreurs.jsp] and [reponse.jsp].
+  </li>
+</ul>
+
+<p>The home page [index.jsp] changes:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span style="color:#bf5f3f">&lt;%@ </span><span style="color:#3f7f7f">page </span><span style="color:#000000">language=</span><span style="color:#2a00ff">&quot;java&quot; </span><span style="color:#000000">contentType=</span><span style="color:#2a00ff">&quot;text/html; charset=ISO-8859-1&quot;</span></span>
+<span class="odt-code-line"><span style="color:#2a00ff">    </span><span style="color:#000000">pageEncoding=</span><span style="color:#2a00ff">&quot;ISO-8859-1&quot;</span><span style="color:#bf5f3f">%&gt;</span></span>
+<span class="odt-code-line"><span style="color:#008080">&lt;!</span><span style="color:#3f7f7f">DOCTYPE </span><span style="color:#000080">HTML </span><span style="color:#808080">PUBLIC </span><span style="color:#000080">&quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line">&lt;%</span>
+<span class="odt-code-line"><span style="color:#000000">  response.sendRedirect(</span><span style="color:#2a00ff">&quot;/person2/main&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#bf5f3f">%&gt;</span></span>
+</code></pre></div>
+
+<ul>
+  <li>Line 5: The [index.jsp] page redirects the client to the URL of the [ServletPersonne] controller in the [/personne2] application.
+  </li>
+</ul>
+
+<h2 id="64-the-view-code">6.4. <span style="color: #4f81bd">The view code</span></h2>
+<h3 id="641-the-form-view">6.4.1. <span style="color: #4f81bd">The [form] view</span></h3>
+<p>This view is identical to that of the previous version:</p>
+<p><img src="images/100000000000024D00000100A2FC3ED8.png" style="width:10.91cm;height:4.741cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000024D00000100A2FC3ED8.png" /></p>
+<p>It is generated by the following JSP page [formulaire.jsp]:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
+<span class="odt-code-line"><span style="color:#bf5f3f">&lt;%@ </span><span style="color:#3f7f7f">page </span><span style="color:#000000">language=</span><span style="color:#2a00ff">&quot;java&quot; </span><span style="color:#000000">contentType=</span><span style="color:#2a00ff">&quot;text/html; charset=ISO-8859-1&quot;</span></span>
+<span class="odt-code-line"><span style="color:#2a00ff">    </span><span style="color:#000000">pageEncoding=</span><span style="color:#2a00ff">&quot;ISO-8859-1&quot;</span><span style="color:#bf5f3f">%&gt;</span></span>
+<span class="odt-code-line"><span style="color:#008080">&lt;!</span><span style="color:#3f7f7f">DOCTYPE </span><span style="color:#000080">HTML </span><span style="color:#808080">PUBLIC </span><span style="color:#000080">&quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line">&lt;%</span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// retrieve data from the model</span></span>
+<span class="odt-code-line"><span style="color:#000000">  String name = (String) session.getAttribute(</span><span style="color:#2a00ff">&quot;name&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">  String age = (String) session.getAttribute(</span><span style="color:#2a00ff">&quot;age&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">  String urlAction = (String) request.getAttribute(</span><span style="color:#2a00ff">&quot;urlAction&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">%&gt;</span>
+<span class="odt-code-line">    </span>
+<span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">html</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">head</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">title</span><span style="color:#008080">&gt;</span><span style="color:#000000">Person - form</span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/title</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/head</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">body</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">center</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">h2</span><span style="color:#008080">&gt;</span><span style="color:#000000">Person - form</span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/h2</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">hr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">form </span><span style="color:#000000">action=</span>&quot;<span style="color:#bf5f3f">&lt;%=urlAction%&gt;</span>&quot; <span style="color:#000000">method=</span><span style="color:#2a00ff">&quot;post&quot;</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">          </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">table</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">              </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;</span><span style="color:#000000">Name</span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/td</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">input </span><span style="color:#000000">name=</span><span style="color:#2a00ff">&quot;txtName&quot; </span><span style="color:#000000">value=</span>&quot;<span style="color:#bf5f3f">&lt;%= </span><span style="color:#000000">name </span><span style="color:#bf5f3f">%&gt;</span>&quot; <span style="color:#000000">type=</span><span style="color:#2a00ff">&quot;text&quot; </span><span style="color:#000000">size=</span><span style="color:#2a00ff">&quot;20&quot;</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">/td</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">          </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">          </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">              </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;</span><span style="color:#000000">Age</span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/td</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">input </span><span style="color:#000000">name=</span><span style="color:#2a00ff">&quot;txtAge&quot; </span><span style="color:#000000">value=</span>&quot;<span style="color:#bf5f3f">&lt;%= </span><span style="color:#000000">age </span><span style="color:#bf5f3f">%&gt;</span>&quot; <span style="color:#000000">type=</span><span style="color:#2a00ff">&quot;text&quot; </span><span style="color:#000000">size=</span><span style="color:#2a00ff">&quot;3&quot;</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">/td</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">          </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/table</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">table</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">              </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">input </span><span style="color:#000000">type=</span><span style="color:#2a00ff">&quot;submit&quot; </span><span style="color:#000000">value=</span><span style="color:#2a00ff">&quot;Submit&quot;</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">/td</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">input </span><span style="color:#000000">type=</span><span style="color:#2a00ff">&quot;reset&quot; </span><span style="color:#000000">value=</span><span style="color:#2a00ff">&quot;Reset&quot;</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">/td</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">input </span><span style="color:#000000">type=</span><span style="color:#2a00ff">&quot;button&quot; </span><span style="color:#000000">value=</span><span style="color:#2a00ff">&quot;Clear&quot;</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">/td</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">          </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/table</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">input </span><span style="color:#000000">type=</span><span style="color:#2a00ff">&quot;hidden&quot; </span><span style="color:#000000">name=</span><span style="color:#2a00ff">&quot;action&quot; </span><span style="color:#000000">value=</span><span style="color:#2a00ff">&quot;validationFormulaire&quot;</span><span style="color:#008080">&gt; </span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/form</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/center</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/body</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/html</span><span style="color:#008080">&gt;</span></span>
+</code></pre></div>
+
+<p>What&#x27;s new:</p>
+<ul>
+  <li><i>Line</i> 19: The form now has an [action] attribute whose value is the URL to which the browser will post the form values when the user clicks the [Submit] button. The [urlAction] variable will have the value <i>action=&quot;main&quot;</i>. The [form] view is displayed after the user performs the following actions:
+  </li>
+  <li>initial request: GET /person2/main
+  </li>
+  <li>click on the [Back to form] link: GET /person2/main?action=retourFormulaire
+  </li>
+</ul>
+
+<p>Since the [action] attribute does not specify an absolute URL (starting with /) but a relative URL (not starting with /), the browser will use the first part of the URL of the currently displayed page [/person2] and append the relative URL to it. The POST URL will therefore be [/person2/main], which is the controller’s URL. This POST request will be accompanied by the parameters [txtName, txtAge, action] from lines 23, 27, and 38.</p>
+<ul>
+  <li>Line 8: We retrieve the value of the [urlAction] element from the model. It is retrieved from the current request’s attributes. It will be used on line 19.
+  </li>
+  <li>Lines 6–7: We retrieve the values of the [name, age] elements from the model. They are retrieved from the session attributes rather than the request attributes, as in the previous version. This is to accommodate the [GET /person2/main?action=returnToForm] request from the link in the [response] and [errors] views. Before displaying these two views, the controller places the data entered in the form into the session, which allows it to retrieve it when the user clicks the [Return to form] link in the [response] and [errors] views.
+  </li>
+</ul>
+
+<h3 id="642-the-response-view">6.4.2. <span style="color: #4f81bd">The [response] view</span></h3>
+<p>This view displays the values entered in the form when they are valid:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002050000010AF83053A8.png" style="display:inline-block; margin:4px;width:9.571cm;height:4.925cm;" class="odt-zoomable" data-zoom-src="images/10000000000002050000010AF83053A8.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000123000000EA529C15AC.png" style="display:inline-block; margin:4px;width:5.39cm;height:4.334cm;" class="odt-zoomable" data-zoom-src="images/1000000000000123000000EA529C15AC.png" /></td></tr></table>
+
+<p>Compared to the previous version, the new feature is the [Back to Form] link. The view is generated by the following JSP page [response.jsp]:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
+<span class="odt-code-line"><span style="color:#bf5f3f">&lt;%@ </span><span style="color:#3f7f7f">page </span><span style="color:#000000">language=</span><span style="color:#2a00ff">&quot;java&quot; </span><span style="color:#000000">contentType=</span><span style="color:#2a00ff">&quot;text/html; charset=ISO-8859-1&quot;</span></span>
+<span class="odt-code-line"><span style="color:#2a00ff">    </span><span style="color:#000000">pageEncoding=</span><span style="color:#2a00ff">&quot;ISO-8859-1&quot;</span><span style="color:#bf5f3f">%&gt;</span></span>
+<span class="odt-code-line"><span style="color:#008080">&lt;!</span><span style="color:#3f7f7f">DOCTYPE </span><span style="color:#000080">HTML </span><span style="color:#808080">PUBLIC </span><span style="color:#000080">&quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">&lt;%</span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// retrieve data from the model</span></span>
+<span class="odt-code-line"><span style="color:#000000">  String name = (String) request.getAttribute(</span><span style="color:#2a00ff">&quot;name&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">  String age = (String) request.getAttribute(</span><span style="color:#2a00ff">&quot;age&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">  String formSubmitLink = (String)request.getAttribute(</span><span style="color:#2a00ff">&quot;formSubmitLink&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">%&gt;</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">html</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">head</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">title</span><span style="color:#008080">&gt;</span><span style="color:#000000">Person</span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/title</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/head</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">body</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">h2</span><span style="color:#008080">&gt;</span><span style="color:#000000">Person - response</span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/h2</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">hr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">table</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">          </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;</span><span style="color:#000000">Name</span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/td</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;</span><span style="color:#bf5f3f">&lt;%= </span><span style="color:#000000">name </span><span style="color:#bf5f3f">%&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">          </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;</span><span style="color:#000000">Age</span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/td</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;</span><span style="color:#bf5f3f">&lt;%= </span><span style="color:#000000">age </span><span style="color:#bf5f3f">%&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/table</span><span style="color:#008080">&gt;      </span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">br</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">a </span><span style="color:#000000">href=</span><span style="color:#2a00ff">&quot;?action=retourFormulaire&quot;</span><span style="color:#008080">&gt;</span><span style="color:#bf5f3f">&lt;%= </span><span style="color:#000000">formBacklink </span><span style="color:#bf5f3f">%&gt;</span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/a</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/body</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/html</span><span style="color:#008080">&gt;</span></span>
+</code></pre></div>
+
+<ul>
+  <li>Line 31: the link back to the form. This link has two components:
+  </li>
+</ul>
+
+<ol>
+    <ul>
+      <li>the target [href=&quot;?action=retourFormulaire&quot;]. The [response] view is displayed after the form [formulaire.jsp] is submitted via POST to the URL [/personne2/main]. It is therefore this latter URL that is displayed in the browser when the [response] view is displayed. Clicking the [Return to Form] link will then trigger a GET request from the browser to the URL specified by the link’s [href] attribute, in this case &quot;?action=retourFormulaire&quot;. If no URL is specified in [href], the browser will use the URL of the currently displayed view, i.e., [/personne2/main]. Ultimately, clicking the [Back to form] link will trigger a GET request from the browser to the URL [/person2/main?action=retourFormulaire], i.e., the application controller’s URL accompanied by the [action] parameter to tell it what to do.
+      </li>
+      <li>the link text. This will be part of the template sent to the page by the controller and retrieved on line 10.
+      </li>
+    </ul>
+</ol>
+
+<h3 id="643-the-errors-view">6.4.3. <span style="color: #4f81bd">The [errors] view</span></h3>
+<p>This view displays input errors in the form:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001E900000104C748B2A1.png" style="display:inline-block; margin:4px;width:9.059cm;height:4.817cm;" class="odt-zoomable" data-zoom-src="images/10000000000001E900000104C748B2A1.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000019C000000D1B2564C9D.png" style="display:inline-block; margin:4px;width:7.59cm;height:3.851cm;" class="odt-zoomable" data-zoom-src="images/100000000000019C000000D1B2564C9D.png" /></td></tr></table>
+
+<p>Compared to the previous version, the new feature is the [Return to form] link. The view is generated by the following JSP page [errors.jsp]:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
+<span class="odt-code-line"><span style="color:#bf5f3f">&lt;%@ </span><span style="color:#3f7f7f">page </span><span style="color:#000000">language=</span><span style="color:#2a00ff">&quot;java&quot; </span><span style="color:#000000">contentType=</span><span style="color:#2a00ff">&quot;text/html; charset=ISO-8859-1&quot;</span></span>
+<span class="odt-code-line"><span style="color:#2a00ff">    </span><span style="color:#000000">pageEncoding=</span><span style="color:#2a00ff">&quot;ISO-8859-1&quot;</span><span style="color:#bf5f3f">%&gt;</span></span>
+<span class="odt-code-line"><span style="color:#008080">&lt;!</span><span style="color:#3f7f7f">DOCTYPE </span><span style="color:#000080">HTML </span><span style="color:#808080">PUBLIC </span><span style="color:#000080">&quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#bf5f3f">&lt;%@ </span><span style="color:#3f7f7f">page </span><span style="color:#000000">import=</span><span style="color:#2a00ff">&quot;java.util.ArrayList&quot; </span><span style="color:#bf5f3f">%&gt;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">&lt;%</span>
+<span class="odt-code-line">// retrieve data from the model</span>
+<span class="odt-code-line"><span style="color:#000000">  ArrayList errors = (ArrayList) request.getAttribute(</span><span style="color:#2a00ff">&quot;errors&quot;</span><span style="color:#000000">); </span></span>
+<span class="odt-code-line"><span style="color:#000000">  String formSubmitLink = (String)request.getAttribute(</span><span style="color:#2a00ff">&quot;formSubmitLink&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">%&gt;</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">html</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">head</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">title</span><span style="color:#008080">&gt;</span><span style="color:#000000">Person</span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/title</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/head</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">body</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">h2</span><span style="color:#008080">&gt;</span><span style="color:#000000">The following errors occurred</span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/h2</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">ul</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#bf5f3f">&lt;%</span></span>
+<span class="odt-code-line"><span style="color:#000000">          </span><span style="font-weight:bold;color:#7f0055">for </span><span style="color:#000000">(</span><span style="font-weight:bold;color:#7f0055">int </span><span style="color:#000000">i = 0; i &lt; errors.size(); i++) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">            out.println(</span><span style="color:#2a00ff">&quot;&lt;li&gt;&quot; </span><span style="color:#000000">+ (String) errors.get(i) + </span><span style="color:#2a00ff">&quot;&lt;/li&gt;\n&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">        }</span><span style="color:#3f7f5f">//for</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#bf5f3f">%&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/ul</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">br</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">a </span><span style="color:#000000">href=</span><span style="color:#2a00ff">&quot;?action=retourFormulaire&quot;</span><span style="color:#008080">&gt;</span><span style="color:#bf5f3f">&lt;%= </span><span style="color:#000000">formSubmitLink </span><span style="color:#bf5f3f">%&gt;</span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/a</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/body</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/html</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"></span>
+</code></pre></div>
+
+<ul>
+  <li>Line 26: the link back to the form. This link is identical to the one in the [response] view. The reader is encouraged to review the explanations provided for that view if necessary.
+  </li>
+</ul>
+
+<h2 id="65-testing-the-views">6.5. <span style="color: #4f81bd">Testing the Views</span></h2>
+<p>To test the previous views, we duplicate their JSP pages in the /WebContent/JSP folder of the Eclipse project:</p>
+<p><img src="images/100000000000013C0000014DC04D571A.png" style="width:4.18cm;height:4.404cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000013C0000014DC04D571A.png" /></p>
+<p>Then, in the JSP folder, the pages are modified as follows:</p>
+<p>[form.jsp]:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line">...</span>
+<span class="odt-code-line">&lt;%</span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// -- test: we create the page template</span></span>
+<span class="odt-code-line"><span style="color:#000000">  session.setAttribute(</span><span style="color:#2a00ff">&quot;name&quot;</span><span style="color:#000000">, </span><span style="color:#2a00ff">&quot;tintin&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">  session.setAttribute(</span><span style="color:#2a00ff">&quot;age&quot;</span><span style="color:#000000">, </span><span style="color:#2a00ff">&quot;30&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">  request.setAttribute(</span><span style="color:#2a00ff">&quot;urlAction&quot;</span><span style="color:#000000">, </span><span style="color:#2a00ff">&quot;main&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">%&gt;</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">&lt;%</span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// retrieve data from the model</span></span>
+<span class="odt-code-line"><span style="color:#000000">  String name = (String)session.getAttribute(</span><span style="color:#2a00ff">&quot;name&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">  String age = (String)session.getAttribute(</span><span style="color:#2a00ff">&quot;age&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">  String urlAction = (String) request.getAttribute(</span><span style="color:#2a00ff">&quot;urlAction&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">%&gt;</span>
+<span class="odt-code-line"></span>
+</code></pre></div>
+
+<p>Lines 4–5 were added to create the model required by the page in lines 11–13.</p>
+<p>[response.jsp]:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line"></span>
+<span class="odt-code-line">&lt;%</span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// -- test: we create the page template</span></span>
+<span class="odt-code-line"><span style="color:#000000">  request.setAttribute(</span><span style="color:#2a00ff">&quot;name&quot;</span><span style="color:#000000">, </span><span style="color:#2a00ff">&quot;milou&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">  request.setAttribute(</span><span style="color:#2a00ff">&quot;age&quot;</span><span style="color:#000000">,</span><span style="color:#2a00ff">&quot;10&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">  request.setAttribute(</span><span style="color:#2a00ff">&quot;formBackLink&quot;</span><span style="color:#000000">, </span><span style="color:#2a00ff">&quot;Back to form&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">%&gt;</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">&lt;%</span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// retrieve data from the form</span></span>
+<span class="odt-code-line"><span style="color:#000000">  String name = (String)request.getAttribute(</span><span style="color:#2a00ff">&quot;name&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">  String age = (String)request.getAttribute(</span><span style="color:#2a00ff">&quot;age&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">  String formSubmitLink = (String)request.getAttribute(</span><span style="color:#2a00ff">&quot;formSubmitLink&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">%&gt;</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"></span>
+</code></pre></div>
+
+<p>Lines 4–6 were added to create the template required by the page in lines 11–13.</p>
+<p>[errors.jsp]:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line"></span>
+<span class="odt-code-line">&lt;%</span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// -- test: create the page template</span></span>
+<span class="odt-code-line"><span style="color:#000000">  ArrayList&lt;String&gt; </span><span style="font-weight:bold;color:#7f0055">errors1 = new </span><span style="color:#000000">ArrayList&lt;String&gt;();</span></span>
+<span class="odt-code-line"><span style="color:#000000">  errors1.add(</span><span style="color:#2a00ff">&quot;error1&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">  errors1.add(</span><span style="color:#2a00ff">&quot;error2&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">  request.setAttribute(</span><span style="color:#2a00ff">&quot;errors&quot;</span><span style="color:#000000">, errors1);</span></span>
+<span class="odt-code-line"><span style="color:#000000">  request.setAttribute(</span><span style="color:#2a00ff">&quot;formBackLink&quot;</span><span style="color:#000000">, </span><span style="color:#2a00ff">&quot;Back to form&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">%&gt;</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">&lt;%</span>
+<span class="odt-code-line">// retrieve data from the model</span>
+<span class="odt-code-line"><span style="color:#000000">  ArrayList errors = (ArrayList) request.getAttribute(</span><span style="color:#2a00ff">&quot;errors&quot;</span><span style="color:#000000">); </span></span>
+<span class="odt-code-line"><span style="color:#000000">  String formBackLink = (String)request.getAttribute(</span><span style="color:#2a00ff">&quot;formBackLink&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">%&gt;</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"></span>
+</code></pre></div>
+
+<p>Lines 4–8 were added to create the model required by the page in lines 13–14.</p>
+<p>Let’s start Tomcat if it isn’t already running, then request the following URLs:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001EB000000F23D8BABCE.png" style="display:inline-block; margin:4px;width:9.089cm;height:4.48cm;" class="odt-zoomable" data-zoom-src="images/10000000000001EB000000F23D8BABCE.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000015A000000E826457891.png" style="display:inline-block; margin:4px;width:6.41cm;height:4.299cm;" class="odt-zoomable" data-zoom-src="images/100000000000015A000000E826457891.png" /></td></tr></table>
+
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000199000000DE79B8ADC7.png" style="display:inline-block; margin:4px;width:7.571cm;height:4.11cm;" class="odt-zoomable" data-zoom-src="images/1000000000000199000000DE79B8ADC7.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+
+<p>We get the expected views. </p>
+<h2 id="66-the-servletpersonne-controller">6.6. <span style="color: #4f81bd">The [ServletPersonne] controller</span></h2>
+<p>The [ServletPersonne] controller of the [/personne2] web application will handle the following actions:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><mark style="background-color: #c0c0c0">No.</mark></b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><mark style="background-color: #c0c0c0">request</mark></b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><mark style="background-color: #c0c0c0">origin</mark></b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><mark style="background-color: #c0c0c0">processing</mark></b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">1</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">[GET /person2/hand]</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">URL entered by the user</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">- send the empty [form] view</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">2</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">[POST /person2/hand]</div><div style="margin:0 0 0.5em 0">with parameters [txtName,</div><div style="margin:0 0 0.5em 0">txtAge, action]</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">click on the</div><div style="margin:0 0 0.5em 0">[Submit] button in the</div><div style="margin:0 0 0.5em 0">[form]</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">- check the values of the parameters [txtName, txtAge]</div><div style="margin:0 0 0.5em 0">- if they are incorrect, send the view [errors(errors)]</div><div style="margin:0 0 0.5em 0">- if they are correct, send the [response(name,age)] view</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">3</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">[GET /person2/main?</div><div style="margin:0 0 0.5em 0">action=returnForm]</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">click on the [Return to</div><div style="margin:0 0 0.5em 0">form] of the views</div><div style="margin:0 0 0.5em 0">response] and [errors].</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">- Send the [form] view pre-filled with the latest entered values</div></td></tr></table>
+
+<p>So we have a new action to handle: [GET /person2/main?action=returnForm].</p>
+<h3 id="661-controller-skeleton">6.6.1. <span style="color: #4f81bd">Controller skeleton</span></h3>
+<p>The controller skeleton [ServletPersonne] is almost identical to that of the previous version:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-8-10">10</a></span>
+<span class="normal"><a href="#__codelineno-8-11">11</a></span>
+<span class="normal"><a href="#__codelineno-8-12">12</a></span>
+<span class="normal"><a href="#__codelineno-8-13">13</a></span>
+<span class="normal"><a href="#__codelineno-8-14">14</a></span>
+<span class="normal"><a href="#__codelineno-8-15">15</a></span>
+<span class="normal"><a href="#__codelineno-8-16">16</a></span>
+<span class="normal"><a href="#__codelineno-8-17">17</a></span>
+<span class="normal"><a href="#__codelineno-8-18">18</a></span>
+<span class="normal"><a href="#__codelineno-8-19">19</a></span>
+<span class="normal"><a href="#__codelineno-8-20">20</a></span>
+<span class="normal"><a href="#__codelineno-8-21">21</a></span>
+<span class="normal"><a href="#__codelineno-8-22">22</a></span>
+<span class="normal"><a href="#__codelineno-8-23">23</a></span>
+<span class="normal"><a href="#__codelineno-8-24">24</a></span>
+<span class="normal"><a href="#__codelineno-8-25">25</a></span>
+<span class="normal"><a href="#__codelineno-8-26">26</a></span>
+<span class="normal"><a href="#__codelineno-8-27">27</a></span>
+<span class="normal"><a href="#__codelineno-8-28">28</a></span>
+<span class="normal"><a href="#__codelineno-8-29">29</a></span>
+<span class="normal"><a href="#__codelineno-8-30">30</a></span>
+<span class="normal"><a href="#__codelineno-8-31">31</a></span>
+<span class="normal"><a href="#__codelineno-8-32">32</a></span>
+<span class="normal"><a href="#__codelineno-8-33">33</a></span>
+<span class="normal"><a href="#__codelineno-8-34">34</a></span>
+<span class="normal"><a href="#__codelineno-8-35">35</a></span>
+<span class="normal"><a href="#__codelineno-8-36">36</a></span>
+<span class="normal"><a href="#__codelineno-8-37">37</a></span>
+<span class="normal"><a href="#__codelineno-8-38">38</a></span>
+<span class="normal"><a href="#__codelineno-8-39">39</a></span>
+<span class="normal"><a href="#__codelineno-8-40">40</a></span>
+<span class="normal"><a href="#__codelineno-8-41">41</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">istia.st.servlets.personne</span><span class="p">;</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="p">...</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javax.servlet.http.HttpSession</span><span class="p">;</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="nd">@SuppressWarnings</span><span class="p">(</span><span class="s">&quot;serial&quot;</span><span class="p">)</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ServletPersonne</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">HttpServlet</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="w">    </span><span class="p">...</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="w">    </span><span class="c1">// init</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="w">    </span><span class="nd">@SuppressWarnings</span><span class="p">(</span><span class="s">&quot;unchecked&quot;</span><span class="p">)</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">init</span><span class="p">()</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">ServletException</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="w">        </span><span class="p">...</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15"></a>
+<a id="__codelineno-8-16" name="__codelineno-8-16"></a><span class="w">    </span><span class="nd">@SuppressWarnings</span><span class="p">(</span><span class="s">&quot;unchecked&quot;</span><span class="p">)</span>
+<a id="__codelineno-8-17" name="__codelineno-8-17"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">doGet</span><span class="p">(</span><span class="n">HttpServletRequest</span><span class="w"> </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">HttpServletResponse</span><span class="w"> </span><span class="n">response</span><span class="p">)</span>
+<a id="__codelineno-8-18" name="__codelineno-8-18"></a><span class="w">            </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span><span class="p">,</span><span class="w"> </span><span class="n">ServletException</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-19" name="__codelineno-8-19"></a><span class="p">...</span>
+<a id="__codelineno-8-20" name="__codelineno-8-20"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-21" name="__codelineno-8-21"></a>
+<a id="__codelineno-8-22" name="__codelineno-8-22"></a><span class="w">    </span><span class="c1">// Display empty form</span>
+<a id="__codelineno-8-23" name="__codelineno-8-23"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">doInit</span><span class="p">(</span><span class="n">HttpServletRequest</span><span class="w"> </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">HttpServletResponse</span><span class="w"> </span><span class="n">response</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">ServletException</span><span class="p">,</span><span class="w"> </span><span class="n">IOException</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-24" name="__codelineno-8-24"></a><span class="w">        </span><span class="p">...</span>
+<a id="__codelineno-8-25" name="__codelineno-8-25"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-26" name="__codelineno-8-26"></a>
+<a id="__codelineno-8-27" name="__codelineno-8-27"></a><span class="w">    </span><span class="c1">// Display pre-filled form</span>
+<a id="__codelineno-8-28" name="__codelineno-8-28"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">doFormSubmit</span><span class="p">(</span><span class="n">HttpServletRequest</span><span class="w"> </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">HttpServletResponse</span><span class="w"> </span><span class="n">response</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">ServletException</span><span class="p">,</span><span class="w"> </span><span class="n">IOException</span><span class="p">{</span>
+<a id="__codelineno-8-29" name="__codelineno-8-29"></a><span class="w">        </span><span class="p">...</span>
+<a id="__codelineno-8-30" name="__codelineno-8-30"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-31" name="__codelineno-8-31"></a>
+<a id="__codelineno-8-32" name="__codelineno-8-32"></a><span class="w">    </span><span class="c1">// validate the form</span>
+<a id="__codelineno-8-33" name="__codelineno-8-33"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">doValidateForm</span><span class="p">(</span><span class="n">HttpServletRequest</span><span class="w"> </span><span class="n">request</span><span class="p">,</span>
+<a id="__codelineno-8-34" name="__codelineno-8-34"></a><span class="w">    </span><span class="p">...</span>
+<a id="__codelineno-8-35" name="__codelineno-8-35"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-36" name="__codelineno-8-36"></a>
+<a id="__codelineno-8-37" name="__codelineno-8-37"></a><span class="w">    </span><span class="c1">// POST</span>
+<a id="__codelineno-8-38" name="__codelineno-8-38"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">doPost</span><span class="p">(</span><span class="n">HttpServletRequest</span><span class="w"> </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">HttpServletResponse</span><span class="w"> </span><span class="n">response</span><span class="p">)</span>
+<a id="__codelineno-8-39" name="__codelineno-8-39"></a><span class="w">    </span><span class="p">...</span>
+<a id="__codelineno-8-40" name="__codelineno-8-40"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-41" name="__codelineno-8-41"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>What&#x27;s new:</p>
+<ul>
+  <li>line 4: using a session requires importing the [HttpSession] package
+  </li>
+  <li>Lines 28–30: The new method [doRetourFormulaire] handles the new action: [GET /personne2/main?action=retourFormulaire].
+  </li>
+</ul>
+
+<h3 id="662-initialization-of-the-init-controller">6.6.2. <span style="color: #4f81bd">Initialization of the [init] controller</span></h3>
+<p>The [init] method is identical to that of the previous version. It checks the [web.xml] file for the elements declared in the [parameters] array:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span>
+<span class="normal"><a href="#__codelineno-9-3">3</a></span>
+<span class="normal"><a href="#__codelineno-9-4">4</a></span>
+<span class="normal"><a href="#__codelineno-9-5">5</a></span>
+<span class="normal"><a href="#__codelineno-9-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ServletPersonne</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">HttpServlet</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="w">    </span><span class="c1">// instance parameters</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">errorURL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">ArrayList</span><span class="w"> </span><span class="n">initializationErrors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">parameters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;formUrl&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;responseUrl&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;controllerUrl&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;formBackLink&quot;</span><span class="p">};</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="n">Map</span><span class="w"> </span><span class="n">params</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+  <li>Line 5: The parameters [controllerUrl] (controller URL) and [formBackLink] (link text for the [response] and [errors] views) have been added.
+  </li>
+</ul>
+
+<h3 id="663-the-doget-method">6.6.3. <span style="color: #4f81bd">The [doGet] method</span></h3>
+<p>The [doGet] method must handle the [GET /person2/main?action=formSubmit] action, which did not exist previously:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-10-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-10-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-10-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-10-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-10-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-10-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-10-10">10</a></span>
+<span class="normal"><a href="#__codelineno-10-11">11</a></span>
+<span class="normal"><a href="#__codelineno-10-12">12</a></span>
+<span class="normal"><a href="#__codelineno-10-13">13</a></span>
+<span class="normal"><a href="#__codelineno-10-14">14</a></span>
+<span class="normal"><a href="#__codelineno-10-15">15</a></span>
+<span class="normal"><a href="#__codelineno-10-16">16</a></span>
+<span class="normal"><a href="#__codelineno-10-17">17</a></span>
+<span class="normal"><a href="#__codelineno-10-18">18</a></span>
+<span class="normal"><a href="#__codelineno-10-19">19</a></span>
+<span class="normal"><a href="#__codelineno-10-20">20</a></span>
+<span class="normal"><a href="#__codelineno-10-21">21</a></span>
+<span class="normal"><a href="#__codelineno-10-22">22</a></span>
+<span class="normal"><a href="#__codelineno-10-23">23</a></span>
+<span class="normal"><a href="#__codelineno-10-24">24</a></span>
+<span class="normal"><a href="#__codelineno-10-25">25</a></span>
+<span class="normal"><a href="#__codelineno-10-26">26</a></span>
+<span class="normal"><a href="#__codelineno-10-27">27</a></span>
+<span class="normal"><a href="#__codelineno-10-28">28</a></span>
+<span class="normal"><a href="#__codelineno-10-29">29</a></span>
+<span class="normal"><a href="#__codelineno-10-30">30</a></span>
+<span class="normal"><a href="#__codelineno-10-31">31</a></span>
+<span class="normal"><a href="#__codelineno-10-32">32</a></span>
+<span class="normal"><a href="#__codelineno-10-33">33</a></span>
+<span class="normal"><a href="#__codelineno-10-34">34</a></span>
+<span class="normal"><a href="#__codelineno-10-35">35</a></span>
+<span class="normal"><a href="#__codelineno-10-36">36</a></span>
+<span class="normal"><a href="#__codelineno-10-37">37</a></span>
+<span class="normal"><a href="#__codelineno-10-38">38</a></span>
+<span class="normal"><a href="#__codelineno-10-39">39</a></span>
+<span class="normal"><a href="#__codelineno-10-40">40</a></span>
+<span class="normal"><a href="#__codelineno-10-41">41</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="w">        </span><span class="nd">@SuppressWarnings</span><span class="p">(</span><span class="s">&quot;unchecked&quot;</span><span class="p">)</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">doGet</span><span class="p">(</span><span class="n">HttpServletRequest</span><span class="w"> </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">HttpServletResponse</span><span class="w"> </span><span class="n">response</span><span class="p">)</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="w">            </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span><span class="p">,</span><span class="w"> </span><span class="n">ServletException</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a>
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="w">        </span><span class="c1">// Check how the servlet initialization went</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">initializationErrors</span><span class="p">.</span><span class="na">size</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="w">            </span><span class="c1">// redirect to the error page</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="w">            </span><span class="n">request</span><span class="p">.</span><span class="na">setAttribute</span><span class="p">(</span><span class="s">&quot;errors&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">initializationErrors</span><span class="p">);</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="w">            </span><span class="n">request</span><span class="p">.</span><span class="na">setAttribute</span><span class="p">(</span><span class="s">&quot;formBackLink&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">);</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="w">            </span><span class="n">getServletContext</span><span class="p">().</span><span class="na">getRequestDispatcher</span><span class="p">(</span><span class="n">errorURL</span><span class="p">).</span><span class="na">forward</span><span class="p">(</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11"></a><span class="w">                    </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="p">);</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12"></a><span class="w">            </span><span class="c1">// end</span>
+<a id="__codelineno-10-13" name="__codelineno-10-13"></a><span class="w">            </span><span class="k">return</span><span class="p">;</span>
+<a id="__codelineno-10-14" name="__codelineno-10-14"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-10-15" name="__codelineno-10-15"></a><span class="w">        </span><span class="c1">// retrieve the request method</span>
+<a id="__codelineno-10-16" name="__codelineno-10-16"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">request</span><span class="p">.</span><span class="na">getMethod</span><span class="p">().</span><span class="na">toLowerCase</span><span class="p">();</span>
+<a id="__codelineno-10-17" name="__codelineno-10-17"></a><span class="w">        </span><span class="c1">// retrieve the action to be executed</span>
+<a id="__codelineno-10-18" name="__codelineno-10-18"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">action</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">request</span><span class="p">.</span><span class="na">getParameter</span><span class="p">(</span><span class="s">&quot;action&quot;</span><span class="p">);</span>
+<a id="__codelineno-10-19" name="__codelineno-10-19"></a><span class="w">        </span><span class="c1">// action?</span>
+<a id="__codelineno-10-20" name="__codelineno-10-20"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">action</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-21" name="__codelineno-10-21"></a><span class="w">            </span><span class="n">action</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;init&quot;</span><span class="p">;</span>
+<a id="__codelineno-10-22" name="__codelineno-10-22"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-10-23" name="__codelineno-10-23"></a><span class="w">        </span><span class="c1">// execute action</span>
+<a id="__codelineno-10-24" name="__codelineno-10-24"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">method</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;get&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">action</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;init&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-25" name="__codelineno-10-25"></a><span class="w">            </span><span class="c1">// Start application</span>
+<a id="__codelineno-10-26" name="__codelineno-10-26"></a><span class="w">            </span><span class="n">doInit</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="p">);</span>
+<a id="__codelineno-10-27" name="__codelineno-10-27"></a><span class="w">            </span><span class="k">return</span><span class="p">;</span>
+<a id="__codelineno-10-28" name="__codelineno-10-28"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-10-29" name="__codelineno-10-29"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">method</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;post&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">action</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;validateForm&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-30" name="__codelineno-10-30"></a><span class="w">            </span><span class="c1">// validate the input form</span>
+<a id="__codelineno-10-31" name="__codelineno-10-31"></a><span class="w">            </span><span class="n">doValidateForm</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="p">);</span>
+<a id="__codelineno-10-32" name="__codelineno-10-32"></a><span class="w">            </span><span class="k">return</span><span class="p">;</span>
+<a id="__codelineno-10-33" name="__codelineno-10-33"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-10-34" name="__codelineno-10-34"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">method</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;get&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">action</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;returnForm&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-35" name="__codelineno-10-35"></a><span class="w">            </span><span class="c1">// return to the input form</span>
+<a id="__codelineno-10-36" name="__codelineno-10-36"></a><span class="w">            </span><span class="n">doReturnForm</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="p">);</span>
+<a id="__codelineno-10-37" name="__codelineno-10-37"></a><span class="w">            </span><span class="k">return</span><span class="p">;</span>
+<a id="__codelineno-10-38" name="__codelineno-10-38"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-10-39" name="__codelineno-10-39"></a><span class="w">        </span><span class="c1">// other cases</span>
+<a id="__codelineno-10-40" name="__codelineno-10-40"></a><span class="w">        </span><span class="n">doInit</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="p">);</span>
+<a id="__codelineno-10-41" name="__codelineno-10-41"></a><span class="w">    </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+  <li>lines 6–14: we check that the list of initialization errors is empty. If it is not, we display the [errors(initializationErrors)] view, which will report the error(s).
+  </li>
+</ul>
+
+<p>To understand this code, you need to recall the [errors] view template:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line">&lt;%</span>
+<span class="odt-code-line">// retrieve data from the model</span>
+<span class="odt-code-line"><span style="color:#000000">  ArrayList errors = (ArrayList) request.getAttribute(</span><span style="color:#2a00ff">&quot;errors&quot;</span><span style="color:#000000">); </span></span>
+<span class="odt-code-line"><span style="color:#000000">  String formReturnLink = (String) request.getAttribute(</span><span style="color:#2a00ff">&quot;formReturnLink&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">%&gt;</span>
+</code></pre></div>
+
+<p>The [errors] view expects a key element named &quot;errors&quot; in the request. The controller creates this element on line 8. It also expects a key element named &quot;formSubmitLink&quot;. The controller creates this element on line 9. Here, the link text will be empty. Therefore, there will be no link in the [errors] view that is sent. Indeed, if there were errors during application initialization, the application must be reconfigured. There is no need to offer the user the option to continue the application via a link.</p>
+<ul>
+  <li>Lines 34–37: processing the new action [GET /person2/main?action=returnForm] 
+  </li>
+</ul>
+
+<h3 id="664-the-doinit-method">6.6.4. <span style="color: #4f81bd">The [doInit] method</span></h3>
+<p>This method handles request #1 [GET /person2/main]. For this request, it must return the empty [form(name,age)] view. Its code is as follows:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-11-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-11-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-11-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-11-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-11-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-11-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-11-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-11-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-11-10">10</a></span>
+<span class="normal"><a href="#__codelineno-11-11">11</a></span>
+<span class="normal"><a href="#__codelineno-11-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="w">    </span><span class="c1">// display empty form</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">doInit</span><span class="p">(</span><span class="n">HttpServletRequest</span><span class="w"> </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">HttpServletResponse</span><span class="w"> </span><span class="n">response</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">ServletException</span><span class="p">,</span><span class="w"> </span><span class="n">IOException</span><span class="p">{</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="w">        </span><span class="c1">// retrieve the user&#39;s session</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="w">        </span><span class="n">HttpSession</span><span class="w"> </span><span class="n">session</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">request</span><span class="p">.</span><span class="na">getSession</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span><span class="w">        </span>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="w">        </span><span class="c1">// send the empty form</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="w">        </span><span class="n">session</span><span class="p">.</span><span class="na">setAttribute</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">);</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="w">        </span><span class="n">session</span><span class="p">.</span><span class="na">setAttribute</span><span class="p">(</span><span class="s">&quot;age&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">);</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="w">        </span><span class="n">request</span><span class="p">.</span><span class="na">setAttribute</span><span class="p">(</span><span class="s">&quot;urlAction&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="p">)</span><span class="n">params</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;urlController&quot;</span><span class="p">));</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9"></a><span class="w">        </span><span class="n">getServletContext</span><span class="p">().</span><span class="na">getRequestDispatcher</span><span class="p">((</span><span class="n">String</span><span class="p">)</span><span class="n">params</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;formUrl&quot;</span><span class="p">)).</span><span class="na">forward</span><span class="p">(</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10"></a><span class="w">                </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="p">);</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11"></a><span class="w">        </span><span class="k">return</span><span class="p">;</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12"></a><span class="w">    </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+  <li>Line 4: The current session is retrieved if it exists; otherwise, it is created (<i>getSession </i>parameter set to <i>true</i>).
+  </li>
+  <li>Lines 9-10: The [form] view is displayed. Recall the model expected by this view:
+  </li>
+</ul>
+
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line">&lt;%</span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// retrieve data from the model</span></span>
+<span class="odt-code-line"><span style="color:#000000">  String name = (String) session.getAttribute(</span><span style="color:#2a00ff">&quot;name&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">  String age = (String) session.getAttribute(</span><span style="color:#2a00ff">&quot;age&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">  String urlAction = (String) request.getAttribute(</span><span style="color:#2a00ff">&quot;urlAction&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">%&gt;</span>
+</code></pre></div>
+
+<ul>
+  <li>Lines 6-7: The [name, age] elements of the [form] view model are initialized with empty strings and placed in the session because that is where the view expects them.
+  </li>
+  <li>Line 8: The [urlAction] element of the model is initialized with the value of the [urlController] parameter from the [web.xml] file and placed in the request.
+  </li>
+</ul>
+
+<h3 id="665-the-dovalidationformulaire-method">6.6.5. <span style="color: #4f81bd">The [doValidationFormulaire] method</span></h3>
+<p>This method processes request #2 [POST /person2/main], in which the posted parameters are [action, txtName, txtAge]. Its code is as follows:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-12-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-12-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-12-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-12-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-12-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-12-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-12-10">10</a></span>
+<span class="normal"><a href="#__codelineno-12-11">11</a></span>
+<span class="normal"><a href="#__codelineno-12-12">12</a></span>
+<span class="normal"><a href="#__codelineno-12-13">13</a></span>
+<span class="normal"><a href="#__codelineno-12-14">14</a></span>
+<span class="normal"><a href="#__codelineno-12-15">15</a></span>
+<span class="normal"><a href="#__codelineno-12-16">16</a></span>
+<span class="normal"><a href="#__codelineno-12-17">17</a></span>
+<span class="normal"><a href="#__codelineno-12-18">18</a></span>
+<span class="normal"><a href="#__codelineno-12-19">19</a></span>
+<span class="normal"><a href="#__codelineno-12-20">20</a></span>
+<span class="normal"><a href="#__codelineno-12-21">21</a></span>
+<span class="normal"><a href="#__codelineno-12-22">22</a></span>
+<span class="normal"><a href="#__codelineno-12-23">23</a></span>
+<span class="normal"><a href="#__codelineno-12-24">24</a></span>
+<span class="normal"><a href="#__codelineno-12-25">25</a></span>
+<span class="normal"><a href="#__codelineno-12-26">26</a></span>
+<span class="normal"><a href="#__codelineno-12-27">27</a></span>
+<span class="normal"><a href="#__codelineno-12-28">28</a></span>
+<span class="normal"><a href="#__codelineno-12-29">29</a></span>
+<span class="normal"><a href="#__codelineno-12-30">30</a></span>
+<span class="normal"><a href="#__codelineno-12-31">31</a></span>
+<span class="normal"><a href="#__codelineno-12-32">32</a></span>
+<span class="normal"><a href="#__codelineno-12-33">33</a></span>
+<span class="normal"><a href="#__codelineno-12-34">34</a></span>
+<span class="normal"><a href="#__codelineno-12-35">35</a></span>
+<span class="normal"><a href="#__codelineno-12-36">36</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="w">    </span><span class="c1">// form validation</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">doValidationFormulaire</span><span class="p">(</span><span class="n">HttpServletRequest</span><span class="w"> </span><span class="n">request</span><span class="p">,</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="w">            </span><span class="n">HttpServletResponse</span><span class="w"> </span><span class="n">response</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">ServletException</span><span class="p">,</span><span class="w"> </span><span class="n">IOException</span><span class="p">{</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="w">        </span><span class="c1">// retrieve the parameters</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">request</span><span class="p">.</span><span class="na">getParameter</span><span class="p">(</span><span class="s">&quot;txtName&quot;</span><span class="p">);</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">request</span><span class="p">.</span><span class="na">getParameter</span><span class="p">(</span><span class="s">&quot;txtAge&quot;</span><span class="p">);</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="w">        </span><span class="c1">// which we store in the session</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8"></a><span class="w">        </span><span class="n">HttpSession</span><span class="w"> </span><span class="n">session</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">request</span><span class="p">.</span><span class="na">getSession</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span><span class="w">        </span>
+<a id="__codelineno-12-9" name="__codelineno-12-9"></a><span class="w">        </span><span class="n">session</span><span class="p">.</span><span class="na">setAttribute</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">);</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10"></a><span class="w">        </span><span class="n">session</span><span class="p">.</span><span class="na">setAttribute</span><span class="p">(</span><span class="s">&quot;age&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">age</span><span class="p">);</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11"></a><span class="w">        </span><span class="c1">// Checking the parameters</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12"></a><span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">callErrors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
+<a id="__codelineno-12-13" name="__codelineno-12-13"></a><span class="w">        </span><span class="c1">// the name must not be empty</span>
+<a id="__codelineno-12-14" name="__codelineno-12-14"></a><span class="w">        </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">.</span><span class="na">trim</span><span class="p">();</span>
+<a id="__codelineno-12-15" name="__codelineno-12-15"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">name</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">))</span>
+<a id="__codelineno-12-16" name="__codelineno-12-16"></a><span class="w">            </span><span class="n">callErrors</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;The [name] field was not filled in&quot;</span><span class="p">);</span>
+<a id="__codelineno-12-17" name="__codelineno-12-17"></a><span class="w">        </span><span class="c1">// age must be an integer &gt;= 0</span>
+<a id="__codelineno-12-18" name="__codelineno-12-18"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">age</span><span class="p">.</span><span class="na">matches</span><span class="p">(</span><span class="s">&quot;^\\s*\\d+\\s*$&quot;</span><span class="p">))</span>
+<a id="__codelineno-12-19" name="__codelineno-12-19"></a><span class="w">            </span><span class="n">callErrors</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;The [age] field is incorrect&quot;</span><span class="p">);</span>
+<a id="__codelineno-12-20" name="__codelineno-12-20"></a><span class="w">        </span><span class="c1">// Are there errors in the parameters?</span>
+<a id="__codelineno-12-21" name="__codelineno-12-21"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">errorList</span><span class="p">.</span><span class="na">size</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-22" name="__codelineno-12-22"></a><span class="w">            </span><span class="c1">// display the error page</span>
+<a id="__codelineno-12-23" name="__codelineno-12-23"></a><span class="w">            </span><span class="n">request</span><span class="p">.</span><span class="na">setAttribute</span><span class="p">(</span><span class="s">&quot;errors&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">callErrors</span><span class="p">);</span>
+<a id="__codelineno-12-24" name="__codelineno-12-24"></a><span class="w">            </span><span class="n">request</span><span class="p">.</span><span class="na">setAttribute</span><span class="p">(</span><span class="s">&quot;formReturnLink&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="p">)</span><span class="n">params</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;formReturnLink&quot;</span><span class="p">));</span>
+<a id="__codelineno-12-25" name="__codelineno-12-25"></a><span class="w">            </span><span class="n">getServletContext</span><span class="p">().</span><span class="na">getRequestDispatcher</span><span class="p">(</span><span class="n">errorURL</span><span class="p">).</span><span class="na">forward</span><span class="p">(</span>
+<a id="__codelineno-12-26" name="__codelineno-12-26"></a><span class="w">                    </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="p">);</span>
+<a id="__codelineno-12-27" name="__codelineno-12-27"></a><span class="w">            </span><span class="k">return</span><span class="p">;</span>
+<a id="__codelineno-12-28" name="__codelineno-12-28"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-12-29" name="__codelineno-12-29"></a><span class="w">        </span><span class="c1">// the parameters are correct - send the response page</span>
+<a id="__codelineno-12-30" name="__codelineno-12-30"></a><span class="w">        </span><span class="n">request</span><span class="p">.</span><span class="na">setAttribute</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">);</span>
+<a id="__codelineno-12-31" name="__codelineno-12-31"></a><span class="w">        </span><span class="n">request</span><span class="p">.</span><span class="na">setAttribute</span><span class="p">(</span><span class="s">&quot;age&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">age</span><span class="p">);</span>
+<a id="__codelineno-12-32" name="__codelineno-12-32"></a><span class="w">        </span><span class="n">request</span><span class="p">.</span><span class="na">setAttribute</span><span class="p">(</span><span class="s">&quot;formReturnLink&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="p">)</span><span class="n">params</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;formReturnLink&quot;</span><span class="p">));</span>
+<a id="__codelineno-12-33" name="__codelineno-12-33"></a><span class="w">        </span><span class="n">getServletContext</span><span class="p">().</span><span class="na">getRequestDispatcher</span><span class="p">((</span><span class="n">String</span><span class="p">)</span><span class="n">params</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;responseUrl&quot;</span><span class="p">)).</span><span class="na">forward</span><span class="p">(</span><span class="n">request</span><span class="p">,</span>
+<a id="__codelineno-12-34" name="__codelineno-12-34"></a><span class="w">                </span><span class="n">response</span><span class="p">);</span>
+<a id="__codelineno-12-35" name="__codelineno-12-35"></a><span class="w">        </span><span class="k">return</span><span class="p">;</span>
+<a id="__codelineno-12-36" name="__codelineno-12-36"></a><span class="w">    </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+  <li>Lines 5–6: We retrieve the values of the &quot;txtNom&quot; and &quot;txtAge&quot; parameters from the client&#x27;s request.
+  </li>
+  <li>lines 8–10: These values are stored in the session so they can be retrieved when the user clicks the [Back to form] link on the [response] and [errors] views.
+  </li>
+  <li>Lines 12–19: The validity of the values for both parameters is checked.
+  </li>
+  <li>lines 21-28: if either parameter is invalid, the [errors(errors,returnToFormLink)] view is displayed. Recall the template for this view:
+  </li>
+</ul>
+
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line">&lt;%</span>
+<span class="odt-code-line">// retrieve the data from the model</span>
+<span class="odt-code-line"><span style="color:#000000">  ArrayList errors = (ArrayList) request.getAttribute(</span><span style="color:#2a00ff">&quot;errors&quot;</span><span style="color:#000000">); </span></span>
+<span class="odt-code-line"><span style="color:#000000">  String formReturnLink = (String) request.getAttribute(</span><span style="color:#2a00ff">&quot;formReturnLink&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">%&gt;</span>
+</code></pre></div>
+
+<ul>
+  <li>Lines 30–34: If the two retrieved parameters &quot;txtName&quot; and &quot;txtAge&quot; have valid values, we display the [response(name, age, formSubmitLink)] view. Remember the [response] view template:
+  </li>
+</ul>
+
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line">&lt;%</span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// retrieve data from the model</span></span>
+<span class="odt-code-line"><span style="color:#000000">  String name = (String)request.getAttribute(</span><span style="color:#2a00ff">&quot;name&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">  String age = (String) request.getAttribute(</span><span style="color:#2a00ff">&quot;age&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">  String formSubmitLink = (String)request.getAttribute(</span><span style="color:#2a00ff">&quot;formSubmitLink&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">%&gt;</span>
+</code></pre></div>
+
+<h3 id="666-the-doretourformulaire-method">6.6.6. <span style="color: #4f81bd"><strong>The [doRetourFormulaire] method</strong></span></h3>
+<p>This method handles request #3 [GET /person2/main?action=formSubmit]. Its code is as follows:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-13-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-13-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-13-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-13-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-13-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-13-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-13-10">10</a></span>
+<span class="normal"><a href="#__codelineno-13-11">11</a></span>
+<span class="normal"><a href="#__codelineno-13-12">12</a></span>
+<span class="normal"><a href="#__codelineno-13-13">13</a></span>
+<span class="normal"><a href="#__codelineno-13-14">14</a></span>
+<span class="normal"><a href="#__codelineno-13-15">15</a></span>
+<span class="normal"><a href="#__codelineno-13-16">16</a></span>
+<span class="normal"><a href="#__codelineno-13-17">17</a></span>
+<span class="normal"><a href="#__codelineno-13-18">18</a></span>
+<span class="normal"><a href="#__codelineno-13-19">19</a></span>
+<span class="normal"><a href="#__codelineno-13-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="c1">// display pre-filled form</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">doReturnForm</span><span class="p">(</span><span class="n">HttpServletRequest</span><span class="w"> </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">HttpServletResponse</span><span class="w"> </span><span class="n">response</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">ServletException</span><span class="p">,</span><span class="w"> </span><span class="n">IOException</span><span class="p">{</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="w">        </span><span class="c1">// retrieve the user&#39;s session</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="w">        </span><span class="n">HttpSession</span><span class="w"> </span><span class="n">session</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">request</span><span class="p">.</span><span class="na">getSession</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span><span class="w">        </span>
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="w">        </span><span class="c1">// prepare the form template</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6"></a><span class="w">        </span><span class="c1">// Is the name present in the session?</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="p">)</span><span class="w"> </span><span class="n">session</span><span class="p">.</span><span class="na">getAttribute</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">);</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9"></a><span class="w">            </span><span class="n">session</span><span class="p">.</span><span class="na">setAttribute</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">);</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10"></a><span class="w">        </span><span class="c1">// Is age present in the session?</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="p">)</span><span class="w"> </span><span class="n">session</span><span class="p">.</span><span class="na">getAttribute</span><span class="p">(</span><span class="s">&quot;age&quot;</span><span class="p">);</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">age</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13"></a><span class="w">            </span><span class="n">session</span><span class="p">.</span><span class="na">setAttribute</span><span class="p">(</span><span class="s">&quot;age&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">);</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14"></a><span class="w">        </span><span class="c1">// urlAction</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15"></a><span class="w">        </span><span class="n">request</span><span class="p">.</span><span class="na">setAttribute</span><span class="p">(</span><span class="s">&quot;urlAction&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="p">)</span><span class="n">params</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;urlController&quot;</span><span class="p">));</span>
+<a id="__codelineno-13-16" name="__codelineno-13-16"></a><span class="w">        </span><span class="c1">// display the form</span>
+<a id="__codelineno-13-17" name="__codelineno-13-17"></a><span class="w">        </span><span class="n">getServletContext</span><span class="p">().</span><span class="na">getRequestDispatcher</span><span class="p">((</span><span class="n">String</span><span class="p">)</span><span class="n">params</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;formUrl&quot;</span><span class="p">)).</span><span class="na">forward</span><span class="p">(</span>
+<a id="__codelineno-13-18" name="__codelineno-13-18"></a><span class="w">                </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="p">);</span>
+<a id="__codelineno-13-19" name="__codelineno-13-19"></a><span class="w">        </span><span class="k">return</span><span class="p">;</span>
+<a id="__codelineno-13-20" name="__codelineno-13-20"></a><span class="w">    </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>After this method completes, the [form] view should be displayed, pre-filled with the user&#x27;s latest entries. Here is the [form] view template:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line">&lt;%</span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// retrieve data from the model</span></span>
+<span class="odt-code-line"><span style="color:#000000">  String name = (String)session.getAttribute(</span><span style="color:#2a00ff">&quot;name&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">  String age = (String)session.getAttribute(</span><span style="color:#2a00ff">&quot;age&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">  String urlAction = (String)request.getAttribute(</span><span style="color:#2a00ff">&quot;urlAction&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">%&gt;</span>
+</code></pre></div>
+
+<p>The [doRetourFormulaire] method must therefore construct the previous model.</p>
+<ul>
+  <li>Line 4: We retrieve the session in which the controller has stored the entered values (name, age).
+  </li>
+  <li>line 7: we retrieve the name from the session
+  </li>
+  <li>Lines 8–9: If it is not there, we add it with an empty value. This scenario should not occur during normal application operation, as the [returnForm] action always takes place after the [validateForm] action, which occurs after the entered data has been saved to the session. However, a session may expire because it has a limited lifespan, often a few dozen minutes. In this case, line 4 has created a new session in which the name will not be found. We therefore set an empty name in the new session.
+  </li>
+  <li>Lines 11–13: We do the same for the age
+  </li>
+  <li>If we ignore the issue of the expired session, then lines 3–13 are unnecessary. The [name, age] elements of the model are already in the session. Therefore, there is no need to put them back there.
+  </li>
+  <li>Line 15: We set the value of the [urlAction] element in the model
+  </li>
+</ul>
+
+<h2 id="67-tests">6.7. <span style="color: #4f81bd">Tests</span></h2>
+<p>Start or restart Tomcat. Request the URL [http://localhost:8080/personne2] and then repeat the tests shown in the example in section<a href="#personne2-introduction"><u><span style="color: #0563c1"> 6.1</span></u></a>.</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner">
+
+      <div>
+        <a href="https://tahe.developpez.com" target="_blank">
+          https://tahe.developpez.com
+        </a>
+        <br>
+        This tutorial written by <strong>Serge Tahé</strong> is made available to the public under the terms of the
+<em>Creative Commons Attribution – Non-Commercial –
+ShareAlike 3.0 Unported</em>.
+      </div>
+
+    </div>
+  </div>
+
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="javascripts/focus.js"></script>
+      
+    
+  </body>
+</html>
