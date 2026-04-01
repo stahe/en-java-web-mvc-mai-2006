@@ -2620,7 +2620,7 @@
   </li>
 </ul>
 
-<h2 id="147-tests-for-the-service-layer">14.7. <span style="color: #4f81bd"><strong>Tests for the [service] layer</strong></span></h2>
+<h2 id="147-tests-for-the-service-layer">14.7. <span style="color: #4f81bd">Tests for the [service] layer</span></h2>
 <p>A JUnit test is written for the [service] layer:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000DE0000005224F7D433.png" style="display:inline-block; margin:4px;width:4.11cm;height:1.519cm;" class="odt-zoomable" data-zoom-src="images/10000000000000DE0000005224F7D433.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000B0000000A1201CC621.png" style="display:inline-block; margin:4px;width:3.26cm;height:2.983cm;" class="odt-zoomable" data-zoom-src="images/10000000000000B0000000A1201CC621.png" /></td></tr></table>
 
@@ -4153,7 +4153,7 @@
   </li>
   <li><span style="color: #000000">lines 24–32: The same process is applied to the [dateOfBirth] parameter</span>
   </li>
-  <li><span style="color: #000000">Line 34: The [spouse] parameter is retrieved. We do not check its validity because, in principle, it comes from the value of a radio button. That said, nothing prevents a program from making a [POST /people-01/do/validate] request accompanied by a fictitious [spouse] parameter. We should therefore test the validity of this parameter. Here, we rely on our exception handling, which causes the [exception.jsp] page to be displayed if the controller does not handle the exception itself. So, if the </span><span style="color: #000000">conversion of the [marie] parameter to a boolean fails on line 34, an exception will be thrown, resulting in the [exception.jsp] page being sent to the client. This behavior works for us.</span>
+  <li><span style="color: #000000">Line 34: The [spouse] parameter is retrieved. We do not check its validity because, in principle, it comes from the value of a radio button. That said, nothing prevents a program from making a [POST /people-01/do/validate] request accompanied by a fictitious [spouse] parameter. We should therefore test the validity of this parameter. Here, we rely on our exception handling, which causes the [exception.jsp] page to be displayed if the controller does not handle the exception itself. So, if the conversion of the [marie] parameter to a boolean fails on line 34, an exception will be thrown, resulting in the [exception.jsp] page being sent to the client. This behavior works for us.</span>
   </li>
   <li><span style="color: #000000">Lines 34–54: We retrieve the [nbEnfants] parameter and check its value.</span>
   </li>

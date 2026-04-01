@@ -1175,7 +1175,7 @@
 <a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">    </span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>In fact, this code remains identical to what it was. In the previous version, the elements [name, age] were not included in the [errors] view template. If we continue to leave them out, the variables ${name} and ${age} in [errors.jsp] will be replaced by an empty string. This works for us, because in this specific case, the [Back to Form] link is not displayed to the user. In fact, we also do not include the [formBackLink] element in the template. The variable ${lienRetourFormulaire} in [erreurs.jsp] will be replaced by an empty string. Therefore, there will be no link, and thus no way to submit the hidden fields [name, age] from the form in [erreurs.jsp]. The value of these fields can therefore be an empty string.</p>
-<h3 id="1152-the-dovalidationformulaire-method">11.5.2. <span style="color: #4f81bd"><strong>The [doValidationFormulaire] method</strong></span></h3>
+<h3 id="1152-the-dovalidationformulaire-method">11.5.2. <span style="color: #4f81bd">The [doValidationFormulaire] method</span></h3>
 <p>Its code is as follows:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
