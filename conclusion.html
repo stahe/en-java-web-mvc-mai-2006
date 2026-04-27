@@ -933,7 +933,7 @@
 </ul>
 
 <p>We believe that readers who have reached this point are ready to develop their own Java web applications. They are also ready to tackle other development methods similar to those covered in this document. Let’s review the architecture of the web applications developed here:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000046200000161FC07A7FF.png" style="display:inline-block; margin:4px;width:14.843cm;height:4.671cm;" class="odt-zoomable" data-zoom-src="images/100000000000046200000161FC07A7FF.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000046200000161FC07A7FF.png" width="561" height="177" style="display:inline-block; margin:4px;width:14.843cm;height:4.671cm;" class="odt-zoomable" data-zoom-src="images/100000000000046200000161FC07A7FF.png" /></td></tr></table>
 
 <p>For simple applications, this architecture is sufficient. Once you have written several applications of this type, you will notice that the servlets of two different applications:</p>
 <ol>
@@ -947,7 +947,7 @@
 <ul>
   <li>factorize the processing (1) into a generic servlet that is unaware of the application using it
   </li>
-  <li>delegate the processing (2) to external classes, since the generic servlet does not know in which application it is being used
+  <li>delegate the processing (2) to external classes since the generic servlet does not know in which application it is being used
   </li>
   <li>link the action requested by the user to the class that must process it using a configuration file
   </li>
@@ -957,13 +957,13 @@
 <p>The <strong>Spring</strong> framework (http://www.springframework.org/), which has emerged more recently, offers features similar to those of Struts. Specifically, this refers to its <strong>Spring MVC</strong> module<strong>.</strong> Its use has been described in several articles (http://tahe.developpez.com/java/springmvc-part1/).</p>
 <p>Spring does not stop at the MVC concept of the [web] layer of a 3-tier application. It is useful even in applications outside the web.</p>
 <p><span style="color: #000000">Thus, we concluded our course by implementing an MVC architecture within a 3-tier architecture [web, business logic, DAO] using a basic example of managing a list of people.</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000447000001DB43FCAB36.png" style="display:inline-block; margin:4px;width:14.487cm;height:6.285cm;" class="odt-zoomable" data-zoom-src="images/1000000000000447000001DB43FCAB36.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000447000001DB43FCAB36.png" width="548" height="238" style="display:inline-block; margin:4px;width:14.487cm;height:6.285cm;" class="odt-zoomable" data-zoom-src="images/1000000000000447000001DB43FCAB36.png" /></td></tr></table>
 
 <p><span style="color: #000000">In version 1 of the application, the list of people was kept in memory and disappeared when the web application was unloaded. In the other versions, the list of people is stored in a database table. We used four different DBMSs: Firebird, Postgres, MySQL, and SQL Server Express.</span></p>
 <p><span style="color: #000000">Thanks to </span><strong>Spring IoC</strong><span style="color: #000000">, the [web] layer from version 1 could be fully retained in subsequent versions. We thus demonstrated that it is possible to build </span><em>n-tier</em><span style="color: #000000"> architectures with independent layers.</span></p>
 <p><span style="color: #000000">With the versions using a database, we demonstrated Spring’s contribution to building the [DAO] and [service] layers. Thanks to Spring’s integration with iBATIS, we were able to build four versions that differ only in their configuration files. The same [DaoImplCommon] class was used to implement the [dao] layer in all four versions. To address an issue specific to the Firebird DBMS, we had to derive this class but did not need to modify it.</span></p>
 <p><span style="color: #000000">Finally, we demonstrated how Spring allowed us to manage transactions declaratively at the [service] layer.</span></p>
-<p><span style="color: #000000">Readers are encouraged to explore the full range of features offered by this product.</span></p>
+<p><span style="color: #000000">Readers are encouraged to explore all the features offered by this product.</span></p>
 
 
 
@@ -999,8 +999,8 @@
     <div class="md-footer-meta__inner">
 
       <div>
-        <a href="https://tahe.developpez.com" target="_blank">
-          https://tahe.developpez.com
+        <a href="https://stahe.github.io" target="_blank">
+          https://stahe.github.io
         </a>
         <br>
         This tutorial written by <strong>Serge Tahé</strong> is made available to the public under the terms of the

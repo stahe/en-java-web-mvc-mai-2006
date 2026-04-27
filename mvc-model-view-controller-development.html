@@ -920,7 +920,7 @@
 <p><a id="mvc-3tier"></a></p>
 <h1 id="4-mvc-modelviewcontroller-development">4. <span style="color: #365f91">MVC (Model–View–Controller) Development</span></h1>
 <p>A web application often has a 3-tier architecture:</p>
-<p><img src="images/1000000000000440000000AA79C81013.png" style="width:14.393cm;height:2.249cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000440000000AA79C81013.png" /></p>
+<p><img src="images/1000000000000440000000AA79C81013.png" width="544" height="85" style="width:14.393cm;height:2.249cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000440000000AA79C81013.png" /></p>
 <ul>
   <li>the [<b>DAO</b>] layer handles data access, most often persistent data within a DBMS. But this can also be data coming from sensors, the network, etc.
   </li>
@@ -944,7 +944,7 @@
 
 <p>The [business] and [DAO] layers are normally accessed via Java interfaces. Thus, the [business] layer knows only the interface(s) of the [DAO] layer and is unaware of the classes implementing them. This is what ensures the independence of the layers from one another: changing the implementation of the [DAO] layer has no impact on the [business] layer as long as the definition of the [DAO] layer’s interface remains unchanged. The same applies between the [user interface] and [business] layers.</p>
 <p>The MVC (Model–View–Controller) architecture is implemented in the [<strong>user interface</strong>] layer when it is a web interface:</p>
-<p><img src="images/100000000000044A000001096FF0D59E.png" style="width:14.526cm;height:3.507cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000044A000001096FF0D59E.png" /></p>
+<p><img src="images/100000000000044A000001096FF0D59E.png" width="549" height="133" style="width:14.526cm;height:3.507cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000044A000001096FF0D59E.png" /></p>
 <p>Processing a client request follows these steps:</p>
 <ol>
   <li>The client sends a request to the controller. The controller handles all client requests. It is the application’s entry point. It is the <b>C </b>in MVC.
@@ -995,12 +995,12 @@
 
 <p>This MVC design pattern is called the &quot;Front Controller&quot; pattern or single-controller pattern. A single servlet handles all requests from all users.</p>
 <p>Let’s return to the architecture of the previous web application:</p>
-<p><img src="images/100000000000039C00000162A72C5060.png" style="width:12.224cm;height:4.683cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000039C00000162A72C5060.png" /></p>
+<p><img src="images/100000000000039C00000162A72C5060.png" width="462" height="177" style="width:12.224cm;height:4.683cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000039C00000162A72C5060.png" /></p>
 <p>This architecture corresponds to the following n-tier architecture:</p>
-<p><img src="images/10000000000001DE000000B47F9D7A03.png" style="width:6.324cm;height:2.381cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001DE000000B47F9D7A03.png" /></p>
+<p><img src="images/10000000000001DE000000B47F9D7A03.png" width="239" height="90" style="width:6.324cm;height:2.381cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001DE000000B47F9D7A03.png" /></p>
 <p>There is actually only one layer: the web interface layer. Generally speaking, an MVC web application based on servlets and JSP pages will have the following architecture:</p>
-<p><img src="images/10000000000004740000015E370B9BE9.png" style="width:15.081cm;height:4.63cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004740000015E370B9BE9.png" /></p>
-<p>For simple applications, this architecture is sufficient. When you’ve written several applications of this type, you realize that the servlets of two different applications:</p>
+<p><img src="images/10000000000004740000015E370B9BE9.png" width="570" height="175" style="width:15.081cm;height:4.63cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004740000015E370B9BE9.png" /></p>
+<p>For simple applications, this architecture is sufficient. When you have written several applications of this type, you realize that the servlets of two different applications:</p>
 <ol>
   <li>use the same mechanism to determine which method [doAction] to execute to handle the action requested by the user
   </li>
@@ -1056,8 +1056,8 @@
     <div class="md-footer-meta__inner">
 
       <div>
-        <a href="https://tahe.developpez.com" target="_blank">
-          https://tahe.developpez.com
+        <a href="https://stahe.github.io" target="_blank">
+          https://stahe.github.io
         </a>
         <br>
         This tutorial written by <strong>Serge Tahé</strong> is made available to the public under the terms of the
