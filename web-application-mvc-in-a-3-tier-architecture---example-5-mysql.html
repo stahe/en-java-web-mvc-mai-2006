@@ -12,13 +12,13 @@
         <meta name="author" content="Serge Tahé">
       
       
-        <link rel="canonical" href="https://stahe.github.io/en-java-web-mvc-mai-2006/mvc-web-application-in-a-3-tier-architecture---example-5-mysql.html">
+        <link rel="canonical" href="https://stahe.github.io/en-java-web-mvc-mai-2006/web-application-mvc-in-a-3-tier-architecture---example-5-mysql.html">
       
       
         <link rel="prev" href="mvc-web-application-in-a-3-tier-architecture---example-4-postgres.html">
       
       
-        <link rel="next" href="mvc-web-application-in-a-3-tier-architecture---example-6-sql-server-express.html">
+        <link rel="next" href="web-application-mvc-in-a-3-tier-architecture---example-6-sql-server-express.html">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>19. MVC Web Application in a 3-Tier Architecture – Example 5, MySQL - The basics of MVC web development in Java: a practical guide</title>
+        <title>19. Web application MVC in a 3-tier architecture – Example 5, MySQL - The basics of MVC web development in Java: a practical guide</title>
       
     
     
@@ -56,6 +56,8 @@
     
     
       <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -92,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#19-mvc-web-application-in-a-3-tier-architecture-example-5-mysql" class="md-skip">
+        <a href="#19-web-application-mvc-in-a-3-tier-architecture-example-5-mysql" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              19. MVC Web Application in a 3-Tier Architecture – Example 5, MySQL
+              19. Web application MVC in a 3-tier architecture – Example 5, MySQL
             
           </span>
         </div>
@@ -337,7 +339,7 @@
   <span class="md-ellipsis">
     
   
-    2. Tools used in this document
+    2. Tools Used in This Document
   
 
     
@@ -384,14 +386,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-model-view-controller-development.html" class="md-nav__link">
+      <a href="mvc-development-model-view-controller.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. MVC (Model–View–Controller) Development
+    4. MVC Development (Model–View–Controller)
   
 
     
@@ -411,14 +413,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-1.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-1.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    5. MVC Web Application [person] – Version 1
+    5. Web application MVC [personne] – version 1
   
 
     
@@ -438,14 +440,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-2.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-2.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6. MVC Web Application [person] – Version 2
+    6. Web application MVC [personne] – version 2
   
 
     
@@ -465,14 +467,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-3.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-3.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. MVC Web Application [person] – Version 3
+    7. Web application MVC [personne] – version 3
   
 
     
@@ -499,7 +501,7 @@
   <span class="md-ellipsis">
     
   
-    8. The JSTL Tag Library
+    8. The JSTL tag library
   
 
     
@@ -519,14 +521,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-4.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-4.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    9. MVC Web Application [person] – Version 4
+    9. Web application MVC [personne] – version 4
   
 
     
@@ -546,14 +548,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-5.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-5.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    10. MVC Web Application [person] – Version 5
+    10. Web application MVC [personne] – version 5
   
 
     
@@ -573,14 +575,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-6.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-6.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    11. MVC Web Application [person] – Version 6
+    11. Web application MVC [personne] – version 6
   
 
     
@@ -600,14 +602,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-7.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-7.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. MVC Web Application [person] – Version 7
+    12. Web application MVC [personne] – version 7
   
 
     
@@ -627,14 +629,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-8.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-8.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    13. MVC Web Application [person] – Version 8
+    13. Web application MVC [personne] – version 8
   
 
     
@@ -742,7 +744,7 @@
   <span class="md-ellipsis">
     
   
-    17. MVC Web Application in a 3-Tier Architecture – Example 3 – Firebird DBMS
+    17. MVC web application in a 3-tier architecture – Example 3 – Firebird DBMS
   
 
     
@@ -769,7 +771,7 @@
   <span class="md-ellipsis">
     
   
-    18. MVC Web Application in a 3-Tier Architecture – Example 4, Postgres
+    18. MVC web application in a 3-tier architecture – Example 4, Postgres
   
 
     
@@ -805,7 +807,7 @@
   <span class="md-ellipsis">
     
   
-    19. MVC Web Application in a 3-Tier Architecture – Example 5, MySQL
+    19. Web application MVC in a 3-tier architecture – Example 5, MySQL
   
 
     
@@ -816,14 +818,14 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="mvc-web-application-in-a-3-tier-architecture---example-5-mysql.html" class="md-nav__link md-nav__link--active">
+      <a href="web-application-mvc-in-a-3-tier-architecture---example-5-mysql.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    19. MVC Web Application in a 3-Tier Architecture – Example 5, MySQL
+    19. Web application MVC in a 3-tier architecture – Example 5, MySQL
   
 
     
@@ -860,10 +862,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#192-the-eclipse-project-for-the-dao-and-service-layers" class="md-nav__link">
+  <a href="#192-the-eclipse-project-for-layers-dao-and-service" class="md-nav__link">
     <span class="md-ellipsis">
       
-        19.2. The Eclipse project for the [DAO] and [service] layers
+        19.2. The Eclipse project for layers [dao] and [service]
       
     </span>
   </a>
@@ -893,10 +895,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#195-web-application-tests" class="md-nav__link">
+  <a href="#195-testing-the-web-application" class="md-nav__link">
     <span class="md-ellipsis">
       
-        19.5. [Web] application tests
+        19.5. Testing the [web] application
       
     </span>
   </a>
@@ -918,14 +920,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-in-a-3-tier-architecture---example-6-sql-server-express.html" class="md-nav__link">
+      <a href="web-application-mvc-in-a-3-tier-architecture---example-6-sql-server-express.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    20. MVC Web Application in a 3-Tier Architecture – Example 6, SQL Server Express
+    20. Web application MVC in a 3-tier architecture – Example 6, SQL Server Express
   
 
     
@@ -972,14 +974,14 @@
   
   
     <li class="md-nav__item">
-      <a href="the-code-from-the-article.html" class="md-nav__link">
+      <a href="the-code-for-this-article.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    22. The code from the article
+    22. The code for this article
   
 
     
@@ -1009,12 +1011,12 @@
 
 
 
-<h1 id="19-mvc-web-application-in-a-3-tier-architecture-example-5-mysql">19. <span style="color: #365f91">MVC Web Application in a 3-Tier Architecture – Example 5, MySQL</span></h1>
+<h1 id="19-web-application-mvc-in-a-3-tier-architecture-example-5-mysql">19. <span style="color: #365f91"><strong>Web application MVC in a 3-tier architecture – Example 5, MySQL</strong></span></h1>
 <h2 id="191-the-mysql-database">19.1. <span style="color: #4f81bd">The MySQL database</span></h2>
-<p>In this version, we will store the list of people in a MySQL 4.x database table. We used the [Apache – MySQL – PHP] package available at the URL [http://www.easyphp.org]. In the following, the screenshots are from the MySQL Manager Lite client [http://www.sqlmanager.net/fr/products/mysql/manager], a free administration client for the MySQL DBMS.</p>
+<p>In this version, we will populate the list of people into a MySQL 4.x database table. We used the [Apache – MySQL – PHP] package available at url [http://www.easyphp.org]. The following screenshots are from the EMS MySQL Manager Lite [http://www.sqlmanager.net/fr/products/mysql/manager] client, a free administration client for SGBD MySQL.</p>
 <p>The database is named [dbpersonnes]. It contains a table named [PERSONNES]:</p>
 <p><img src="images/10000000000000D8000000A0F9BD024D.png" width="151" height="112" style="width:4.001cm;height:2.963cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000D8000000A0F9BD024D.png" /></p>
-<p>The [PERSONNES] table will contain the list of people managed by the web application. It was created using the following SQL statements:</p>
+<p>The [PERSONNES] table will contain the list of people managed by the web application. It was created using the following SQL commands:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
@@ -1035,40 +1037,40 @@
 <a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">  </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w">  </span><span class="p">(</span><span class="o">`</span><span class="n">ID</span><span class="o">`</span><span class="p">)</span>
 <a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="p">)</span><span class="w"> </span><span class="n">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="n">CHARSET</span><span class="o">=</span><span class="n">latin1</span>
 </code></pre></div></td></tr></table></div>
-<p>MySQL 4.x seems less capable than the two previous DBMSs. I was unable to add constraints (checks) to the table.</p>
+<p>MySQL 4.x seems less robust than the two previous SGBD versions. I was unable to add constraints (checks) to the table.</p>
 <ul>
-  <li>Line 10: The table must be of type [InnoDB] and not [MyISAM], which does not support transactions.
+  <li>Line 10: The table must be of type [InnoDB], not [MyISAM], which does not support transactions.
   </li>
-  <li>Line 2: The primary key is of type <b>auto_increment</b>. If a row is inserted without a value for the table’s ID column, MySQL will automatically generate an integer for that column. This will save us from having to generate the primary keys ourselves.
+  <li>Line 2: The primary key is of type <b>auto_increment</b>. If a row is inserted without a value for the ID column in the table, MySQL will automatically generate an integer for that column. This will save us from having to generate the primary keys ourselves.
   </li>
 </ul>
 
-<p>The [PERSONNES] table could have the following content:</p>
+<p>The table [PERSONNES] could have the following content:</p>
 <p><img src="images/1000000000000250000000B6397F308B.png" width="414" height="127" style="width:10.961cm;height:3.371cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000250000000B6397F308B.png" /></p>
-<p>We know that when inserting a [Person] object via our [DAO] layer, the [id] field of this object is equal to -1 before insertion and has a value other than -1 afterward; this value is the primary key assigned to the new row inserted into the [PERSONNES] table. Let’s look at an example to see how we can determine this value.</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000558000000FD0C36C7CD.png" width="680" height="126" style="display:inline-block; margin:4px;width:17.997cm;height:3.328cm;" class="odt-zoomable" data-zoom-src="images/1000000000000558000000FD0C36C7CD.png" /></td></tr></table>
+<p>We know that when inserting a [Personne] object via our [dao] layer, the [id] field of this object is equal to -1 before insertion and has a value other than -1 afterward, this value being the primary key assigned to the new row inserted into the [PERSONNES] table. Let’s look at an example to see how we can determine this value.</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/1000000000000558000000FD0C36C7CD.png" width="680" height="126" style="display:inline-block; margin:4px;width:17.997cm;height:3.328cm;" class="odt-zoomable" data-zoom-src="images/1000000000000558000000FD0C36C7CD.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000055300000162285DF619.png" width="680" height="177" style="display:inline-block; margin:4px;width:17.997cm;height:4.674cm;" class="odt-zoomable" data-zoom-src="images/100000000000055300000162285DF619.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000055300000162285DF619.png" width="680" height="177" style="display:inline-block; margin:4px;width:17.997cm;height:4.674cm;" class="odt-zoomable" data-zoom-src="images/100000000000055300000162285DF619.png" /></td></tr></table>
 
-<p><a id="dao-mysql-exemple-insertion"></a></p>
-<p>The SQL statement </p>
+<p><span id="dao-mysql-exemple-insertion" name="dao-mysql-exemple-insertion" class="odt-bookmark-anchor"></span></p>
+<p>The command SQL </p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">LAST_INSERT_ID</span><span class="p">()</span>
 </code></pre></div>
-<p>allows us to determine the last value inserted into the ID field of the table. It must be executed <strong>after the insertion</strong>. This differs from the [Firebird] and [Postgres] DBMSs, where we requested the primary key value of the added person <strong>before insertion</strong>. We will use it in the [people-mysql.xml] file, which contains the SQL statements executed on the database.</p>
-<h2 id="192-the-eclipse-project-for-the-dao-and-service-layers">19.2. <span style="color: #4f81bd">The Eclipse project for the [DAO] and [service] layers</span></h2>
-<p>To develop the [dao] and [service] layers of our application with the MySQL database, we will use the following Eclipse project [mvc-personnes-05]:</p>
+<p>allows us to determine the last value inserted into the ID field of the table. It must be executed <strong>after the insertion</strong>. This differs from the SGBD, [Firebird], and [Postgres] queries, where we requested the primary key value of the added person <strong>before the insertion</strong>. We will use it in the [personnes-mysql.xml] file, which aggregates the SQL commands issued to the database.</p>
+<h2 id="192-the-eclipse-project-for-layers-dao-and-service">19.2. <span style="color: #4f81bd"><strong>The Eclipse project for layers [dao] and [service]</strong></span></h2>
+<p>To develop the [dao] and [service] layers of our application using the MySQL database, we will use the following Eclipse project, [mvc-personnes-05]:</p>
 <p><img src="images/10000000000000DE00000063B6D4C070.png" width="156" height="70" style="width:4.129cm;height:1.842cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000DE00000063B6D4C070.png" /></p>
 <p>The project is a simple Java project, not a Tomcat web project.</p>
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
-<p>[src] directory</p>
+<p>Folder [src]</p>
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
 <p>This folder contains the source code for the [dao] and [service] layers, as well as the configuration files for these two layers:</p>
 <p><img src="images/100000000000010D0000016380A19AC1.png" width="188" height="248" style="width:4.979cm;height:6.57cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000010D0000016380A19AC1.png" /></p>
 <p>All files with [mysql] in their names may or may not have been modified for the Firebird and Postgres versions. Below, we describe those that have been modified.</p>
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
-<p>[database] folder</p>
+<p>Folder [database]</p>
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
-<p>This folder contains the script for creating the MySQL database for users:</p>
+<p>This folder contains the script for creating the MySQL database of people:</p>
 <p><img src="images/1000000000000093000000214220834E.png" width="103" height="23" style="width:2.72cm;height:0.61cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000093000000214220834E.png" /></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
@@ -1111,8 +1113,8 @@
 <span class="normal"><a href="#__codelineno-2-39">39</a></span>
 <span class="normal"><a href="#__codelineno-2-40">40</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="o">#</span><span class="w"> </span><span class="n">EMS</span><span class="w"> </span><span class="n">MySQL</span><span class="w"> </span><span class="n">Manager</span><span class="w"> </span><span class="n">Lite</span><span class="w"> </span><span class="mi">3</span><span class="p">.</span><span class="mi">2</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="o">#</span><span class="w"> </span><span class="c1">---------------------------------------</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="o">#</span><span class="w"> </span><span class="k">Host</span><span class="w">     </span><span class="p">:</span><span class="w"> </span><span class="n">localhost</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="o">#</span><span class="w"> </span><span class="n">Port</span><span class="w">     </span><span class="p">:</span><span class="w"> </span><span class="mi">3306</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="o">#</span><span class="w"> </span><span class="k">Host</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">localhost</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="o">#</span><span class="w"> </span><span class="n">Port</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">3306</span>
 <a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="o">#</span><span class="w"> </span><span class="k">Database</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">dbpersonnes</span>
 <a id="__codelineno-2-6" name="__codelineno-2-6"></a>
 <a id="__codelineno-2-7" name="__codelineno-2-7"></a>
@@ -1140,7 +1142,7 @@
 <a id="__codelineno-2-29" name="__codelineno-2-29"></a><span class="p">)</span><span class="w"> </span><span class="n">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="n">CHARSET</span><span class="o">=</span><span class="n">latin1</span><span class="p">;</span>
 <a id="__codelineno-2-30" name="__codelineno-2-30"></a>
 <a id="__codelineno-2-31" name="__codelineno-2-31"></a><span class="o">#</span>
-<a id="__codelineno-2-32" name="__codelineno-2-32"></a><span class="o">#</span><span class="w"> </span><span class="k">Data</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="o">`</span><span class="n">personnes</span><span class="o">`</span><span class="w"> </span><span class="k">table</span><span class="w">  </span><span class="p">(</span><span class="k">LIMIT</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="mi">500</span><span class="p">)</span>
+<a id="__codelineno-2-32" name="__codelineno-2-32"></a><span class="o">#</span><span class="w"> </span><span class="k">Data</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="o">`</span><span class="n">personnes</span><span class="o">`</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="p">(</span><span class="k">LIMIT</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="mi">500</span><span class="p">)</span>
 <a id="__codelineno-2-33" name="__codelineno-2-33"></a><span class="o">#</span>
 <a id="__codelineno-2-34" name="__codelineno-2-34"></a>
 <a id="__codelineno-2-35" name="__codelineno-2-35"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="o">`</span><span class="n">personnes</span><span class="o">`</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="n">ID</span><span class="o">`</span><span class="p">,</span><span class="w"> </span><span class="o">`</span><span class="k">VERSION</span><span class="o">`</span><span class="p">,</span><span class="w"> </span><span class="o">`</span><span class="n">NOM</span><span class="o">`</span><span class="p">,</span><span class="w"> </span><span class="o">`</span><span class="n">PRENOM</span><span class="o">`</span><span class="p">,</span><span class="w"> </span><span class="o">`</span><span class="n">DATENAISSANCE</span><span class="o">`</span><span class="p">,</span><span class="w"> </span><span class="o">`</span><span class="n">MARIE</span><span class="o">`</span><span class="p">,</span><span class="w"> </span><span class="o">`</span><span class="n">NBENFANTS</span><span class="o">`</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span>
@@ -1153,15 +1155,15 @@
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
 <p>Folder [lib]</p>
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
-<p>This directory contains the files required by the application:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000014A000001C7FA46DB91.png" width="165" height="228" style="display:inline-block; margin:4px;width:4.366cm;height:6.02cm;" class="odt-zoomable" data-zoom-src="images/100000000000014A000001C7FA46DB91.png" /></td></tr></table>
+<p>This folder contains the archives required by the application:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000014A000001C7FA46DB91.png" width="165" height="228" style="display:inline-block; margin:4px;width:4.366cm;height:6.02cm;" class="odt-zoomable" data-zoom-src="images/100000000000014A000001C7FA46DB91.png" /></td></tr></table>
 
-<p>Note the presence of the MySQL DBMS JDBC driver. All these files are part of the Eclipse project&#x27;s <em>classpath</em>.</p>
+<p>Note the presence of the jdbc driver for SGBD and MySQL. All these files are part of the Eclipse project&#x27;s <em>classpath</em>.</p>
 <h2 id="193-the-dao-layer">19.3. <span style="color: #4f81bd">The [dao] layer</span></h2>
 <p>The [dao] layer is as follows:</p>
 <p><img src="images/100000000000010D0000014756B49F60.png" width="188" height="229" style="width:4.979cm;height:6.054cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000010D0000014756B49F60.png" /></p>
-<p>We are only presenting the changes compared to the [Firebird] version.</p>
-<p>The mapping file [person-mysql.xml] is as follows:</p>
+<p>We are only showing what has changed compared to version and [Firebird].</p>
+<p>The [personne-mysql.xml] mapping file is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000e1">&lt;?xml</span><span style="color:#000000"> </span><span style="color:#0000e1">version=</span><span style="color:#000080">&quot;1.0&quot;</span><span style="color:#000000"> </span><span style="color:#0000e1">encoding=</span><span style="color:#000080">&quot;UTF-8&quot;</span><span style="color:#000000"> </span><span style="color:#0000e1">?&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1214,22 +1216,22 @@
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;/sqlMap&gt;</span></span>
 </code></pre></div>
 
-<p>This is the same content as [people-firebird.xml] with the following minor differences:</p>
+<p>This is the same content as [personnes-firebird.xml], with the following minor differences:</p>
 <ul>
-  <li><span style="color: #000000">the SQL statement &quot;Person.insertOne&quot; has changed in lines 29–37:</span>
+  <li><span style="color: #000000">The SQL &quot; Personne.insertOne &quot; command has changed lines 29-37:</span>
   </li>
-  <li><span style="color: #000000">the SQL insert statement is executed before the SELECT statement, which retrieves the primary key value of the inserted row</span>
+  <li><span style="color: #000000">the insertion order SQL is executed before the order SELECT, which will allow retrieving the primary key value of the inserted row</span>
   </li>
-  <li><span style="color: #000000">the SQL insertion statement does not have a value for the ID column in the [PERSONNES] table</span>
+  <li><span style="color: #000000">The insertion command SQL has no value for the column ID in the table [PERSONNES]</span>
   </li>
 </ul>
 
-<p><span style="color: #000000">This mirrors the insertion example we discussed in </span>Section<a href="#dao-mysql-exemple-insertion"><u><span style="color: #0563c1"> 19.1</span></u></a><span style="color: #000000">.</span></p>
-<p><span style="color: #000000"><a id="pb-select-after-insert-mysql"></a>Note that this may be a potential source of problems between concurrent threads. Imagine two threads, Th1 and Th2, performing an insertion at the same time. There are a total of four SQL statements to be executed. Suppose they are executed in the following order:</span></p>
+<p><span style="color: #000000">This reflects the insertion example we discussed in </span>Section<a href="#dao-mysql-exemple-insertion"><u><span style="color: #0563c1"> 19.1</span></u></a><span style="color: #000000">.</span></p>
+<p><span style="color: #000000"><span id="pb-select-after-insert-mysql" name="pb-select-after-insert-mysql" class="odt-bookmark-anchor"></span>Note that this may be a potential source of problems between concurrent threads. Imagine two threads, Th1 and Th2, performing an insertion at the same time. There are a total of four SQL orders to be issued. Suppose they are issued in the following order:</span></p>
 <ol>
-  <li><span style="color: #000000">insert I1 by Th1</span>
+  <li><span style="color: #000000">insertion I1 by Th1</span>
   </li>
-  <li><span style="color: #000000">insert I2 by Th2</span>
+  <li><span style="color: #000000">insertion I2 by Th2</span>
   </li>
   <li><span style="color: #000000">select S1 by Th1</span>
   </li>
@@ -1237,12 +1239,12 @@
   </li>
 </ol>
 
-<p><span style="color: #000000">In step 3, Th1 retrieves the primary key generated during the last insertion, which is Th2’s key and not its own. I am unsure whether iBATIS’s [insert] method is protected against this scenario. We will assume that it handles this properly. If that were not the case, we would need to derive the implementation class [DaoImplCommon] from the [dao] layer into a class [DaoImplMySQL] where the [insertPersonne] method would be synchronized. This would only solve the problem for the threads in our application. If, in the example above, Th1 and Th2 are threads from two different applications, the problem would then need to be resolved using both transactions and an appropriate isolation level between transactions. The [serializable] level, in which transactions are executed as if they were running sequentially, would be appropriate.</span></p>
-<p><span style="color: #000000">Note that this problem does not exist with the Firebird and Postgres DBMSs, which perform the SELECT before the INSERT. For example, consider the following sequence:</span></p>
+<p><span style="color: #000000">In step 3, Th1 retrieves the primary key generated during the last insertion, which is Th2’s key and not its own. I am unsure whether the method [insert] of iBATIS is protected for this scenario. We will assume that it handles it correctly. If that were not the case, we would need to derive the implementation class [DaoImplCommon] from the [dao] layer into a class [DaoImplMySQL] where the method [insertPersonne] would be synchronized. This would only solve the problem for the threads in our application. If, as described above, Th1 and Th2 are threads from two different applications, we would then need to resolve the issue using both transactions and an appropriate isolation level between transactions. The [serializable] isolation level, in which transactions are executed as if they were running sequentially, would be appropriate.</span></p>
+<p><span style="color: #000000">Note that this problem does not exist with Firebird and Postgres, which execute SELECT before INSERT. For example, consider the following sequence:</span></p>
 <ol>
   <li><span style="color: #000000">select S1 from Th1</span>
   </li>
-  <li><span style="color: #000000">SELECT S2 from Th2</span>
+  <li><span style="color: #000000">select S2 from Th2</span>
   </li>
   <li><span style="color: #000000">insert I1 from Th1</span>
   </li>
@@ -1251,9 +1253,9 @@
 </ol>
 
 <p><span style="color: #000000">In steps 1 and 2, Th1 and Th2 retrieve primary key values from the same generator. This operation is normally atomic, and Th1 and Th2 will retrieve two different values. If the operation were not atomic, and Th1 and Th2 retrieved two identical values, the insertion performed in step 4 by Th2 would fail due to a primary key duplicate. This is a fully recoverable error, and Th2 can retry the insertion.</span></p>
-<p><span style="color: #000000">We will leave the &quot;Personne.insertOne&quot; operation as it currently is in the [personnes-mysql.xml] file, but the reader should be aware that there is a potential issue here.</span></p>
+<p><span style="color: #000000">We will leave the operation &quot;Personne.insertOne&quot; as it currently is in the file [personnes-mysql.xml], but the reader should be aware that there is a potential issue here.</span></p>
 <p><span style="color: #000000">The implementation class [DaoImplCommon] of the [dao] layer is the same as in the two previous versions.</span></p>
-<p><span style="color: #000000">The configuration of the [dao] layer has been adapted to the [MySQL] DBMS. Thus, the configuration file [spring-config-test-dao-mysql.xml] is as follows:</span></p>
+<p><span style="color: #000000">The configuration of the [dao] layer has been adapted to SGBD and [MySQL]. Thus, the configuration file [spring-config-test-dao-mysql.xml] is as follows:</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000e1">&lt;?xml</span><span style="color:#000000"> </span><span style="color:#0000e1">version=</span><span style="color:#000080">&quot;1.0&quot;</span><span style="color:#000000"> </span><span style="color:#0000e1">encoding=</span><span style="color:#000080">&quot;ISO_8859-1&quot;</span><span style="color:#0000e1">?&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000e1">&lt;!DOCTYPE</span><span style="color:#000000"> </span><span style="color:#0000e1">beans</span><span style="color:#000000"> </span><span style="color:#0000e1">SYSTEM</span><span style="color:#000000"> </span><span style="color:#000080">&quot;http://www.springframework.org/dtd/spring-beans.dtd&quot;</span><span style="color:#0000e1">&gt;</span></span></span>
@@ -1284,7 +1286,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">            </span><span style="color:#0000e1">&lt;value&gt;</span><span style="color:#000000">classpath:sql-map-config-mysql.xml</span><span style="color:#0000e1">&lt;/value&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000e1">&lt;/property&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000e1">&lt;/bean&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- the [dao] layer access classes --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- layer access classes [dao] --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000e1">&lt;bean</span><span style="color:#000000"> </span><span style="color:#0000e1">id=</span><span style="color:#000080">&quot;dao&quot;</span><span style="color:#000000"> </span><span style="color:#0000e1">class=</span><span style="color:#000080">&quot;istia.st.mvc.personnes.dao.DaoImplCommon&quot;</span><span style="color:#0000e1">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000e1">&lt;property</span><span style="color:#000000"> </span><span style="color:#0000e1">name=</span><span style="color:#000080">&quot;sqlMapClient&quot;</span><span style="color:#0000e1">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">            </span><span style="color:#0000e1">&lt;ref</span><span style="color:#000000"> </span><span style="color:#0000e1">local=</span><span style="color:#000080">&quot;sqlMapClient&quot;</span><span style="color:#0000e1">/&gt;</span></span></span>
@@ -1294,33 +1296,33 @@
 </code></pre></div>
 
 <ul>
-  <li><span style="color: #000000">lines 5–19: The [dataSource] bean now refers to the [MySQL] database [dbpersonnes], whose administrator is [root] with no password. The reader should modify this configuration according to their own environment.</span>
+  <li><span style="color: #000000">Lines 5–19: The [dataSource] bean now refers to the [MySQL] database, managed by [root] without a password. The reader should modify this configuration according to their own environment.</span>
   </li>
-  <li><span style="color: #000000">line 31: the [DaoImplCommon] class is the implementation class for the [dao] layer</span>
+  <li><span style="color: #000000">Line 31: The class [DaoImplCommon] is the implementation class for the layer [dao]</span>
   </li>
 </ul>
 
-<p><span style="color: #000000">With these changes made, we can move on to testing.</span></p>
+<p><span style="color: #000000">Once these changes have been made, we can proceed to testing.</span></p>
 <h2 id="194-tests-for-the-dao-and-service-layers">19.4. <span style="color: #4f81bd">Tests for the [dao] and [service] layers</span></h2>
-<p><span style="color: #000000">The tests for the [dao] and [service] layers are the same as for the [Firebird] version. The results obtained are as follows:</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000548000001C9173DFD39.png" width="676" height="229" style="display:inline-block; margin:4px;width:17.886cm;height:6.047cm;" class="odt-zoomable" data-zoom-src="images/1000000000000548000001C9173DFD39.png" /></td></tr></table>
+<p><span style="color: #000000">The tests for the [dao] and [service] layers are the same as for version and [Firebird]. The results obtained are as follows:</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/1000000000000548000001C9173DFD39.png" width="676" height="229" style="display:inline-block; margin:4px;width:17.886cm;height:6.047cm;" class="odt-zoomable" data-zoom-src="images/1000000000000548000001C9173DFD39.png" /></td></tr></table>
 
-<p><span style="color: #000000">We can see that the tests passed successfully with the [DaoImplCommon] implementation. We will not need to derive this class as was necessary with the [Firebird] DBMS.</span></p>
-<h2 id="195-web-application-tests">19.5. <span style="color: #4f81bd">[Web] application tests</span></h2>
-<p><span style="color: #000000">To test the web application with the [MySQL] DBMS, we build an Eclipse project [mvc-personnes-05B] in a manner analogous to that used to build the [mvc-personnes-03B] project with the Firebird database (see </span>Section<a href="#web-firebird"><u><span style="color: #0563c1"> 17.7</span></u></a><span style="color: #000000">).  However, as with Postgres, we do not need to recreate the [personnes-dao.jar] and [personnes-service.jar] archives since we have not modified any classes.</span></p>
+<p><span style="color: #000000">We can see that the tests were passed successfully with the [DaoImplCommon] implementation. We will not need to derive this class as we had to do with SGBD and [Firebird].</span></p>
+<h2 id="195-testing-the-web-application">19.5. <span style="color: #4f81bd">Testing the [web] application</span></h2>
+<p><span style="color: #000000">To test the web application with SGBD and [MySQL], we build an Eclipse project [mvc-personnes-05B] in a manner similar to that used to build the [mvc-personnes-03B] project with the Firebird database (see </span>Section<a href="mvc-web-application-in-a-3-tier-architecture---example-3---firebird-dbms.html#web-firebird"><u><span style="color: #0563c1"> 17.7</span></u></a><span style="color: #000000">).  However, as with Postgres, we do not need to recreate the [personnes-dao.jar] and [personnes-service.jar] archives since we have not modified any classes.</span></p>
 <p><span style="color: #000000">We deploy the [mvc-personnes-05B] web project within Tomcat:</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001560000008E61AA1E0B.png" width="239" height="99" style="display:inline-block; margin:4px;width:6.331cm;height:2.628cm;" class="odt-zoomable" data-zoom-src="images/10000000000001560000008E61AA1E0B.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001360000005A8CC393A1.png" width="217" height="63" style="display:inline-block; margin:4px;width:5.74cm;height:1.667cm;" class="odt-zoomable" data-zoom-src="images/10000000000001360000005A8CC393A1.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000001560000008E61AA1E0B.png" width="239" height="99" style="display:inline-block; margin:4px;width:6.331cm;height:2.628cm;" class="odt-zoomable" data-zoom-src="images/10000000000001560000008E61AA1E0B.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000001360000005A8CC393A1.png" width="217" height="63" style="display:inline-block; margin:4px;width:5.74cm;height:1.667cm;" class="odt-zoomable" data-zoom-src="images/10000000000001360000005A8CC393A1.png" /></td></tr></table>
 
-<p><span style="color: #000000">The MySQL DBMS is started. The contents of the [PERSONNES] table are then as follows:</span></p>
+<p><span style="color: #000000">SGBD and MySQL are launched. The contents of the [PERSONNES] table are then as follows:</span></p>
 <p><img src="images/100000000000024B000000AD724E2BB8.png" width="411" height="121" style="width:10.871cm;height:3.203cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000024B000000AD724E2BB8.png" /></p>
-<p><span style="color: #000000">Tomcat is then started. Using a browser, we request the URL [http://localhost:8080/mvc-personnes-05B]:</span></p>
+<p><span style="color: #000000">Tomcat is launched in turn. Using a browser, we request the url [http://localhost:8080/mvc-personnes-05B]:</span></p>
 <p><img src="images/10000000000002340000010ACDC03F1A.png" width="395" height="186" style="width:10.449cm;height:4.928cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002340000010ACDC03F1A.png" /></p>
-<p><span style="color: #000000">We add    a new person using the [Add] link:</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000019300000178981FF3E2.png" width="282" height="263" style="display:inline-block; margin:4px;width:7.459cm;height:6.959cm;" class="odt-zoomable" data-zoom-src="images/100000000000019300000178981FF3E2.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000022600000123D5B450B9.png" width="332" height="176" style="display:inline-block; margin:4px;width:8.789cm;height:4.65cm;" class="odt-zoomable" data-zoom-src="images/100000000000022600000123D5B450B9.png" /></td></tr></table>
+<p><span style="color: #000000">We add    a new person using the link [Ajout]:</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000019300000178981FF3E2.png" width="282" height="263" style="display:inline-block; margin:4px;width:7.459cm;height:6.959cm;" class="odt-zoomable" data-zoom-src="images/100000000000019300000178981FF3E2.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000022600000123D5B450B9.png" width="332" height="176" style="display:inline-block; margin:4px;width:8.789cm;height:4.65cm;" class="odt-zoomable" data-zoom-src="images/100000000000022600000123D5B450B9.png" /></td></tr></table>
 
 <p><span style="color: #000000">We verify the addition in the database:</span></p>
 <p><img src="images/100000000000024A000000BCE867BEA2.png" width="410" height="132" style="width:10.85cm;height:3.48cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000024A000000BCE867BEA2.png" /></p>
-<p><span style="color: #000000">The reader is invited to perform other tests [edit, delete].</span></p>
+<p><span style="color: #000000">The reader is invited to perform further tests [modification, suppression].</span></p>
 
 
 

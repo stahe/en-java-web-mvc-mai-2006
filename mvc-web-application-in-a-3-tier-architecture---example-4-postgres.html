@@ -18,7 +18,7 @@
         <link rel="prev" href="mvc-web-application-in-a-3-tier-architecture---example-3---firebird-dbms.html">
       
       
-        <link rel="next" href="mvc-web-application-in-a-3-tier-architecture---example-5-mysql.html">
+        <link rel="next" href="web-application-mvc-in-a-3-tier-architecture---example-5-mysql.html">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>18. MVC Web Application in a 3-Tier Architecture – Example 4, Postgres - The basics of MVC web development in Java: a practical guide</title>
+        <title>18. MVC web application in a 3-tier architecture – Example 4, Postgres - The basics of MVC web development in Java: a practical guide</title>
       
     
     
@@ -56,6 +56,8 @@
     
     
       <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -128,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              18. MVC Web Application in a 3-Tier Architecture – Example 4, Postgres
+              18. MVC web application in a 3-tier architecture – Example 4, Postgres
             
           </span>
         </div>
@@ -337,7 +339,7 @@
   <span class="md-ellipsis">
     
   
-    2. Tools used in this document
+    2. Tools Used in This Document
   
 
     
@@ -384,14 +386,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-model-view-controller-development.html" class="md-nav__link">
+      <a href="mvc-development-model-view-controller.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. MVC (Model–View–Controller) Development
+    4. MVC Development (Model–View–Controller)
   
 
     
@@ -411,14 +413,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-1.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-1.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    5. MVC Web Application [person] – Version 1
+    5. Web application MVC [personne] – version 1
   
 
     
@@ -438,14 +440,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-2.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-2.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6. MVC Web Application [person] – Version 2
+    6. Web application MVC [personne] – version 2
   
 
     
@@ -465,14 +467,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-3.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-3.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. MVC Web Application [person] – Version 3
+    7. Web application MVC [personne] – version 3
   
 
     
@@ -499,7 +501,7 @@
   <span class="md-ellipsis">
     
   
-    8. The JSTL Tag Library
+    8. The JSTL tag library
   
 
     
@@ -519,14 +521,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-4.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-4.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    9. MVC Web Application [person] – Version 4
+    9. Web application MVC [personne] – version 4
   
 
     
@@ -546,14 +548,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-5.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-5.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    10. MVC Web Application [person] – Version 5
+    10. Web application MVC [personne] – version 5
   
 
     
@@ -573,14 +575,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-6.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-6.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    11. MVC Web Application [person] – Version 6
+    11. Web application MVC [personne] – version 6
   
 
     
@@ -600,14 +602,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-7.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-7.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. MVC Web Application [person] – Version 7
+    12. Web application MVC [personne] – version 7
   
 
     
@@ -627,14 +629,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-8.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-8.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    13. MVC Web Application [person] – Version 8
+    13. Web application MVC [personne] – version 8
   
 
     
@@ -742,7 +744,7 @@
   <span class="md-ellipsis">
     
   
-    17. MVC Web Application in a 3-Tier Architecture – Example 3 – Firebird DBMS
+    17. MVC web application in a 3-tier architecture – Example 3 – Firebird DBMS
   
 
     
@@ -778,7 +780,7 @@
   <span class="md-ellipsis">
     
   
-    18. MVC Web Application in a 3-Tier Architecture – Example 4, Postgres
+    18. MVC web application in a 3-tier architecture – Example 4, Postgres
   
 
     
@@ -796,7 +798,7 @@
   <span class="md-ellipsis">
     
   
-    18. MVC Web Application in a 3-Tier Architecture – Example 4, Postgres
+    18. MVC web application in a 3-tier architecture – Example 4, Postgres
   
 
     
@@ -833,10 +835,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#182-the-eclipse-project-for-the-dao-and-service-layers" class="md-nav__link">
+  <a href="#182-the-eclipse-project-for-layers-dao-and-service" class="md-nav__link">
     <span class="md-ellipsis">
       
-        18.2. The Eclipse project for the [dao] and [service] layers
+        18.2. The Eclipse project for layers [dao] and [service]
       
     </span>
   </a>
@@ -866,10 +868,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#185-web-application-tests" class="md-nav__link">
+  <a href="#185-testing-the-web-application" class="md-nav__link">
     <span class="md-ellipsis">
       
-        18.5. [Web] Application Tests
+        18.5. Testing the [web] application
       
     </span>
   </a>
@@ -891,14 +893,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-in-a-3-tier-architecture---example-5-mysql.html" class="md-nav__link">
+      <a href="web-application-mvc-in-a-3-tier-architecture---example-5-mysql.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    19. MVC Web Application in a 3-Tier Architecture – Example 5, MySQL
+    19. Web application MVC in a 3-tier architecture – Example 5, MySQL
   
 
     
@@ -918,14 +920,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-in-a-3-tier-architecture---example-6-sql-server-express.html" class="md-nav__link">
+      <a href="web-application-mvc-in-a-3-tier-architecture---example-6-sql-server-express.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    20. MVC Web Application in a 3-Tier Architecture – Example 6, SQL Server Express
+    20. Web application MVC in a 3-tier architecture – Example 6, SQL Server Express
   
 
     
@@ -972,14 +974,14 @@
   
   
     <li class="md-nav__item">
-      <a href="the-code-from-the-article.html" class="md-nav__link">
+      <a href="the-code-for-this-article.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    22. The code from the article
+    22. The code for this article
   
 
     
@@ -1009,12 +1011,12 @@
 
 
 
-<h1 id="18-mvc-web-application-in-a-3-tier-architecture-example-4-postgres">18. <span style="color: #365f91"><strong>MVC Web Application in a 3-Tier Architecture – Example 4, Postgres</strong></span></h1>
+<h1 id="18-mvc-web-application-in-a-3-tier-architecture-example-4-postgres">18. <span style="color: #365f91">MVC web application in a 3-tier architecture – Example 4, Postgres</span></h1>
 <h2 id="181-the-postgres-database">18.1. <span style="color: #4f81bd">The Postgres database</span></h2>
-<p>In this version, we will store the list of people in a Postgres 8.x database table [http://www.postgres.org]. In the following, the screenshots are taken from the EMS PostgreSQL Manager Lite client [http://www.sqlmanager.net/fr/products/postgresql/manager], a free administration client for the Postgres DBMS.</p>
+<p>In this version, we will store the list of people in a Postgres 8.x database table [http://www.postgres.org]. The following screenshots are from the EMS PostgreSQL Manager Lite [http://www.sqlmanager.net/fr/products/postgresql/manager] client, a free Postgres administration client.</p>
 <p>The database is named [dbpersonnes]. It contains a table named [PERSONNES]:</p>
 <p><img src="images/10000000000000DA0000019F63C2A51A.png" width="153" height="291" style="width:4.039cm;height:7.689cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000DA0000019F63C2A51A.png" /></p>
-<p>The [PERSONNES] table will contain the list of people managed by the web application. It was created using the following SQL statements:</p>
+<p>The [PERSONNES] table will contain the list of people managed by the web application. It was created using the following SQL commands:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
@@ -1041,35 +1043,35 @@
 <a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">  </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="ss">&quot;PERSONNES_chk_PRENOM&quot;</span><span class="w"> </span><span class="k">CHECK</span><span class="w"> </span><span class="p">((</span><span class="ss">&quot;PRENOM&quot;</span><span class="p">)::</span><span class="nb">text</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">::</span><span class="nb">text</span><span class="p">)</span>
 <a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="p">)</span><span class="w"> </span><span class="k">WITH</span><span class="w"> </span><span class="k">OIDS</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
-<p>We will not dwell on this table, which is analogous to the Firebird [PERSONNES] table discussed earlier. Note, however, that the column and table names are enclosed in quotes. Furthermore, these names are case-sensitive. It is possible that this behavior in Postgres 8.x is configurable. I have not investigated this further.</p>
-<p>The [PERSONNES] table could have the following content:</p>
+<p>We will not dwell on this table, which is analogous to the Firebird table [PERSONNES] discussed earlier. Note, however, that the column and table names are enclosed in quotes. Furthermore, these names are case-sensitive. It is possible that this behavior in Postgres 8.x is configurable. I have not investigated this further.</p>
+<p>The table [PERSONNES] could have the following content:</p>
 <p><img src="images/1000000000000270000000B1BB534938.png" width="437" height="124" style="width:11.561cm;height:3.279cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000270000000B1BB534938.png" /></p>
-<p>In addition to the [PERSONNES] table, the [dbpersonnes] database has an object called a sequence named [SEQ_ID]. This generator produces successive integers that we will use to populate the [ID] primary key of the [PERSONNES] class. Let’s take an example to illustrate how it works:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005660000021F4FC241D7.png" width="680" height="267" style="display:inline-block; margin:4px;width:17.997cm;height:7.071cm;" class="odt-zoomable" data-zoom-src="images/10000000000005660000021F4FC241D7.png" /></td></tr></table>
+<p>In addition to the table [PERSONNES], the database [dbpersonnes] contains an object called a sequence named [SEQ_ID]. This generator produces successive integers that we will use to assign a value to the primary key [ID] of the class [PERSONNES]. Let’s look at an example to illustrate how it works:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000005660000021F4FC241D7.png" width="680" height="267" style="display:inline-block; margin:4px;width:17.997cm;height:7.071cm;" class="odt-zoomable" data-zoom-src="images/10000000000005660000021F4FC241D7.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000054A000001228A337DE1.png" width="677" height="145" style="display:inline-block; margin:4px;width:17.912cm;height:3.836cm;" class="odt-zoomable" data-zoom-src="images/100000000000054A000001228A337DE1.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000054A000001228A337DE1.png" width="677" height="145" style="display:inline-block; margin:4px;width:17.912cm;height:3.836cm;" class="odt-zoomable" data-zoom-src="images/100000000000054A000001228A337DE1.png" /></td></tr></table>
 
-<p>We can see that the [Next value] of the [SEQ_ID] sequence has changed (double-click on it + F5 to refresh):</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000016C000000C5B42EEE20.png" width="255" height="138" style="display:inline-block; margin:4px;width:6.74cm;height:3.648cm;" class="odt-zoomable" data-zoom-src="images/100000000000016C000000C5B42EEE20.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<p>We can see that the value [Next value] of the sequence [SEQ_ID] has changed (double-click on it + F5 to refresh):</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000016C000000C5B42EEE20.png" width="255" height="138" style="display:inline-block; margin:4px;width:6.74cm;height:3.648cm;" class="odt-zoomable" data-zoom-src="images/100000000000016C000000C5B42EEE20.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;">&nbsp;</td></tr></table>
 
-<p>The SQL statement </p>
+<p>The order SQL </p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">nextval</span><span class="p">(</span><span class="s1">&#39;&quot;SEQ_ID&quot;&#39;</span><span class="p">)</span>
 </code></pre></div>
-<p>therefore allows us to retrieve the next value in the [SEQ_ID] sequence. We will use it in the [people-postgres.xml] file, which contains the SQL statements executed on the DBMS.</p>
-<h2 id="182-the-eclipse-project-for-the-dao-and-service-layers">18.2. <span style="color: #4f81bd">The Eclipse project for the [dao] and [service] layers</span></h2>
+<p>therefore provides the next value in the sequence: [SEQ_ID]. We will use this in the file [personnes-postgres.xml], which collects the orders SQL issued on SGBD.</p>
+<h2 id="182-the-eclipse-project-for-layers-dao-and-service">18.2. <span style="color: #4f81bd">The Eclipse project for layers [dao] and [service]</span></h2>
 <p>To develop the [dao] and [service] layers of our application with the Postgres 8.x database, we will use the following Eclipse project [spring-mvc-39]:</p>
 <p><img src="images/10000000000000E000000063258DEAF4.png" width="158" height="70" style="width:4.17cm;height:1.843cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000E000000063258DEAF4.png" /></p>
 <p>The project is a simple Java project, not a Tomcat web project.</p>
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
-<p>[src] folder</p>
+<p>Folder [src]</p>
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
 <p>This folder contains the source code for the [dao] and [service] layers:</p>
 <p><img src="images/100000000000011300000160906459E0.png" width="193" height="247" style="width:5.11cm;height:6.541cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000011300000160906459E0.png" /></p>
-<p>All files with [postgres] in their names may or may not have been modified compared to the Firebird version. Below, we describe the modified files.</p>
+<p>All files with [postgres] in their names may or may not have been modified compared to the version Firebird version. Below, we describe the modified files.</p>
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
-<p>[database] folder</p>
+<p>Folder [database]</p>
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
-<p>This folder contains the script for creating the Postgres database for users:</p>
+<p>This folder contains the script for creating the Postgres database for people:</p>
 <p><img src="images/1000000000000093000000214220834E.png" width="103" height="23" style="width:2.72cm;height:0.61cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000093000000214220834E.png" /></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
@@ -1178,17 +1180,17 @@
 <a id="__codelineno-2-53" name="__codelineno-2-53"></a><span class="k">COMMENT</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">SCHEMA</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="s1">&#39;Standard public schema&#39;</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
-<p>[lib] folder</p>
+<p>Folder [lib]</p>
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
 <p>This folder contains the archives required by the application:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000015300000185C0C8F66D.png" width="170" height="195" style="display:inline-block; margin:4px;width:4.486cm;height:5.149cm;" class="odt-zoomable" data-zoom-src="images/100000000000015300000185C0C8F66D.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000015300000185C0C8F66D.png" width="170" height="195" style="display:inline-block; margin:4px;width:4.486cm;height:5.149cm;" class="odt-zoomable" data-zoom-src="images/100000000000015300000185C0C8F66D.png" /></td></tr></table>
 
-<p>Note the presence of the Postgres 8.x DBMS JDBC driver. All these files are part of the Eclipse project&#x27;s <em>classpath</em>.</p>
+<p>Note the presence of the SGBD Postgres 8.x JDBC driver. All these files are part of the Eclipse project&#x27;s <em>classpath</em>.</p>
 <h2 id="183-the-dao-layer">18.3. <span style="color: #4f81bd">The [dao] layer</span></h2>
 <p>The [dao] layer is as follows:</p>
 <p><img src="images/100000000000011900000141946563BC.png" width="197" height="225" style="width:5.2cm;height:5.941cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000011900000141946563BC.png" /></p>
-<p>We are only presenting the changes compared to the [Firebird] version.</p>
-<p>The mapping file [personne-postgres.xml] is as follows:</p>
+<p>We are only presenting the changes relative to version and [Firebird].</p>
+<p>The [personne-postgres.xml] mapping file is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000e1">&lt;?xml</span><span style="color:#000000"> </span><span style="color:#0000e1">version=</span><span style="color:#000080">&quot;1.0&quot;</span><span style="color:#000000"> </span><span style="color:#0000e1">encoding=</span><span style="color:#000080">&quot;UTF-8&quot;</span><span style="color:#000000"> </span><span style="color:#0000e1">?&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1242,24 +1244,24 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000e1">&lt;/sqlMap&gt;</span></span></span>
 </code></pre></div>
 
-<p>This is the same content as [people-firebird.xml] with the following minor differences:</p>
+<p>This is the same content as [personnes-firebird.xml], with the following minor differences:</p>
 <ul>
   <li><span style="color: #000000">column and table names are enclosed in quotes and are case-sensitive</span>
   </li>
-  <li><span style="color: #000000">the SQL statement &quot;Person.insertOne&quot; has changed in lines 34–41. The way the primary key is generated with Postgres differs from that used with Firebird:</span>
+  <li><span style="color: #000000">the order SQL &quot; Personne.insertOne &quot; has changed in lines 34–41. The way the primary key is generated with Postgres differs from that used with Firebird:</span>
     <ul>
-      <li><span style="color: #000000">line 36: the SQL statement [SELECT nextval(&#x27;&quot;SEQ_ID&quot;&#x27;)] provides the primary key. The [as value] syntax is mandatory. [value] represents the key obtained. This value will be assigned to the field of the [Person] object designated by the [keyProperty] attribute (line 35), here the [id] field.</span>
+      <li><span style="color: #000000">line 36: the order SQL [SELECT nextval(&#x27;&quot;SEQ_ID&quot;&#x27;)] provides the primary key. The syntax [as value] is mandatory. [value] represents the resulting key. This value will be assigned to the field of the [Personne] object designated by the [keyProperty] attribute (line 35), in this case the [id] field.</span>
       </li>
-      <li><span style="color: #000000">The SQL statements within the &lt;insert&gt; tag are executed in the order they appear. Therefore, the SELECT is executed before the INSERT. By the time the insertion operation occurs, the [id] field of the [Person] object will have been updated by the SELECT SQL statement.</span>
+      <li><span style="color: #000000">The SQL commands within the &lt;insert&gt; tag are executed in the order in which they are encountered. Therefore, SELECT is executed before INSERT. At the time of the insertion operation, the field [id] of the object [Personne] will therefore have been updated by the command SQL SELECT.</span>
       </li>
-      <li><span style="color: #000000">Lines 38–40: insertion of the [Person] object</span>
+      <li><span style="color: #000000">Lines 38–40: Insertion of object [Personne]</span>
       </li>
     </ul>
   </li>
 </ul>
 
-<p><span style="color: #000000">The implementation class [DaoImplCommon] of the [dao] layer is the one studied in the [Firebird] version.</span></p>
-<p><span style="color: #000000">The configuration of the [dao] layer has been adapted to the [Postgres] DBMS. Thus, the configuration file [spring-config-test-dao-postgres.xml] is as follows:</span></p>
+<p><span style="color: #000000">The implementation class [DaoImplCommon] of layer [dao] is the one examined in version and [Firebird].</span></p>
+<p><span style="color: #000000">The configuration of the [dao] layer has been adapted to SGBD and [Postgres]. Thus, the configuration file [spring-config-test-dao-postgres.xml] is as follows:</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000e1">&lt;?xml</span> <span style="color:#0000e1">version=</span><span style="color:#000080">&quot;1.0&quot;</span> <span style="color:#0000e1">encoding=</span><span style="color:#000080">&quot;ISO_8859-1&quot;</span><span style="color:#0000e1">?&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000e1">&lt;!DOCTYPE</span><span style="color:#000000"> </span><span style="color:#0000e1">beans</span><span style="color:#000000"> </span><span style="color:#0000e1">SYSTEM</span><span style="color:#000000"> </span><span style="color:#000080">&quot;http://www.springframework.org/dtd/spring-beans.dtd&quot;</span><span style="color:#0000e1">&gt;</span></span></span>
@@ -1290,7 +1292,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">            </span><span style="color:#0000e1">&lt;value&gt;</span><span style="color:#000000">classpath:sql-map-config-postgres.xml</span><span style="color:#0000e1">&lt;/value&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000e1">&lt;/property&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000e1">&lt;/bean&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- the [dao] layer access classes --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- layer access classes [dao] --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000e1">&lt;bean</span><span style="color:#000000"> </span><span style="color:#0000e1">id=</span><span style="color:#000080">&quot;dao&quot;</span><span style="color:#000000"> </span><span style="color:#0000e1">class=</span><span style="color:#000080">&quot;istia.st.mvc.personnes.dao.DaoImplCommon&quot;</span><span style="color:#0000e1">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000e1">&lt;property</span><span style="color:#000000"> </span><span style="color:#0000e1">name=</span><span style="color:#000080">&quot;sqlMapClient&quot;</span><span style="color:#0000e1">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">            </span><span style="color:#0000e1">&lt;ref</span><span style="color:#000000"> </span><span style="color:#0000e1">local=</span><span style="color:#000080">&quot;sqlMapClient&quot;</span><span style="color:#0000e1">/&gt;</span></span></span>
@@ -1300,34 +1302,34 @@
 </code></pre></div>
 
 <ul>
-  <li><span style="color: #000000">lines 5–19: The [dataSource] bean now refers to the [Postgres] database [dbpersonnes], whose administrator is [postgres] with the password [postgres]. The reader should modify this configuration according to their own environment.</span>
+  <li><span style="color: #000000">lines 5–19: The bean [dataSource] now refers to the database [Postgres] [dbpersonnes], whose administrator is [postgres] with the password [postgres]. The reader should modify this configuration according to their own environment.</span>
   </li>
-  <li><span style="color: #000000">line 31: the [DaoImplCommon] class is the implementation class for the [dao] layer</span>
+  <li><span style="color: #000000">Line 31: The class [DaoImplCommon] is the implementation class for the [dao] layer</span>
   </li>
 </ul>
 
-<p><span style="color: #000000">With these changes made, we can move on to testing.</span></p>
+<p><span style="color: #000000">With these changes made, we can proceed to testing.</span></p>
 <h2 id="184-tests-for-the-dao-and-service-layers">18.4. <span style="color: #4f81bd">Tests for the [dao] and [service] layers</span></h2>
-<p><span style="color: #000000">The tests for the [dao] and [service] layers are the same as for the [Firebird] version. Let’s launch the Postgres DBMS and then run the Eclipse tests. The results obtained are as follows:</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000559000001B78BDBCE03.png" width="680" height="218" style="display:inline-block; margin:4px;width:17.997cm;height:5.771cm;" class="odt-zoomable" data-zoom-src="images/1000000000000559000001B78BDBCE03.png" /></td></tr></table>
+<p><span style="color: #000000">The tests for the [dao] and [service] layers are the same as for version and [Firebird]. Let’s run the SGBD Postgres test followed by the Eclipse tests. The results are as follows:</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/1000000000000559000001B78BDBCE03.png" width="680" height="218" style="display:inline-block; margin:4px;width:17.997cm;height:5.771cm;" class="odt-zoomable" data-zoom-src="images/1000000000000559000001B78BDBCE03.png" /></td></tr></table>
 
-<p><span style="color: #000000">We can see that the tests passed successfully with the [DaoImplCommon] implementation. We will not need to derive this class as we had to do with the [Firebird] DBMS.</span></p>
-<h2 id="185-web-application-tests">18.5. <span style="color: #4f81bd">[Web] Application Tests</span></h2>
-<p><span style="color: #000000">To test the web application with the [Postgres] DBMS, we build an Eclipse project [mvc-personnes-04B] in a manner analogous to that used to build the [mvc-personnes-03B] project with the Firebird database (see </span>Section<a href="#web-firebird"><u><span style="color: #0563c1"> 17.7</span></u></a><span style="color: #000000">). However, we do not need to recreate the [personnes-dao.jar] and [personnes-service.jar] archives. In fact, we have not modified any classes compared to the [mvc-personnes-03B] project. The [personnes-dao.jar] archive simply contains the [DaoImplFirebird] class, which is no longer needed.</span></p>
+<p><span style="color: #000000">We can see that the tests passed successfully with the [DaoImplCommon] implementation. We will not need to derive this class as we had to do with SGBD and [Firebird].</span></p>
+<h2 id="185-testing-the-web-application">18.5. <span style="color: #4f81bd">Testing the [web] application</span></h2>
+<p><span style="color: #000000">To test the web application with SGBD and [Postgres], we build an Eclipse project [mvc-personnes-04B] in a manner similar to that used to build the [mvc-personnes-03B] project with the Firebird database (see </span>Section<a href="mvc-web-application-in-a-3-tier-architecture---example-3---firebird-dbms.html#web-firebird"><u><span style="color: #0563c1"> 17.7</span></u></a><span style="color: #000000">). However, we do not need to recreate the [personnes-dao.jar] and [personnes-service.jar] archives. In fact, </span><span style="color: #000000">we have not modified any classes relative to the [mvc-personnes-03B] project. The [personnes-dao.jar] archive simply contains the [DaoImplFirebird] class, which is no longer needed.</span></p>
 <p><img src="images/10000000000000E4000001816C62BA8F.png" width="159" height="269" style="width:4.219cm;height:7.124cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000E4000001816C62BA8F.png" /></p>
 <p><span style="color: #000000">We deploy the web project [mvc-personnes-04B] within Tomcat:</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000015B00000090D83F7489.png" width="244" height="101" style="display:inline-block; margin:4px;width:6.451cm;height:2.678cm;" class="odt-zoomable" data-zoom-src="images/100000000000015B00000090D83F7489.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000013100000059298FC360.png" width="214" height="62" style="display:inline-block; margin:4px;width:5.65cm;height:1.649cm;" class="odt-zoomable" data-zoom-src="images/100000000000013100000059298FC360.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000015B00000090D83F7489.png" width="244" height="101" style="display:inline-block; margin:4px;width:6.451cm;height:2.678cm;" class="odt-zoomable" data-zoom-src="images/100000000000015B00000090D83F7489.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000013100000059298FC360.png" width="214" height="62" style="display:inline-block; margin:4px;width:5.65cm;height:1.649cm;" class="odt-zoomable" data-zoom-src="images/100000000000013100000059298FC360.png" /></td></tr></table>
 
-<p><span style="color: #000000">We are ready for test</span><a id="tests-web-firebird1"></a><span style="color: #000000"> s. The contents of the [PERSONNES] table are now as follows:</span></p>
+<p><span style="color: #000000">We are ready for test</span><span id="tests-web-firebird1" name="tests-web-firebird1" class="odt-bookmark-anchor"></span><span style="color: #000000"> s. The contents of the [PERSONNES] table are then as follows:</span></p>
 <p><img src="images/1000000000000270000000AC77151CC1.png" width="437" height="120" style="width:11.561cm;height:3.187cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000270000000AC77151CC1.png" /></p>
-<p><span style="color: #000000">Tomcat is running. Using a browser, we request the URL [http://localhost:8080/mvc-personnes-04B]:</span></p>
+<p><span style="color: #000000">Tomcat is running. Using a browser, we request the url and [http://localhost:8080/mvc-personnes-04B] pages:</span></p>
 <p><img src="images/100000000000029900000113969BFA4E.png" width="466" height="193" style="width:12.321cm;height:5.096cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000029900000113969BFA4E.png" /></p>
-<p><span style="color: #000000">We add    a new person using the [Add] link:</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000019A00000173505499AE.png" width="287" height="260" style="display:inline-block; margin:4px;width:7.59cm;height:6.869cm;" class="odt-zoomable" data-zoom-src="images/100000000000019A00000173505499AE.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000023800000120E76E3AC6.png" width="341" height="173" style="display:inline-block; margin:4px;width:9.021cm;height:4.574cm;" class="odt-zoomable" data-zoom-src="images/100000000000023800000120E76E3AC6.png" /></td></tr></table>
+<p><span style="color: #000000">We add    a new person using the link [Ajout]:</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000019A00000173505499AE.png" width="287" height="260" style="display:inline-block; margin:4px;width:7.59cm;height:6.869cm;" class="odt-zoomable" data-zoom-src="images/100000000000019A00000173505499AE.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000023800000120E76E3AC6.png" width="341" height="173" style="display:inline-block; margin:4px;width:9.021cm;height:4.574cm;" class="odt-zoomable" data-zoom-src="images/100000000000023800000120E76E3AC6.png" /></td></tr></table>
 
 <p><span style="color: #000000">We verify the addition in the database:</span></p>
 <p><img src="images/1000000000000276000000BDEF216D69.png" width="443" height="133" style="width:11.719cm;height:3.515cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000276000000BDEF216D69.png" /></p>
-<p><span style="color: #000000">The reader is invited to perform further tests [update, delete].</span></p>
+<p><span style="color: #000000">The reader is invited to perform further tests [modification, suppression].</span></p>
 
 
 

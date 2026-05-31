@@ -12,13 +12,13 @@
         <meta name="author" content="Serge Tahé">
       
       
-        <link rel="canonical" href="https://stahe.github.io/en-java-web-mvc-mai-2006/mvc-web-application-person---version-5.html">
+        <link rel="canonical" href="https://stahe.github.io/en-java-web-mvc-mai-2006/web-application-mvc-personne---version-5.html">
       
       
-        <link rel="prev" href="mvc-web-application-person---version-4.html">
+        <link rel="prev" href="web-application-mvc-personne---version-4.html">
       
       
-        <link rel="next" href="mvc-web-application-person---version-6.html">
+        <link rel="next" href="web-application-mvc-personne---version-6.html">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>10. MVC Web Application [person] – Version 5 - The basics of MVC web development in Java: a practical guide</title>
+        <title>10. Web application MVC [personne] – version 5 - The basics of MVC web development in Java: a practical guide</title>
       
     
     
@@ -56,6 +56,8 @@
     
     
       <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -92,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#10-mvc-web-application-person-version-5" class="md-skip">
+        <a href="#10-web-application-mvc-personne-version-5" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              10. MVC Web Application [person] – Version 5
+              10. Web application MVC [personne] – version 5
             
           </span>
         </div>
@@ -337,7 +339,7 @@
   <span class="md-ellipsis">
     
   
-    2. Tools used in this document
+    2. Tools Used in This Document
   
 
     
@@ -384,14 +386,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-model-view-controller-development.html" class="md-nav__link">
+      <a href="mvc-development-model-view-controller.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. MVC (Model–View–Controller) Development
+    4. MVC Development (Model–View–Controller)
   
 
     
@@ -411,14 +413,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-1.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-1.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    5. MVC Web Application [person] – Version 1
+    5. Web application MVC [personne] – version 1
   
 
     
@@ -438,14 +440,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-2.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-2.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6. MVC Web Application [person] – Version 2
+    6. Web application MVC [personne] – version 2
   
 
     
@@ -465,14 +467,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-3.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-3.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. MVC Web Application [person] – Version 3
+    7. Web application MVC [personne] – version 3
   
 
     
@@ -499,7 +501,7 @@
   <span class="md-ellipsis">
     
   
-    8. The JSTL Tag Library
+    8. The JSTL tag library
   
 
     
@@ -519,14 +521,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-4.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-4.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    9. MVC Web Application [person] – Version 4
+    9. Web application MVC [personne] – version 4
   
 
     
@@ -562,7 +564,7 @@
   <span class="md-ellipsis">
     
   
-    10. MVC Web Application [person] – Version 5
+    10. Web application MVC [personne] – version 5
   
 
     
@@ -573,14 +575,14 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="mvc-web-application-person---version-5.html" class="md-nav__link md-nav__link--active">
+      <a href="web-application-mvc-personne---version-5.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    10. MVC Web Application [person] – Version 5
+    10. Web application MVC [personne] – version 5
   
 
     
@@ -650,15 +652,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#105-the-servletpersonne-controller" class="md-nav__link">
+  <a href="#105-the-controller-servletpersonne" class="md-nav__link">
     <span class="md-ellipsis">
       
-        10.5. The [ServletPersonne] controller
+        10.5. The controller [ServletPersonne]
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="10.5. The [ServletPersonne] controller">
+    <nav class="md-nav" aria-label="10.5. The controller [ServletPersonne]">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -700,10 +702,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#106-testing" class="md-nav__link">
+  <a href="#106-tests" class="md-nav__link">
     <span class="md-ellipsis">
       
-        10.6. Testing
+        10.6. Tests
       
     </span>
   </a>
@@ -725,14 +727,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-6.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-6.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    11. MVC Web Application [person] – Version 6
+    11. Web application MVC [personne] – version 6
   
 
     
@@ -752,14 +754,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-7.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-7.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. MVC Web Application [person] – Version 7
+    12. Web application MVC [personne] – version 7
   
 
     
@@ -779,14 +781,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-8.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-8.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    13. MVC Web Application [person] – Version 8
+    13. Web application MVC [personne] – version 8
   
 
     
@@ -894,7 +896,7 @@
   <span class="md-ellipsis">
     
   
-    17. MVC Web Application in a 3-Tier Architecture – Example 3 – Firebird DBMS
+    17. MVC web application in a 3-tier architecture – Example 3 – Firebird DBMS
   
 
     
@@ -921,7 +923,7 @@
   <span class="md-ellipsis">
     
   
-    18. MVC Web Application in a 3-Tier Architecture – Example 4, Postgres
+    18. MVC web application in a 3-tier architecture – Example 4, Postgres
   
 
     
@@ -941,14 +943,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-in-a-3-tier-architecture---example-5-mysql.html" class="md-nav__link">
+      <a href="web-application-mvc-in-a-3-tier-architecture---example-5-mysql.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    19. MVC Web Application in a 3-Tier Architecture – Example 5, MySQL
+    19. Web application MVC in a 3-tier architecture – Example 5, MySQL
   
 
     
@@ -968,14 +970,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-in-a-3-tier-architecture---example-6-sql-server-express.html" class="md-nav__link">
+      <a href="web-application-mvc-in-a-3-tier-architecture---example-6-sql-server-express.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    20. MVC Web Application in a 3-Tier Architecture – Example 6, SQL Server Express
+    20. Web application MVC in a 3-tier architecture – Example 6, SQL Server Express
   
 
     
@@ -1022,14 +1024,14 @@
   
   
     <li class="md-nav__item">
-      <a href="the-code-from-the-article.html" class="md-nav__link">
+      <a href="the-code-for-this-article.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    22. The code from the article
+    22. The code for this article
   
 
     
@@ -1059,15 +1061,15 @@
 
 
 
-<h1 id="10-mvc-web-application-person-version-5">10. <span style="color: #365f91">MVC Web Application [person] – Version 5</span></h1>
-<p><a id="personne3-introduction1"></a></p>
+<h1 id="10-web-application-mvc-personne-version-5">10. <span style="color: #365f91">Web application MVC [personne] – version 5</span></h1>
+<p><span id="personne3-introduction1" name="personne3-introduction1" class="odt-bookmark-anchor"></span></p>
 <h2 id="101-introduction">10.1. <span style="color: #4f81bd">Introduction</span></h2>
 <p>In this version, we are making two changes:</p>
-<p>The first concerns how the client indicates to the server the action it wishes to perform. Until now, this was specified using a parameter called [action] in the client’s GET or POST request. Here, the action will be specified by the last element of the URL requested by the client, as shown in the following sequence:</p>
+<p>The first concerns the way the client tells the server what action it wants to perform. Until now, this was specified using a parameter called [action] in the client’s GET or POST request. Here, the action will be specified by the last element of the Url requested by the client, as shown in the following sequence:</p>
 <p><img src="images/10000000000005180000016504D44577.png" width="652" height="179" style="width:17.251cm;height:4.724cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005180000016504D44577.png" /></p>
-<p>In [1], the URL to which the form was submitted is [/person5/do/validateForm]. It is the last element [validateForm] of the URL that allowed the controller to recognize the action to be performed. In [2], the POST triggered by the [Return to form] link was sent to the URL [/person5/do/returnForm]. Here again, the last element [returnForm] of the URL tells the controller which action to perform.</p>
-<p>We are introducing this change because it is the method used by the most widely used web development frameworks, such as <em>Struts</em> or <em>Spring MVC</em>.</p>
-<p>All URLs in the application will have the form [/person5/do/action]. The [web.xml] file for the [/person5] application will specify that it accepts URLs of the form [/do/*]:</p>
+<p>In [1], the Url to which the form was posted is [/personne5/do/validationFormulaire]. It is the last element, [validationFormulaire], of Url that allowed the controller to recognize the action to be taken. In [2], the POST triggered by the link [Retour au formulaire] was performed on the Url [/personne5/do/retourFormulaire]. Again, the last element [retourFormulaire] of Url tells the controller what action to take.</p>
+<p>We are introducing this change because it is the method used by the most widely used web development frameworks such as <em>Struts</em> or <em>Spring MVC</em>.</p>
+<p>All Url in the application will have the form [/personne5/do/action]. The [web.xml] file for the [/personne5] application will indicate that it accepts Url in the form [/do/*]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">servlet-mapping</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">servlet-name</span><span style="color:#008080">&gt;</span><span style="color:#000000">personne</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">servlet-name</span><span style="color:#008080">&gt;</span></span></span>
@@ -1077,19 +1079,19 @@
 
 <p>The controller will retrieve the name of the action to be performed as follows:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>        // on récupère l&#39;action à exécuter
+<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>        // retrieve the action to be executed
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a>String action=request.getPathInfo();
 </code></pre></div></td></tr></table></div>
-<p>The [getPathInfo] method of the [request] object returns the last element of the request URL.</p>
-<p>The second change concerns how user input is stored between request/response cycles. Currently, this information is stored in a session. This approach can have drawbacks if there are many users and a large amount of data to store for each one. Indeed, each user has their own personal session. Furthermore, the session remains active for some time after a user logs out, unless a logout option has been provided. Thus, 1,000 sessions of 100 bytes each will occupy 1 MB of memory. This remains a moderate requirement, and few applications have 1,000 active sessions simultaneously.</p>
-<p>Nevertheless, there are alternatives to sessions that are less memory-intensive, and it’s good to be aware of them. Here, we’ll use the cookie method. Let’s illustrate this with an example.</p>
+<p>The [getPathInfo] method of the [request] object returns the last element of the Url in the request.</p>
+<p>The second change concerns how to store user input between request/response cycles. Currently, this information is stored in a session. This approach can have drawbacks if there are many users and a large amount of data to store for each one. Indeed, each user has their own personal session. Furthermore, this session remains active for some time after a user logs out unless a logout option has been provided. Thus, 1,000 sessions of 1,000 bytes will occupy 1 MB of memory. This remains a moderate requirement, and few applications have 1,000 active sessions simultaneously.</p>
+<p>Nevertheless, there are alternatives to sessions that are less memory-intensive, and it is good to be aware of them. Here, we will use the cookie method. Let’s illustrate this with an example.</p>
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
 <p>Step 1: The user submits a form:</p>
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000055B000001A7FFA399FA.png" width="680" height="210" style="display:inline-block; margin:4px;width:17.997cm;height:5.553cm;" class="odt-zoomable" data-zoom-src="images/100000000000055B000001A7FFA399FA.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000055B000001A7FFA399FA.png" width="680" height="210" style="display:inline-block; margin:4px;width:17.997cm;height:5.553cm;" class="odt-zoomable" data-zoom-src="images/100000000000055B000001A7FFA399FA.png" /></td></tr></table>
 
-<p>This request/response cycle results in the following HTTP exchanges between the client and the server:</p>
-<p>[1]: [client request]</p>
+<p>This request/response cycle results in the following exchanges between the client and the server:</p>
+<p>[1]: [demande du client]</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
@@ -1113,15 +1115,15 @@
 <a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="n">Accept</span><span class="o">-</span><span class="n">Charset</span><span class="p">:</span> <span class="n">ISO</span><span class="o">-</span><span class="mi">8859</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">utf</span><span class="o">-</span><span class="mi">8</span><span class="p">;</span><span class="n">q</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span><span class="o">*</span><span class="p">;</span><span class="n">q</span><span class="o">=</span><span class="mf">0.7</span>
 <a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="n">Keep</span><span class="o">-</span><span class="n">Alive</span><span class="p">:</span> <span class="mi">300</span>
 <a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="n">Connection</span><span class="p">:</span> <span class="n">keep</span><span class="o">-</span><span class="n">alive</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="n">Referer</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">8080</span><span class="o">/</span><span class="n">personne5</span><span class="o">/</span><span class="n">do</span><span class="o">/</span><span class="n">formulaire</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="n">Referer</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">8080</span><span class="o">/</span><span class="n">person5</span><span class="o">/</span><span class="n">do</span><span class="o">/</span><span class="n">formulary</span>
 <a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="n">Cookie</span><span class="p">:</span> <span class="n">JSESSIONID</span><span class="o">=</span><span class="mi">6</span><span class="n">C6F4D112803A7E3696D41F5750CEDE7</span>
 <a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span> <span class="n">application</span><span class="o">/</span><span class="n">x</span><span class="o">-</span><span class="n">www</span><span class="o">-</span><span class="n">form</span><span class="o">-</span><span class="n">urlencoded</span>
 <a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="n">Content</span><span class="o">-</span><span class="n">Length</span><span class="p">:</span> <span class="mi">24</span>
 <a id="__codelineno-1-14" name="__codelineno-1-14"></a>
 <a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="n">txtNom</span><span class="o">=</span><span class="n">pauline</span><span class="o">&amp;</span><span class="n">txtAge</span><span class="o">=</span><span class="mi">18</span>
 </code></pre></div></td></tr></table></div>
-<p>This is a standard POST request. There is nothing unusual to note here, except that even though we are not going to use a session, the web server creates one anyway. This is evident from the session token that the browser sends back to the server on line 11, which it had previously received from the server.</p>
-<p>[2]: [server response]</p>
+<p>This is a classic POST. There is nothing in particular to note here, except that although we are not going to use a session, the web server creates one anyway. We can see this in the session token that the browser sends back to the server on line 11, which it had previously received from the server.</p>
+<p>[2] : [réponse du serveur]</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
 <span class="normal"><a href="#__codelineno-2-3">3</a></span>
@@ -1136,14 +1138,14 @@
 <a id="__codelineno-2-6" name="__codelineno-2-6"></a>Content-Length: 547
 <a id="__codelineno-2-7" name="__codelineno-2-7"></a>Date: Mon, 22 May 2006 08:03:51 GMT
 </code></pre></div></td></tr></table></div>
-<p>We can see that in lines 3 and 4, [Set-Cookie] HTTP headers were sent to the client browser, one for the name (line 3) and one for the age (line 4). The values of these cookies are the values posted in line 14 of the POST [1] above.</p>
+<p>We can see that lines 3 and 4, headers HTTP and [Set-Cookie], were sent to the client browser, one for the name (line 3) and one for the age (line 4). The values of these cookies are the values posted in line 14 of the POST and [1] headers above.</p>
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
 <p>Step 2: Return to the form</p>
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
 
 <p><img src="images/1000000000000549000001A3D6C2B924.png" width="677" height="209" style="width:17.9cm;height:5.542cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000549000001A3D6C2B924.png" /></p>
 <p>This request/response cycle results in the following HTTP exchanges between the client and the server:</p>
-<p>[1]: [client request]</p>
+<p>[1]: [demande du client]</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
@@ -1170,8 +1172,8 @@
 <a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span> <span class="n">application</span><span class="o">/</span><span class="n">x</span><span class="o">-</span><span class="n">www</span><span class="o">-</span><span class="n">form</span><span class="o">-</span><span class="n">urlencoded</span>
 <a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="n">Content</span><span class="o">-</span><span class="n">Length</span><span class="p">:</span> <span class="mi">0</span>
 </code></pre></div></td></tr></table></div>
-<p>Here we see the POST request triggered by clicking the [Back to form] link. On line 11, we see that the browser sends the cookies it received [name, age, JSESSIONID] back to the server using the HTTP [Cookie] header. This is how cookies work. The client sends back to the server the cookies that the server sent to it. In this example, the controller will receive the values [pauline, 18], which it must place in the [txtName, txtAge] fields of the [form] view displayed in [2].</p>
-<p>[2]: [server response]</p>
+<p>Here we see POST triggered by clicking on the link [Retour au formulaire]. On line 11, we see that the browser sends back to the server the cookies it received [nom, age, JSESSIONID] using the header Http [Cookie]. This is how cookies work. The client sends back to the browser the cookies that the browser sent to it. In this example, the controller will receive the values [pauline, 18], which it must place in the fields [txtNom, txtAge] of the view [formulaire] displayed in [2].</p>
+<p>[2] : [réponse du serveur]</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
 <span class="normal"><a href="#__codelineno-4-2">2</a></span>
 <span class="normal"><a href="#__codelineno-4-3">3</a></span>
@@ -1184,8 +1186,8 @@
 </code></pre></div></td></tr></table></div>
 <p>There is nothing in particular to note here other than the fact that in this response, the server did not send any cookies. This will not prevent the browser from sending back all the cookies it received from the server in the next exchange, even if it serves no purpose. We therefore reduce the load on the server’s available memory at the cost of an increase in the character flow in client/server exchanges.</p>
 <h2 id="102-the-eclipse-project">10.2. <span style="color: #4f81bd">The Eclipse Project</span></h2>
-<p>To create the Eclipse project [mvc-personne-05] for the web application [/personne5], duplicate the [mvc-personne-04] project by following the procedure described in section<a href="#personne2-eclipse"><u><span style="color: #0563c1"> 6.2</span></u></a>.</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000EB0000019D59396DF5.png" width="164" height="289" style="display:inline-block; margin:4px;width:4.35cm;height:7.645cm;" class="odt-zoomable" data-zoom-src="images/10000000000000EB0000019D59396DF5.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000016A0000005ACA1567F4.png" width="253" height="63" style="display:inline-block; margin:4px;width:6.699cm;height:1.665cm;" class="odt-zoomable" data-zoom-src="images/100000000000016A0000005ACA1567F4.png" /></td></tr></table>
+<p>To create the Eclipse project [mvc-personne-05] for the web application [/personne5], duplicate the project [mvc-personne-04] by following the procedure described in section<a href="web-application-mvc-personne---version-2.html#personne2-eclipse"><u><span style="color: #0563c1"> 6.2</span></u></a>.</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000000EB0000019D59396DF5.png" width="164" height="289" style="display:inline-block; margin:4px;width:4.35cm;height:7.645cm;" class="odt-zoomable" data-zoom-src="images/10000000000000EB0000019D59396DF5.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000016A0000005ACA1567F4.png" width="253" height="63" style="display:inline-block; margin:4px;width:6.699cm;height:1.665cm;" class="odt-zoomable" data-zoom-src="images/100000000000016A0000005ACA1567F4.png" /></td></tr></table>
 
 <h2 id="103-configuring-the-personne5-web-application">10.3. <span style="color: #4f81bd">Configuring the [personne5] web application</span></h2>
 <p>The <strong>web.xml</strong> file for the <strong>/personne5</strong> application is as follows:</p>
@@ -1217,15 +1219,15 @@
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 </code></pre></div>
 
-<p>This file is identical to the one in the previous version except for a few details:</p>
+<p>This file is identical to that of the previous version except for a few details:</p>
 <ul>
   <li>line 6: the display name of the web application has changed to [mvc-personne-05]
   </li>
-  <li>line 18: the URLs handled by the application are in the form [/do/*]. Previously, only the URL [/main] was handled. Now, there are as many URLs as there are actions to handle.
+  <li>Line 18: The Url records processed by the application are in the form [/do/*]. Previously, only the Url and [/main] records were processed. Now, there are as many Url entries as there are actions to process.
   </li>
 </ul>
 
-<p>The home page [index.jsp] changes:</p>
+<p>The [index.jsp] home page changes:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#bf5f3f">&lt;%@ </span><span style="color:#3f7f7f">page </span><span style="color:#7f007f">language</span><span style="color:#000000">=</span><span style="color:#2a00ff">&quot;java&quot; </span><span style="color:#7f007f">contentType</span><span style="color:#000000">=</span><span style="color:#2a00ff">&quot;text/html; charset=ISO-8859-1&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#2a00ff">    </span><span style="color:#7f007f">pageEncoding</span><span style="color:#000000">=</span><span style="color:#2a00ff">&quot;ISO-8859-1&quot;</span><span style="color:#bf5f3f">%&gt;</span></span></span>
@@ -1235,13 +1237,13 @@
 </code></pre></div>
 
 <ul>
-  <li>line 5: the [index.jsp] page redirects the client to the URL [/person5/do/form], which is equivalent to asking the controller to execute the [form] action.
+  <li>Line 5: The [index.jsp] page redirects the client to url [/personne5/do/formulaire], which is equivalent to asking the controller to execute the [formulaire] action.
   </li>
 </ul>
 
 <h2 id="104-the-view-code">10.4. <span style="color: #4f81bd">The view code</span></h2>
-<p>The views [form, response, errors] change very little. The only change is that the action to be performed is no longer specified in the same way as before, when it was defined in a hidden field named [action] in submitted forms. Now it is defined in the target URL of submitted forms, i.e., in the [action] attribute of the &lt;form&gt; tag:</p>
-<p>[form.jsp]:</p>
+<p>The [formulaire, réponse, erreurs] views change very little. The only change is that the action to be performed is no longer specified in the same way as before, when it was defined in a hidden field named [action] in the submitted forms. Now it is defined in the Url target of the posted forms, c.a.d, in the [action] attribute of the &lt;form&gt; tag:</p>
+<p>[formulaire.jsp]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content">...</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">html</span><span style="color:#008080">&gt;</span></span></span>
@@ -1264,13 +1266,13 @@
 </code></pre></div>
 
 <ul>
-  <li>Line [13]: The [action] parameter of the form reappears after having been absent for some time in previous versions. To understand the value of this attribute here, remember that all URLs processed by the application are of the form [/do/action]. In line [13], the [action] attribute has a relative URL as its value (not starting with /). Therefore, the browser will complete it with the URL of the currently displayed page, which is necessarily a URL of the form [/do/action]. The last element will be replaced by the relative URL of the [action] attribute of the &lt;form&gt; tag to yield the URL [/do/validationFormulaire] as the POST target.
+  <li>line [13]: the [action] parameter of the form reappears after having been absent for some time in previous versions. To understand the value of this attribute here, remember that all Url processed by the application are of the form [/do/action]. In the [13] line, the [action] attribute has a relative Url value (not starting with /). Therefore, the browser will complete it with the Url of the currently displayed page, which must be a Url of the form [/do/action]. The last element will be replaced by the relative Url of the [action] attribute of the &lt;form&gt; tag to yieldUrl [/do/validationFormulaire] as the target of POST.
   </li>
-  <li>The hidden [action] field has disappeared
+  <li>The hidden field [action] has disappeared
   </li>
 </ul>
 
-<p>[response.jsp]:</p>
+<p>[réponse.jsp]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content">...</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1289,13 +1291,13 @@
 </code></pre></div>
 
 <ul>
-  <li>line [7]: the POST target will be [/do/returnForm]
+  <li>line [7]: the target of POST will be [/do/retourFormulaire]
   </li>
-  <li>The hidden [action] field has been removed from the form in lines 7–8.
+  <li>The hidden field [action] has disappeared from the form on lines 7-8.
   </li>
 </ul>
 
-<p>[errors.jsp]:</p>
+<p>[erreurs.jsp]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content">...</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">html</span><span style="color:#008080">&gt;</span></span></span>
@@ -1313,18 +1315,18 @@
 </code></pre></div>
 
 <ul>
-  <li>line [6]: the POST target will be [/do/returnForm]
+  <li>line [6]: the target of POST will be [/do/retourFormulaire]
   </li>
-  <li>The hidden field [action] has been removed from the form in lines 6–7.
+  <li>The hidden field [action] has been removed from the form on lines 6–7.
   </li>
 </ul>
 
-<p>Readers are invited to test these new views using the approach seen in previous versions.</p>
-<h2 id="105-the-servletpersonne-controller">10.5. <span style="color: #4f81bd">The [ServletPersonne] controller</span></h2>
-<p>The [ServletPersonne] controller of the [/personne5] web application will handle the following actions:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><mark style="background-color: #c0c0c0">No.</mark></b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><mark style="background-color: #c0c0c0">request</mark></b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><mark style="background-color: #c0c0c0">origin</mark></b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><mark style="background-color: #c0c0c0">processing</mark></b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">1</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">[GET /person5/do/form]</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">URL entered by the user</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">- send the empty [form] view</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">2</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">[POST</div><div style="margin:0 0 0.5em 0">/person5/do/formValidation]</div><div style="margin:0 0 0.5em 0">with parameters [txtName, txtAge]</div><div style="margin:0 0 0.5em 0">posted</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">click on the</div><div style="margin:0 0 0.5em 0">[Submit] button in the</div><div style="margin:0 0 0.5em 0">[form]</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">- check the values of the parameters [txtName, txtAge]</div><div style="margin:0 0 0.5em 0">- if they are incorrect, send the [errors(errors)] view</div><div style="margin:0 0 0.5em 0">- if they are correct, send the [response(name,age)] view</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">3</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">[POST</div><div style="margin:0 0 0.5em 0">/person5/do/returnForm]</div><div style="margin:0 0 0.5em 0">without posted parameters</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">Click on the [Return to</div><div style="margin:0 0 0.5em 0">form] from the</div><div style="margin:0 0 0.5em 0">[response] and [errors].</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">- send the [form] view pre-filled with the latest entered values</div></td></tr></table>
+<p>Readers are invited to test these new views using the same approach as in previous versions.</p>
+<h2 id="105-the-controller-servletpersonne">10.5. <span style="color: #4f81bd">The controller [ServletPersonne]</span></h2>
+<p>The controller [ServletPersonne] of the web application [/personne5] will handle the following actions:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><b><mark style="background-color: #c0c0c0">Request</mark></b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><b><mark style="background-color: #c0c0c0">request</mark></b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><b><mark style="background-color: #c0c0c0">origin</mark></b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><b><mark style="background-color: #c0c0c0">processing</mark></b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">1</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">[GET /personne5/do/formulaire]</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">url entered by the user</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">- send the empty view [formulaire]</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">2</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">[POST</div><div style="margin:0 0 0.5em 0">/person5/do/validationFormulaire]</div><div style="margin:0 0 0.5em 0">with parameters [txtNom, txtAge]</div><div style="margin:0 0 0.5em 0">posted</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">click on the button</div><div style="margin:0 0 0.5em 0">[Envoyer] in the view</div><div style="margin:0 0 0.5em 0">[formulaire]</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">- check the parameter values [txtNom, txtAge]</div><div style="margin:0 0 0.5em 0">- if they are incorrect, send the view [erreurs(erreurs)]</div><div style="margin:0 0 0.5em 0">- if they are correct, send the view [reponse(nom,age)]</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">3</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">[POST</div><div style="margin:0 0 0.5em 0">/person5/do/retourFormulaire]</div><div style="margin:0 0 0.5em 0">without posted parameters</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">click on the [Back to</div><div style="margin:0 0 0.5em 0">form] in the views</div><div style="margin:0 0 0.5em 0">[réponse] and [erreurs].</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">- send the pre-filled view [formulaire] with the latest entered values</div></td></tr></table>
 
-<p>The skeleton of the [ServletPersonne] controller is identical to that of the previous version. We will review the changes made to the [doValidationFormulaire, doRetourFormulaire, doGet] methods; the [init, doInit, doPost] methods remain unchanged.</p>
+<p>The controller skeleton for [ServletPersonne] is identical to that of the previous version. We will review the changes made to the [doValidationFormulaire, doRetourFormulaire, doGet] methods, as the [init, doInit, doPost] methods remain unchanged.</p>
 <h3 id="1051-the-doget-method">10.5.1. <span style="color: #4f81bd">The [doGet] method</span></h3>
 <p>The [doGet] method does not retrieve the action to be executed in the same way as in previous versions:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
@@ -1361,55 +1363,55 @@
 <span class="normal"><a href="#__codelineno-5-32">32</a></span>
 <span class="normal"><a href="#__codelineno-5-33">33</a></span>
 <span class="normal"><a href="#__codelineno-5-34">34</a></span>
-<span class="normal"><a href="#__codelineno-5-35">35</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="w">        </span><span class="nd">@SuppressWarnings</span><span class="p">(</span><span class="s">&quot;unchecked&quot;</span><span class="p">)</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">doGet</span><span class="p">(</span><span class="n">HttpServletRequest</span><span class="w"> </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">HttpServletResponse</span><span class="w"> </span><span class="n">response</span><span class="p">)</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">            </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span><span class="p">,</span><span class="w"> </span><span class="n">ServletException</span><span class="w"> </span><span class="p">{</span>
+<span class="normal"><a href="#__codelineno-5-35">35</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="w">        </span><span class="err">@</span><span class="nx">SuppressWarnings</span><span class="p">(</span><span class="s2">&quot;unchecked&quot;</span><span class="p">)</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">    </span><span class="kr">public</span><span class="w"> </span><span class="ow">void</span><span class="w"> </span><span class="nx">doGet</span><span class="p">(</span><span class="nx">HttpServletRequest</span><span class="w"> </span><span class="nx">request</span><span class="p">,</span><span class="w"> </span><span class="nx">HttpServletResponse</span><span class="w"> </span><span class="nx">response</span><span class="p">)</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">            </span><span class="kr">throws</span><span class="w"> </span><span class="nx">IOException</span><span class="p">,</span><span class="w"> </span><span class="nx">ServletException</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-5-4" name="__codelineno-5-4"></a>
 <a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">        </span><span class="c1">// check how the servlet was initialized</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">erreursInitialisation</span><span class="p">.</span><span class="na">size</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">erreursInitialisation</span><span class="p">.</span><span class="nx">size</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="p">...</span>
 <a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="w">        </span><span class="p">}</span>
 <a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="w">        </span><span class="c1">// retrieve the request sending method</span>
-<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">méthode</span><span class="o">=</span><span class="n">request</span><span class="p">.</span><span class="na">getMethod</span><span class="p">().</span><span class="na">toLowerCase</span><span class="p">();</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="w">        </span><span class="nb">String</span><span class="w"> </span><span class="nx">méthode</span><span class="o">=</span><span class="nx">request</span><span class="p">.</span><span class="nx">getMethod</span><span class="p">().</span><span class="nx">toLowerCase</span><span class="p">();</span>
 <a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="w">        </span><span class="c1">// retrieve the action to be executed</span>
-<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">action</span><span class="o">=</span><span class="n">request</span><span class="p">.</span><span class="na">getPathInfo</span><span class="p">();</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="w">        </span><span class="nb">String</span><span class="w"> </span><span class="nx">action</span><span class="o">=</span><span class="nx">request</span><span class="p">.</span><span class="nx">getPathInfo</span><span class="p">();</span>
 <a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="w">        </span><span class="c1">// action?</span>
-<a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">action</span><span class="o">==</span><span class="kc">null</span><span class="p">){</span>
-<a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="w">            </span><span class="n">action</span><span class="o">=</span><span class="s">&quot;/formulaire&quot;</span><span class="p">;</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="nx">action</span><span class="o">==</span><span class="kc">null</span><span class="p">){</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="w">            </span><span class="nx">action</span><span class="o">=</span><span class="s2">&quot;/formulaire&quot;</span><span class="p">;</span>
 <a id="__codelineno-5-16" name="__codelineno-5-16"></a><span class="w">        </span><span class="p">}</span>
 <a id="__codelineno-5-17" name="__codelineno-5-17"></a><span class="w">        </span><span class="c1">// execution action</span>
-<a id="__codelineno-5-18" name="__codelineno-5-18"></a><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">méthode</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;get&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">action</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;/formulaire&quot;</span><span class="p">)){</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18"></a><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="nx">méthode</span><span class="p">.</span><span class="nx">equals</span><span class="p">(</span><span class="s2">&quot;get&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">action</span><span class="p">.</span><span class="nx">equals</span><span class="p">(</span><span class="s2">&quot;/formulaire&quot;</span><span class="p">)){</span>
 <a id="__codelineno-5-19" name="__codelineno-5-19"></a><span class="w">            </span><span class="c1">// start application</span>
-<a id="__codelineno-5-20" name="__codelineno-5-20"></a><span class="w">            </span><span class="n">doInit</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="n">response</span><span class="p">);</span>
+<a id="__codelineno-5-20" name="__codelineno-5-20"></a><span class="w">            </span><span class="nx">doInit</span><span class="p">(</span><span class="nx">request</span><span class="p">,</span><span class="nx">response</span><span class="p">);</span>
 <a id="__codelineno-5-21" name="__codelineno-5-21"></a><span class="w">            </span><span class="k">return</span><span class="p">;</span>
 <a id="__codelineno-5-22" name="__codelineno-5-22"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-5-23" name="__codelineno-5-23"></a><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">méthode</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;post&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">action</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;/validationFormulaire&quot;</span><span class="p">)){</span>
+<a id="__codelineno-5-23" name="__codelineno-5-23"></a><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="nx">méthode</span><span class="p">.</span><span class="nx">equals</span><span class="p">(</span><span class="s2">&quot;post&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">action</span><span class="p">.</span><span class="nx">equals</span><span class="p">(</span><span class="s2">&quot;/validationFormulaire&quot;</span><span class="p">)){</span>
 <a id="__codelineno-5-24" name="__codelineno-5-24"></a><span class="w">            </span><span class="c1">// validation of input form</span>
-<a id="__codelineno-5-25" name="__codelineno-5-25"></a><span class="w">            </span><span class="n">doValidationFormulaire</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="n">response</span><span class="p">);</span>
+<a id="__codelineno-5-25" name="__codelineno-5-25"></a><span class="w">            </span><span class="nx">doValidationFormulaire</span><span class="p">(</span><span class="nx">request</span><span class="p">,</span><span class="nx">response</span><span class="p">);</span>
 <a id="__codelineno-5-26" name="__codelineno-5-26"></a><span class="w">            </span><span class="k">return</span><span class="p">;</span>
 <a id="__codelineno-5-27" name="__codelineno-5-27"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-5-28" name="__codelineno-5-28"></a><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">méthode</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;post&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">action</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;/retourFormulaire&quot;</span><span class="p">)){</span>
+<a id="__codelineno-5-28" name="__codelineno-5-28"></a><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="nx">méthode</span><span class="p">.</span><span class="nx">equals</span><span class="p">(</span><span class="s2">&quot;post&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">action</span><span class="p">.</span><span class="nx">equals</span><span class="p">(</span><span class="s2">&quot;/retourFormulaire&quot;</span><span class="p">)){</span>
 <a id="__codelineno-5-29" name="__codelineno-5-29"></a><span class="w">            </span><span class="c1">// back to input form</span>
-<a id="__codelineno-5-30" name="__codelineno-5-30"></a><span class="w">            </span><span class="n">doRetourFormulaire</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="n">response</span><span class="p">);</span>
+<a id="__codelineno-5-30" name="__codelineno-5-30"></a><span class="w">            </span><span class="nx">doRetourFormulaire</span><span class="p">(</span><span class="nx">request</span><span class="p">,</span><span class="nx">response</span><span class="p">);</span>
 <a id="__codelineno-5-31" name="__codelineno-5-31"></a><span class="w">            </span><span class="k">return</span><span class="p">;</span>
 <a id="__codelineno-5-32" name="__codelineno-5-32"></a><span class="w">        </span><span class="p">}</span>
 <a id="__codelineno-5-33" name="__codelineno-5-33"></a><span class="w">        </span><span class="c1">// other cases</span>
-<a id="__codelineno-5-34" name="__codelineno-5-34"></a><span class="w">        </span><span class="n">doInit</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="n">response</span><span class="p">);</span>
+<a id="__codelineno-5-34" name="__codelineno-5-34"></a><span class="w">        </span><span class="nx">doInit</span><span class="p">(</span><span class="nx">request</span><span class="p">,</span><span class="nx">response</span><span class="p">);</span>
 <a id="__codelineno-5-35" name="__codelineno-5-35"></a><span class="w">    </span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
   <li>line 12: retrieve the action to be executed. It is in the form [/action].
   </li>
-  <li>lines 18–22: processing the [/form] action requested by a GET request
+  <li>lines 18–22: processing of the action [/formulaire] requested by a request GET
   </li>
-  <li>lines 23–27: processing the [/validateForm] action requested by a POST request
+  <li>lines 23–27: processing of the action [/validationFormulaire] requested by a request POST
   </li>
-  <li>lines 28–32: processing the [/returnForm] action requested by a POST request
+  <li>lines 28-32: processing of action [/retourFormulaire] requested by request POST
   </li>
 </ul>
 
 <h3 id="1052-the-dovalidationformulaire-method">10.5.2. <span style="color: #4f81bd">The [doValidationFormulaire] method</span></h3>
-<p>This method processes request #2 [POST /person5/do/validationFormulaire] with [txtName, txtAge] in the posted elements. Its code is as follows:</p>
+<p>This method processes request No. 2 [POST /personne5/do/validationFormulaire] with [txtNom, txtAge] in the posted elements. Its code is as follows:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
@@ -1422,21 +1424,21 @@
 <span class="normal"><a href="#__codelineno-6-10">10</a></span>
 <span class="normal"><a href="#__codelineno-6-11">11</a></span>
 <span class="normal"><a href="#__codelineno-6-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="c1">// form validation</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">doValidationFormulaire</span><span class="p">(</span><span class="n">HttpServletRequest</span><span class="w"> </span><span class="n">request</span><span class="p">,</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">            </span><span class="n">HttpServletResponse</span><span class="w"> </span><span class="n">response</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">ServletException</span><span class="p">,</span><span class="w"> </span><span class="n">IOException</span><span class="p">{</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="w">    </span><span class="ow">void</span><span class="w"> </span><span class="nx">doValidationFormulaire</span><span class="p">(</span><span class="nx">HttpServletRequest</span><span class="w"> </span><span class="nx">request</span><span class="p">,</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">            </span><span class="nx">HttpServletResponse</span><span class="w"> </span><span class="nx">response</span><span class="p">)</span><span class="w"> </span><span class="kr">throws</span><span class="w"> </span><span class="nx">ServletException</span><span class="p">,</span><span class="w"> </span><span class="nx">IOException</span><span class="p">{</span>
 <a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">        </span><span class="c1">// parameters are retrieved</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">request</span><span class="p">.</span><span class="na">getParameter</span><span class="p">(</span><span class="s">&quot;txtNom&quot;</span><span class="p">);</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">request</span><span class="p">.</span><span class="na">getParameter</span><span class="p">(</span><span class="s">&quot;txtAge&quot;</span><span class="p">);</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">        </span><span class="nb">String</span><span class="w"> </span><span class="nx">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">request</span><span class="p">.</span><span class="nx">getParameter</span><span class="p">(</span><span class="s2">&quot;txtNom&quot;</span><span class="p">);</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">        </span><span class="nb">String</span><span class="w"> </span><span class="nx">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">request</span><span class="p">.</span><span class="nx">getParameter</span><span class="p">(</span><span class="s2">&quot;txtAge&quot;</span><span class="p">);</span>
 <a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="w">        </span><span class="c1">// stored in a cookie</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="w">        </span><span class="n">response</span><span class="p">.</span><span class="na">addCookie</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Cookie</span><span class="p">(</span><span class="s">&quot;nom&quot;</span><span class="p">,</span><span class="n">nom</span><span class="p">));</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="w">        </span><span class="n">response</span><span class="p">.</span><span class="na">addCookie</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Cookie</span><span class="p">(</span><span class="s">&quot;age&quot;</span><span class="p">,</span><span class="n">age</span><span class="p">));</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="w">        </span><span class="nx">response</span><span class="p">.</span><span class="nx">addCookie</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">Cookie</span><span class="p">(</span><span class="s2">&quot;nom&quot;</span><span class="p">,</span><span class="nx">nom</span><span class="p">));</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="w">        </span><span class="nx">response</span><span class="p">.</span><span class="nx">addCookie</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">Cookie</span><span class="p">(</span><span class="s2">&quot;age&quot;</span><span class="p">,</span><span class="nx">age</span><span class="p">));</span>
 <a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="w">        </span><span class="c1">// parameter verification</span>
 <a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="w">        </span><span class="p">...</span>
 <a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="w">    </span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>What&#x27;s new:</p>
 <ul>
-  <li>The [doValidationFormulaire] method returns one of the views [response, errors]. Regardless of the response, the controller sets two cookies within it, lines 8–9. A cookie is represented by a [Cookie] object whose constructor accepts two parameters: the cookie key and the value associated with it.
+  <li>The [doValidationFormulaire] method returns one of the [réponse, erreurs] views. Regardless of the response, the controller sets two cookies in it, lines 8–9. A cookie is represented by a [Cookie] object whose constructor accepts two parameters: the cookie key and the value associated with it.
   </li>
   <li>line 8: the value entered for the name is placed in a cookie with the key &quot;name&quot;
   </li>
@@ -1447,7 +1449,7 @@
 </ul>
 
 <h3 id="1053-the-doretourformulaire-method">10.5.3. <span style="color: #4f81bd">The [doRetourFormulaire] method</span></h3>
-<p>This method processes request #2 [POST /person5/do/retourFormulaire] without any posted data. Its code is as follows:</p>
+<p>This method processes request #2 [POST /personne5/do/retourFormulaire] without any posted elements. Its code is as follows:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
@@ -1474,43 +1476,43 @@
 <span class="normal"><a href="#__codelineno-7-24">24</a></span>
 <span class="normal"><a href="#__codelineno-7-25">25</a></span>
 <span class="normal"><a href="#__codelineno-7-26">26</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="w">        </span><span class="c1">// display pre-filled form</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">doRetourFormulaire</span><span class="p">(</span><span class="n">HttpServletRequest</span><span class="w"> </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">HttpServletResponse</span><span class="w"> </span><span class="n">response</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">ServletException</span><span class="p">,</span><span class="w"> </span><span class="n">IOException</span><span class="p">{</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="w">    </span><span class="ow">void</span><span class="w"> </span><span class="nx">doRetourFormulaire</span><span class="p">(</span><span class="nx">HttpServletRequest</span><span class="w"> </span><span class="nx">request</span><span class="p">,</span><span class="w"> </span><span class="nx">HttpServletResponse</span><span class="w"> </span><span class="nx">response</span><span class="p">)</span><span class="w"> </span><span class="kr">throws</span><span class="w"> </span><span class="nx">ServletException</span><span class="p">,</span><span class="w"> </span><span class="nx">IOException</span><span class="p">{</span>
 <a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="w">        </span><span class="c1">// retrieve the user&#39;s cookies</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">        </span><span class="n">Cookie</span><span class="o">[]</span><span class="w"> </span><span class="n">cookies</span><span class="o">=</span><span class="n">request</span><span class="p">.</span><span class="na">getCookies</span><span class="p">();</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="o">=</span><span class="kc">null</span><span class="p">;</span>
-<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">age</span><span class="o">=</span><span class="kc">null</span><span class="p">;</span>
-<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">nbCookies</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
-<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">cookies</span><span class="p">.</span><span class="na">length</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">nbCookies</span><span class="o">&lt;</span><span class="mi">2</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
-<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">cookies</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">getName</span><span class="p">().</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;nom&quot;</span><span class="p">)){</span>
-<a id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="w">                </span><span class="n">nom</span><span class="o">=</span><span class="n">cookies</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">getValue</span><span class="p">();</span>
-<a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="w">                </span><span class="n">nbCookies</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">        </span><span class="nx">Cookie</span><span class="p">[]</span><span class="w"> </span><span class="nx">cookies</span><span class="o">=</span><span class="nx">request</span><span class="p">.</span><span class="nx">getCookies</span><span class="p">();</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="w">        </span><span class="nb">String</span><span class="w"> </span><span class="nx">nom</span><span class="o">=</span><span class="kc">null</span><span class="p">;</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="w">        </span><span class="nb">String</span><span class="w"> </span><span class="nx">age</span><span class="o">=</span><span class="kc">null</span><span class="p">;</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="w">        </span><span class="kr">int</span><span class="w"> </span><span class="nx">nbCookies</span><span class="o">=</span><span class="mf">0</span><span class="p">;</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kr">int</span><span class="w"> </span><span class="nx">i</span><span class="o">=</span><span class="mf">0</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;</span><span class="nx">cookies</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">nbCookies</span><span class="o">&lt;</span><span class="mf">2</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="nx">cookies</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">getName</span><span class="p">().</span><span class="nx">equals</span><span class="p">(</span><span class="s2">&quot;nom&quot;</span><span class="p">)){</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="w">                </span><span class="nx">nom</span><span class="o">=</span><span class="nx">cookies</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">getValue</span><span class="p">();</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="w">                </span><span class="nx">nbCookies</span><span class="o">++</span><span class="p">;</span>
 <a id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="w">            </span><span class="p">}</span><span class="k">else</span><span class="p">{</span>
-<a id="__codelineno-7-13" name="__codelineno-7-13"></a><span class="w">                </span><span class="k">if</span><span class="p">(</span><span class="n">cookies</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">getName</span><span class="p">().</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;age&quot;</span><span class="p">)){</span>
-<a id="__codelineno-7-14" name="__codelineno-7-14"></a><span class="w">                    </span><span class="n">age</span><span class="o">=</span><span class="n">cookies</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">getValue</span><span class="p">();</span>
-<a id="__codelineno-7-15" name="__codelineno-7-15"></a><span class="w">                    </span><span class="n">nbCookies</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13"></a><span class="w">                </span><span class="k">if</span><span class="p">(</span><span class="nx">cookies</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">getName</span><span class="p">().</span><span class="nx">equals</span><span class="p">(</span><span class="s2">&quot;age&quot;</span><span class="p">)){</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14"></a><span class="w">                    </span><span class="nx">age</span><span class="o">=</span><span class="nx">cookies</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">getValue</span><span class="p">();</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15"></a><span class="w">                    </span><span class="nx">nbCookies</span><span class="o">++</span><span class="p">;</span>
 <a id="__codelineno-7-16" name="__codelineno-7-16"></a><span class="w">                </span><span class="p">}</span>
 <a id="__codelineno-7-17" name="__codelineno-7-17"></a><span class="w">            </span><span class="p">}</span>
 <a id="__codelineno-7-18" name="__codelineno-7-18"></a><span class="w">        </span><span class="p">}</span>
 <a id="__codelineno-7-19" name="__codelineno-7-19"></a><span class="w">        </span><span class="c1">// prepare the form template</span>
-<a id="__codelineno-7-20" name="__codelineno-7-20"></a><span class="w">        </span><span class="n">request</span><span class="p">.</span><span class="na">setAttribute</span><span class="p">(</span><span class="s">&quot;nom&quot;</span><span class="p">,</span><span class="n">nom</span><span class="p">);</span>
-<a id="__codelineno-7-21" name="__codelineno-7-21"></a><span class="w">        </span><span class="n">request</span><span class="p">.</span><span class="na">setAttribute</span><span class="p">(</span><span class="s">&quot;age&quot;</span><span class="p">,</span><span class="n">age</span><span class="p">);</span>
+<a id="__codelineno-7-20" name="__codelineno-7-20"></a><span class="w">        </span><span class="nx">request</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s2">&quot;nom&quot;</span><span class="p">,</span><span class="nx">nom</span><span class="p">);</span>
+<a id="__codelineno-7-21" name="__codelineno-7-21"></a><span class="w">        </span><span class="nx">request</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s2">&quot;age&quot;</span><span class="p">,</span><span class="nx">age</span><span class="p">);</span>
 <a id="__codelineno-7-22" name="__codelineno-7-22"></a><span class="w">        </span><span class="c1">// the form is displayed</span>
-<a id="__codelineno-7-23" name="__codelineno-7-23"></a><span class="w">        </span><span class="n">getServletContext</span><span class="p">().</span><span class="na">getRequestDispatcher</span><span class="p">((</span><span class="n">String</span><span class="p">)</span><span class="n">params</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;urlFormulaire&quot;</span><span class="p">)).</span><span class="na">forward</span><span class="p">(</span>
-<a id="__codelineno-7-24" name="__codelineno-7-24"></a><span class="w">                </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="p">);</span>
+<a id="__codelineno-7-23" name="__codelineno-7-23"></a><span class="w">        </span><span class="nx">getServletContext</span><span class="p">().</span><span class="nx">getRequestDispatcher</span><span class="p">((</span><span class="nb">String</span><span class="p">)</span><span class="nx">params</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;urlFormulaire&quot;</span><span class="p">)).</span><span class="nx">forward</span><span class="p">(</span>
+<a id="__codelineno-7-24" name="__codelineno-7-24"></a><span class="w">                </span><span class="nx">request</span><span class="p">,</span><span class="w"> </span><span class="nx">response</span><span class="p">);</span>
 <a id="__codelineno-7-25" name="__codelineno-7-25"></a><span class="w">        </span><span class="k">return</span><span class="p">;</span>
 <a id="__codelineno-7-26" name="__codelineno-7-26"></a><span class="w">    </span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>What&#x27;s new:</p>
-<p>The [doRetourFormulaire] method should display a form pre-filled with the most recent entries. In the previous version, these were stored in the session. In this version, we no longer use the session but instead use cookies to store data between client-server exchanges. When the client requested form validation, they received the [response] or [errors] view in response, as appropriate, along with two cookies labeled &quot;name&quot; and &quot;age&quot;. When the [Back to form] link on these two views is clicked—which triggers a POST request to the URL [/do/retourFormulaire]—the browser sends the two cookies it received back to the server.</p>
+<p>New features:</p>
+<p>The [doRetourFormulaire] method must display a form pre-filled with the latest entries made. In the previous version, these were stored in the session. In this one, we no longer use the session but cookies to store data between client-server exchanges. When the client requested form validation, they received the [réponse] or [erreurs] view in response, depending on the case, along with two cookies labeled &quot;name&quot; and &quot;age&quot;. When the user clicks the [Retour au formulaire] link on either of these two views—which triggers a POST on the Url [/do/retourFormulaire]—the browser will send the two cookies it received back to the server.</p>
 <ul>
-  <li>Lines 4–18: We retrieve the values of the cookies labeled &quot;name&quot; and &quot;age.&quot; Strangely enough, there is no method to retrieve a cookie’s value based on its key. Therefore, we must iterate through each of the received cookies.
+  <li>Lines 4–18: We retrieve the values of the cookies named &quot;name&quot; and &quot;age.&quot; Strangely enough, there is no method for retrieving a cookie&#x27;s value based on its key. Therefore, we have to iterate through each of the received cookies.
   </li>
-  <li>Once this is done, the two values obtained are placed in the [form] view template (lines 20–21) so that it can display them.
+  <li>Once this is done, the two values obtained are placed in the template for the [formulaire] view (lines 20–21) so that it can display them.
   </li>
 </ul>
 
-<h2 id="106-testing">10.6. <span style="color: #4f81bd">Testing</span></h2>
-<p>Start or restart Tomcat after integrating the Eclipse project [person-mvc-05] into it, then request the URL [http://localhost:8080/personne5].</p>
+<h2 id="106-tests">10.6. <span style="color: #4f81bd">Tests</span></h2>
+<p>Start or restart Tomcat after integrating the Eclipse project [personne-mvc-05], then request the url and [http://localhost:8080/personne5].</p>
 
 
 

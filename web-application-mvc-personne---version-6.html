@@ -12,13 +12,13 @@
         <meta name="author" content="Serge Tahé">
       
       
-        <link rel="canonical" href="https://stahe.github.io/en-java-web-mvc-mai-2006/mvc-web-application-person---version-6.html">
+        <link rel="canonical" href="https://stahe.github.io/en-java-web-mvc-mai-2006/web-application-mvc-personne---version-6.html">
       
       
-        <link rel="prev" href="mvc-web-application-person---version-5.html">
+        <link rel="prev" href="web-application-mvc-personne---version-5.html">
       
       
-        <link rel="next" href="mvc-web-application-person---version-7.html">
+        <link rel="next" href="web-application-mvc-personne---version-7.html">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>11. MVC Web Application [person] – Version 6 - The basics of MVC web development in Java: a practical guide</title>
+        <title>11. Web application MVC [personne] – version 6 - The basics of MVC web development in Java: a practical guide</title>
       
     
     
@@ -56,6 +56,8 @@
     
     
       <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -92,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#11-mvc-web-application-person-version-6" class="md-skip">
+        <a href="#11-web-application-mvc-personne-version-6" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              11. MVC Web Application [person] – Version 6
+              11. Web application MVC [personne] – version 6
             
           </span>
         </div>
@@ -337,7 +339,7 @@
   <span class="md-ellipsis">
     
   
-    2. Tools used in this document
+    2. Tools Used in This Document
   
 
     
@@ -384,14 +386,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-model-view-controller-development.html" class="md-nav__link">
+      <a href="mvc-development-model-view-controller.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. MVC (Model–View–Controller) Development
+    4. MVC Development (Model–View–Controller)
   
 
     
@@ -411,14 +413,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-1.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-1.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    5. MVC Web Application [person] – Version 1
+    5. Web application MVC [personne] – version 1
   
 
     
@@ -438,14 +440,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-2.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-2.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6. MVC Web Application [person] – Version 2
+    6. Web application MVC [personne] – version 2
   
 
     
@@ -465,14 +467,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-3.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-3.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. MVC Web Application [person] – Version 3
+    7. Web application MVC [personne] – version 3
   
 
     
@@ -499,7 +501,7 @@
   <span class="md-ellipsis">
     
   
-    8. The JSTL Tag Library
+    8. The JSTL tag library
   
 
     
@@ -519,14 +521,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-4.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-4.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    9. MVC Web Application [person] – Version 4
+    9. Web application MVC [personne] – version 4
   
 
     
@@ -546,14 +548,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-5.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-5.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    10. MVC Web Application [person] – Version 5
+    10. Web application MVC [personne] – version 5
   
 
     
@@ -589,7 +591,7 @@
   <span class="md-ellipsis">
     
   
-    11. MVC Web Application [person] – Version 6
+    11. Web application MVC [personne] – version 6
   
 
     
@@ -600,14 +602,14 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="mvc-web-application-person---version-6.html" class="md-nav__link md-nav__link--active">
+      <a href="web-application-mvc-personne---version-6.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    11. MVC Web Application [person] – Version 6
+    11. Web application MVC [personne] – version 6
   
 
     
@@ -689,10 +691,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1151-the-doget-method" class="md-nav__link">
+  <a href="#1151-the-method-doget" class="md-nav__link">
     <span class="md-ellipsis">
       
-        11.5.1. The [doGet] method
+        11.5.1. The method [doGet]
       
     </span>
   </a>
@@ -741,14 +743,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-7.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-7.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. MVC Web Application [person] – Version 7
+    12. Web application MVC [personne] – version 7
   
 
     
@@ -768,14 +770,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-8.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-8.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    13. MVC Web Application [person] – Version 8
+    13. Web application MVC [personne] – version 8
   
 
     
@@ -883,7 +885,7 @@
   <span class="md-ellipsis">
     
   
-    17. MVC Web Application in a 3-Tier Architecture – Example 3 – Firebird DBMS
+    17. MVC web application in a 3-tier architecture – Example 3 – Firebird DBMS
   
 
     
@@ -910,7 +912,7 @@
   <span class="md-ellipsis">
     
   
-    18. MVC Web Application in a 3-Tier Architecture – Example 4, Postgres
+    18. MVC web application in a 3-tier architecture – Example 4, Postgres
   
 
     
@@ -930,14 +932,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-in-a-3-tier-architecture---example-5-mysql.html" class="md-nav__link">
+      <a href="web-application-mvc-in-a-3-tier-architecture---example-5-mysql.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    19. MVC Web Application in a 3-Tier Architecture – Example 5, MySQL
+    19. Web application MVC in a 3-tier architecture – Example 5, MySQL
   
 
     
@@ -957,14 +959,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-in-a-3-tier-architecture---example-6-sql-server-express.html" class="md-nav__link">
+      <a href="web-application-mvc-in-a-3-tier-architecture---example-6-sql-server-express.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    20. MVC Web Application in a 3-Tier Architecture – Example 6, SQL Server Express
+    20. Web application MVC in a 3-tier architecture – Example 6, SQL Server Express
   
 
     
@@ -1011,14 +1013,14 @@
   
   
     <li class="md-nav__item">
-      <a href="the-code-from-the-article.html" class="md-nav__link">
+      <a href="the-code-for-this-article.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    22. The code from the article
+    22. The code for this article
   
 
     
@@ -1048,17 +1050,17 @@
 
 
 
-<h1 id="11-mvc-web-application-person-version-6">11. <span style="color: #365f91">MVC Web Application [person] – Version 6</span></h1>
-<p><a id="personne3-introduction11"></a></p>
+<h1 id="11-web-application-mvc-personne-version-6">11. <span style="color: #365f91">Web application MVC [personne] – version 6</span></h1>
+<p><span id="personne3-introduction11" name="personne3-introduction11" class="odt-bookmark-anchor"></span></p>
 <h2 id="111-introduction">11.1. <span style="color: #4f81bd">Introduction</span></h2>
-<p>In this version, we make the following change:</p>
-<p>The previous version did not use sessions to store data between client/server exchanges. It used cookies, which means that the data to be stored is sent to the client by the server so that the client can send it back during the next exchange. In this new version, we use a similar technique: hidden fields in forms. There are differences between these two techniques:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>Cookies</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>Hidden fields</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">- The server places the items to be stored in the HTTP stream preceding the HTML document.</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">- The server places the elements to be stored within the HTML document.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">- The technique requires the browser to accept cookies so that it can send them back to the server during its GET or POST requests.</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">- This technique requires that all client requests to the server be POST requests so that the hidden fields are sent to the server.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">- The user can access the stored items by viewing the cookies received by their browser. Most browsers offer this option.</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">- The user can access the stored data by viewing the source code of the received HTML document.</div></td></tr></table>
+<p>In this version, we are making the following change:</p>
+<p>The previous version did not use a session to store data between client/server exchanges. It used cookies, which means that the data to be stored is sent to the client by the server so that the client can send it back during the next exchange. In this new version, we use a similar technique: hidden fields in forms. There are differences between these two techniques:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><b>Cookies</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><b>Hidden fields</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">- The server places the elements to be stored in the HTTP stream that precedes the HTML document.</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">- The server places the items to be stored in the HTML document.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">- This technique requires the browser to accept cookies so that it can send them back to the server during its GET or POST requests.</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">- The technique requires that all client requests to the server be POST so that the hidden fields are sent to the server.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">- The user can access the stored data by viewing the cookies received by their browser. Most browsers offer this feature.</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">- The user can access the stored data by viewing the source code of the received document.</div></td></tr></table>
 
-<p>The hidden field technique can be used here because all client requests are POST requests.</p>
+<p>The hidden field technique can be used here because all client requests are of type POST.</p>
 <h2 id="112-the-eclipse-project">11.2. <span style="color: #4f81bd">The Eclipse Project</span></h2>
-<p>To create the Eclipse project [mvc-personne-06] for the web application [/personne6], duplicate the project [mvc-personne-05] by following the procedure described in section<a href="#personne2-eclipse"><u><span style="color: #0563c1"> 6.2</span></u></a>.</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000E70000019B16610662.png" width="162" height="288" style="display:inline-block; margin:4px;width:4.279cm;height:7.613cm;" class="odt-zoomable" data-zoom-src="images/10000000000000E70000019B16610662.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000012E0000005B2FF2C91C.png" width="211" height="64" style="display:inline-block; margin:4px;width:5.59cm;height:1.685cm;" class="odt-zoomable" data-zoom-src="images/100000000000012E0000005B2FF2C91C.png" /></td></tr></table>
+<p>To create the Eclipse project [mvc-personne-06] for the web application [/personne6], duplicate the project [mvc-personne-05] by following the procedure described in section<a href="web-application-mvc-personne---version-2.html#personne2-eclipse"><u><span style="color: #0563c1"> 6.2</span></u></a>.</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000000E70000019B16610662.png" width="162" height="288" style="display:inline-block; margin:4px;width:4.279cm;height:7.613cm;" class="odt-zoomable" data-zoom-src="images/10000000000000E70000019B16610662.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000012E0000005B2FF2C91C.png" width="211" height="64" style="display:inline-block; margin:4px;width:5.59cm;height:1.685cm;" class="odt-zoomable" data-zoom-src="images/100000000000012E0000005B2FF2C91C.png" /></td></tr></table>
 
 <h2 id="113-configuring-the-personne6-web-application">11.3. <span style="color: #4f81bd">Configuring the [personne6] Web Application</span></h2>
 <p>The <strong>web.xml</strong> file for the <strong>/personne6</strong> application is as follows:</p>
@@ -1072,13 +1074,13 @@
 <span class="odt-code-line"><span class="odt-code-line-content">...</span></span>
 </code></pre></div>
 
-<p>This file is identical to the one in the previous version except for a few details:</p>
+<p>This file is identical to that of the previous version except for a few details:</p>
 <ul>
   <li>line 6: the display name of the web application has changed to [mvc-personne-06]
   </li>
 </ul>
 
-<p>The home page [index.jsp] is identical to that of the [/personne5] application:</p>
+<p>The [index.jsp] home page is identical to that of the [/personne5] application:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;%@ <span style="color:#3f7f7f">page </span><span style="color:#7f007f">language</span><span style="color:#000000">=</span><span style="color:#2a00ff">&quot;java&quot; </span><span style="color:#7f007f">contentType</span><span style="color:#000000">=</span><span style="color:#2a00ff">&quot;text/html; charset=ISO-8859-1&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#2a00ff">    </span><span style="color:#7f007f">pageEncoding</span><span style="color:#000000">=</span><span style="color:#2a00ff">&quot;ISO-8859-1&quot;</span><span style="color:#bf5f3f">%&gt;</span></span></span>
@@ -1088,8 +1090,8 @@
 </code></pre></div>
 
 <h2 id="114-the-view-code">11.4. <span style="color: #4f81bd">The view code</span></h2>
-<p>Only the [response, errors] views have changed. They now include hidden fields in their respective forms, whereas in the previous version, these forms did not submit any parameters.</p>
-<p>[response.jsp]:</p>
+<p>Only the [réponse, erreurs] views change. They now have hidden fields in their respective forms, whereas in the previous version, these forms did not post any parameters.</p>
+<p>[réponse.jsp]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content">...</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">html</span><span style="color:#008080">&gt;</span></span></span>
@@ -1110,15 +1112,15 @@
 </code></pre></div>
 
 <ul>
-  <li>Lines 6–9: The form that will be submitted to the server when the link in lines 10–12 is clicked
+  <li>lines 6-9: the form that will be submitted to the server when the link in lines 10-12 is clicked
   </li>
-  <li>line 6: the POST target will be [/do/retourFormulaire]
+  <li>line 6: the target of POST will be [/do/retourFormulaire]
   </li>
-  <li>lines 7-8: the hidden fields [name] and [age] will be submitted. Their values ${name} and ${age} will be set by the controller that displays [response.jsp]. These will be the values entered in the form.
+  <li>lines 7-8: the hidden fields [nom] and [age] will be posted. Their values ${name} and ${age} will be set by the controller that displays [réponse.jsp]. These will be the values entered in the form.
   </li>
 </ul>
 
-<p>[errors.jsp]:</p>
+<p>[erreurs.jsp]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content">...</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">html</span><span style="color:#008080">&gt;</span></span></span>
@@ -1136,11 +1138,11 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">html</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
-<p>The changes and explanations are the same as for the [response.jsp] view. Note that the [errors] view template has been expanded with two new elements [name, age], which are added to the two existing ones: [errors, returnToFormLink].</p>
-<p>Readers are invited to test these new views following the approach used in previous versions.</p>
+<p>The changes and explanations are the same as for view [réponse.jsp]. Note that the template for view [erreurs] has been enhanced with two new elements, [nom, age], which are added to the two that already existed: [erreurs, lienRetourFormulaire].</p>
+<p>Readers are invited to test these new views using the same approach as in previous versions.</p>
 <h2 id="115-the-servletpersonne-controller">11.5. <span style="color: #4f81bd">The [ServletPersonne] controller</span></h2>
-<p>The [ServletPersonne] controller for the [/personne6] web application is very similar to that of the previous version. The changes stem from the fact that the model for the [errors] view has changed. Two additional elements must be added: [name, age]. Only the methods that display this view are affected. These are the [doGet] and [doValidateForm] methods. </p>
-<h3 id="1151-the-doget-method">11.5.1. <span style="color: #4f81bd">The [doGet] method</span></h3>
+<p>The [ServletPersonne] controller for the [/personne6] web application is very similar to that of the previous version. The changes stem from the fact that the [erreurs] view model has changed. Two additional elements must be added: [nom, age]. Only the methods that display this view are affected. These are the methods [doGet] and [doValidationFormulaire]. </p>
+<h3 id="1151-the-method-doget">11.5.1. <span style="color: #4f81bd"><strong>The method [doGet]</strong></span></h3>
 <p>The code for [doGet] is as follows:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
@@ -1158,24 +1160,24 @@
 <span class="normal"><a href="#__codelineno-0-14">14</a></span>
 <span class="normal"><a href="#__codelineno-0-15">15</a></span>
 <span class="normal"><a href="#__codelineno-0-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="w">    </span><span class="c1">// GET</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="nd">@SuppressWarnings</span><span class="p">(</span><span class="s">&quot;unchecked&quot;</span><span class="p">)</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">doGet</span><span class="p">(</span><span class="n">HttpServletRequest</span><span class="w"> </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">HttpServletResponse</span><span class="w"> </span><span class="n">response</span><span class="p">)</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">            </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span><span class="p">,</span><span class="w"> </span><span class="n">ServletException</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="err">@</span><span class="nx">SuppressWarnings</span><span class="p">(</span><span class="s2">&quot;unchecked&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="kr">public</span><span class="w"> </span><span class="ow">void</span><span class="w"> </span><span class="nx">doGet</span><span class="p">(</span><span class="nx">HttpServletRequest</span><span class="w"> </span><span class="nx">request</span><span class="p">,</span><span class="w"> </span><span class="nx">HttpServletResponse</span><span class="w"> </span><span class="nx">response</span><span class="p">)</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">            </span><span class="kr">throws</span><span class="w"> </span><span class="nx">IOException</span><span class="p">,</span><span class="w"> </span><span class="nx">ServletException</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5"></a>
 <a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">        </span><span class="c1">// check how the servlet was initialized</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">erreursInitialisation</span><span class="p">.</span><span class="na">size</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">erreursInitialisation</span><span class="p">.</span><span class="nx">size</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">            </span><span class="c1">// we hand over to the error page</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">            </span><span class="n">request</span><span class="p">.</span><span class="na">setAttribute</span><span class="p">(</span><span class="s">&quot;erreurs&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">erreursInitialisation</span><span class="p">);</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">            </span><span class="n">getServletContext</span><span class="p">().</span><span class="na">getRequestDispatcher</span><span class="p">(</span><span class="n">urlErreurs</span><span class="p">).</span><span class="na">forward</span><span class="p">(</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">                    </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="p">);</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">            </span><span class="nx">request</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s2">&quot;erreurs&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">erreursInitialisation</span><span class="p">);</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">            </span><span class="nx">getServletContext</span><span class="p">().</span><span class="nx">getRequestDispatcher</span><span class="p">(</span><span class="nx">urlErreurs</span><span class="p">).</span><span class="nx">forward</span><span class="p">(</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">                    </span><span class="nx">request</span><span class="p">,</span><span class="w"> </span><span class="nx">response</span><span class="p">);</span>
 <a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">            </span><span class="c1">// end</span>
 <a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">            </span><span class="k">return</span><span class="p">;</span>
 <a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">        </span><span class="p">}</span>
 <a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="p">...</span>
 <a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">    </span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>In fact, this code remains identical to what it was. In the previous version, the elements [name, age] were not included in the [errors] view template. If we continue to leave them out, the variables ${name} and ${age} in [errors.jsp] will be replaced by an empty string. This works for us, because in this specific case, the [Back to Form] link is not displayed to the user. In fact, we also do not include the [formBackLink] element in the template. The variable ${lienRetourFormulaire} in [erreurs.jsp] will be replaced by the empty string. Therefore, there will be no link, and thus no way to submit the hidden fields [name, age] from the form in [erreurs.jsp]. The value of these fields can therefore be the empty string.</p>
-<h3 id="1152-the-dovalidationformulaire-method">11.5.2. <span style="color: #4f81bd"><strong>The [doValidationFormulaire] method</strong></span></h3>
+<p>In fact, this code remains identical to what it was. In the previous version, the elements [nom, age] were not included in the [erreurs] view template. If we continue to omit them, the variables ${name} and ${age} from [erreurs.jsp] will be replaced by an empty string. This is fine, because in this specific case, the link [Retour au formulaire] is not displayed to the user. In fact, we also do not include the [lienRetourFormulaire] element in the template. The ${lienRetourFormulaire} variable from [erreurs.jsp] will be replaced by an empty string. Therefore, there will be no link, so it will not be possible to submit the hidden fields [nom, age] from the [erreurs.jsp] form. The value of these fields may therefore be the empty string.</p>
+<h3 id="1152-the-dovalidationformulaire-method">11.5.2. <span style="color: #4f81bd">The [doValidationFormulaire] method</span></h3>
 <p>Its code is as follows:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
@@ -1189,21 +1191,21 @@
 <span class="normal"><a href="#__codelineno-1-10">10</a></span>
 <span class="normal"><a href="#__codelineno-1-11">11</a></span>
 <span class="normal"><a href="#__codelineno-1-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="w">    </span><span class="c1">// form validation</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">doValidationFormulaire</span><span class="p">(</span><span class="n">HttpServletRequest</span><span class="w"> </span><span class="n">request</span><span class="p">,</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">            </span><span class="n">HttpServletResponse</span><span class="w"> </span><span class="n">response</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">ServletException</span><span class="p">,</span><span class="w"> </span><span class="n">IOException</span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="ow">void</span><span class="w"> </span><span class="nx">doValidationFormulaire</span><span class="p">(</span><span class="nx">HttpServletRequest</span><span class="w"> </span><span class="nx">request</span><span class="p">,</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">            </span><span class="nx">HttpServletResponse</span><span class="w"> </span><span class="nx">response</span><span class="p">)</span><span class="w"> </span><span class="kr">throws</span><span class="w"> </span><span class="nx">ServletException</span><span class="p">,</span><span class="w"> </span><span class="nx">IOException</span><span class="p">{</span>
 <a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">        </span><span class="c1">// parameters are retrieved</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">request</span><span class="p">.</span><span class="na">getParameter</span><span class="p">(</span><span class="s">&quot;txtNom&quot;</span><span class="p">);</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">request</span><span class="p">.</span><span class="na">getParameter</span><span class="p">(</span><span class="s">&quot;txtAge&quot;</span><span class="p">);</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">        </span><span class="nb">String</span><span class="w"> </span><span class="nx">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">request</span><span class="p">.</span><span class="nx">getParameter</span><span class="p">(</span><span class="s2">&quot;txtNom&quot;</span><span class="p">);</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">        </span><span class="nb">String</span><span class="w"> </span><span class="nx">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">request</span><span class="p">.</span><span class="nx">getParameter</span><span class="p">(</span><span class="s2">&quot;txtAge&quot;</span><span class="p">);</span>
 <a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">        </span><span class="c1">// prepare the view model [response, errors]</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">        </span><span class="n">request</span><span class="p">.</span><span class="na">setAttribute</span><span class="p">(</span><span class="s">&quot;nom&quot;</span><span class="p">,</span><span class="n">nom</span><span class="p">);</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">        </span><span class="n">request</span><span class="p">.</span><span class="na">setAttribute</span><span class="p">(</span><span class="s">&quot;age&quot;</span><span class="p">,</span><span class="n">age</span><span class="p">);</span><span class="w">        </span>
-<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">        </span><span class="n">request</span><span class="p">.</span><span class="na">setAttribute</span><span class="p">(</span><span class="s">&quot;lienRetourFormulaire&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="p">)</span><span class="n">params</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;lienRetourFormulaire&quot;</span><span class="p">));</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">        </span><span class="nx">request</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s2">&quot;nom&quot;</span><span class="p">,</span><span class="nx">nom</span><span class="p">);</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">        </span><span class="nx">request</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s2">&quot;age&quot;</span><span class="p">,</span><span class="nx">age</span><span class="p">);</span><span class="w">        </span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">        </span><span class="nx">request</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s2">&quot;lienRetourFormulaire&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nb">String</span><span class="p">)</span><span class="nx">params</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;lienRetourFormulaire&quot;</span><span class="p">));</span>
 <a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">        </span><span class="c1">// parameter verification</span>
 <a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="p">...</span>
 </code></pre></div></td></tr></table></div>
-<p>Lines 8–10: We pass the elements [name, age, formReturnLink] to the model. We know that the method displays one of the views [response] or [errors]. The latter will therefore have the elements [name, age] in its model.</p>
+<p>Lines 8–10: We insert the [nom, age, lienRetourFormulaire] elements into the template. We know that the method displays one of the views [réponse] or [erreurs]. The latter will therefore have the elements [nom,age] in its model.</p>
 <h2 id="116-tests">11.6. <span style="color: #4f81bd">Tests</span></h2>
-<p>Start or restart Tomcat after integrating the Eclipse project [person-mvc-06] into it, then request the URL [http://localhost:8080/personne6].</p>
+<p>Start or restart Tomcat after integrating the Eclipse project [personne-mvc-06], then request url and [http://localhost:8080/personne6].</p>
 
 
 

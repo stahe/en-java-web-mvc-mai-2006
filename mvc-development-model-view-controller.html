@@ -12,13 +12,13 @@
         <meta name="author" content="Serge Tahé">
       
       
-        <link rel="canonical" href="https://stahe.github.io/en-java-web-mvc-mai-2006/mvc-model-view-controller-development.html">
+        <link rel="canonical" href="https://stahe.github.io/en-java-web-mvc-mai-2006/mvc-development-model-view-controller.html">
       
       
         <link rel="prev" href="the-basics-of-web-development-in-java.html">
       
       
-        <link rel="next" href="mvc-web-application-person---version-1.html">
+        <link rel="next" href="web-application-mvc-personne---version-1.html">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>4. MVC (Model–View–Controller) Development - The basics of MVC web development in Java: a practical guide</title>
+        <title>4. MVC Development (Model–View–Controller) - The basics of MVC web development in Java: a practical guide</title>
       
     
     
@@ -56,6 +56,8 @@
     
     
       <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -92,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#4-mvc-modelviewcontroller-development" class="md-skip">
+        <a href="#4-mvc-development-modelviewcontroller" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              4. MVC (Model–View–Controller) Development
+              4. MVC Development (Model–View–Controller)
             
           </span>
         </div>
@@ -337,7 +339,7 @@
   <span class="md-ellipsis">
     
   
-    2. Tools used in this document
+    2. Tools Used in This Document
   
 
     
@@ -393,14 +395,14 @@
         
       
       
-      <a href="mvc-model-view-controller-development.html" class="md-nav__link md-nav__link--active">
+      <a href="mvc-development-model-view-controller.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. MVC (Model–View–Controller) Development
+    4. MVC Development (Model–View–Controller)
   
 
     
@@ -421,14 +423,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-1.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-1.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    5. MVC Web Application [person] – Version 1
+    5. Web application MVC [personne] – version 1
   
 
     
@@ -448,14 +450,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-2.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-2.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6. MVC Web Application [person] – Version 2
+    6. Web application MVC [personne] – version 2
   
 
     
@@ -475,14 +477,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-3.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-3.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. MVC Web Application [person] – Version 3
+    7. Web application MVC [personne] – version 3
   
 
     
@@ -509,7 +511,7 @@
   <span class="md-ellipsis">
     
   
-    8. The JSTL Tag Library
+    8. The JSTL tag library
   
 
     
@@ -529,14 +531,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-4.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-4.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    9. MVC Web Application [person] – Version 4
+    9. Web application MVC [personne] – version 4
   
 
     
@@ -556,14 +558,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-5.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-5.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    10. MVC Web Application [person] – Version 5
+    10. Web application MVC [personne] – version 5
   
 
     
@@ -583,14 +585,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-6.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-6.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    11. MVC Web Application [person] – Version 6
+    11. Web application MVC [personne] – version 6
   
 
     
@@ -610,14 +612,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-7.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-7.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. MVC Web Application [person] – Version 7
+    12. Web application MVC [personne] – version 7
   
 
     
@@ -637,14 +639,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-8.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-8.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    13. MVC Web Application [person] – Version 8
+    13. Web application MVC [personne] – version 8
   
 
     
@@ -752,7 +754,7 @@
   <span class="md-ellipsis">
     
   
-    17. MVC Web Application in a 3-Tier Architecture – Example 3 – Firebird DBMS
+    17. MVC web application in a 3-tier architecture – Example 3 – Firebird DBMS
   
 
     
@@ -779,7 +781,7 @@
   <span class="md-ellipsis">
     
   
-    18. MVC Web Application in a 3-Tier Architecture – Example 4, Postgres
+    18. MVC web application in a 3-tier architecture – Example 4, Postgres
   
 
     
@@ -799,14 +801,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-in-a-3-tier-architecture---example-5-mysql.html" class="md-nav__link">
+      <a href="web-application-mvc-in-a-3-tier-architecture---example-5-mysql.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    19. MVC Web Application in a 3-Tier Architecture – Example 5, MySQL
+    19. Web application MVC in a 3-tier architecture – Example 5, MySQL
   
 
     
@@ -826,14 +828,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-in-a-3-tier-architecture---example-6-sql-server-express.html" class="md-nav__link">
+      <a href="web-application-mvc-in-a-3-tier-architecture---example-6-sql-server-express.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    20. MVC Web Application in a 3-Tier Architecture – Example 6, SQL Server Express
+    20. Web application MVC in a 3-tier architecture – Example 6, SQL Server Express
   
 
     
@@ -880,14 +882,14 @@
   
   
     <li class="md-nav__item">
-      <a href="the-code-from-the-article.html" class="md-nav__link">
+      <a href="the-code-for-this-article.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    22. The code from the article
+    22. The code for this article
   
 
     
@@ -917,39 +919,39 @@
 
 
 
-<p><a id="mvc-3tier"></a></p>
-<h1 id="4-mvc-modelviewcontroller-development">4. <span style="color: #365f91">MVC (Model–View–Controller) Development</span></h1>
-<p>A web application often has a 3-tier architecture:</p>
+<p><span id="mvc-3tier" name="mvc-3tier" class="odt-bookmark-anchor"></span></p>
+<h1 id="4-mvc-development-modelviewcontroller">4. <span style="color: #365f91">MVC Development (Model–View–Controller)</span></h1>
+<p>A web application often has a three-tier architecture:</p>
 <p><img src="images/1000000000000440000000AA79C81013.png" width="544" height="85" style="width:14.393cm;height:2.249cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000440000000AA79C81013.png" /></p>
 <ul>
-  <li>the [<b>DAO</b>] layer handles data access, most often persistent data within a DBMS. But this can also be data coming from sensors, the network, etc.
+  <li>the [dao] layer handles data access, most often persistent data within a SGBD. But this can also be data coming from sensors, the network, etc.
   </li>
-  <li>the [<b>business</b>] layer implements the application’s “business” algorithms. This layer is independent of any form of user interface. Thus, it must be usable with a console interface, a web interface, or a rich client interface. It must therefore be testable outside the web interface, particularly with a console interface. This is generally the most stable layer of the architecture. It does not change if the user interface or the method of accessing the data necessary for the application’s operation is altered. 
+  <li>The [metier] layer implements the application’s “business” algorithms. This layer is independent of any form of user interface. Thus, it must be usable with a console interface, a web interface, or a rich client interface. It must therefore be testable outside the web interface, particularly with a console interface. This is generally the most stable layer of the architecture. It does not change if the user interface or the method of accessing the data necessary for the application’s operation is altered. 
   </li>
-  <li>The [<b>user interface</b>] layer, which is the interface (often graphical) that allows the user to control the application and receive information from it.
+  <li>The [interface utilisateur] layer, which is the interface (often graphical) that allows the user to control the application and receive information from it.
   </li>
 </ul>
 
 <p>Communication flows from left to right:</p>
 <ul>
-  <li>the user makes a request to the [<b>user interface</b>] layer
+  <li>the user makes a request to layer [interface utilisateur]
   </li>
-  <li>this request is formatted by the [<b>user interface</b>] layer and transmitted to the [<b>business logic</b>] layer
+  <li>this request is formatted by the [interface utilisateur] layer and transmitted to the [métier] layer
   </li>
-  <li>if the [<b>business logic</b>] layer needs data to process this request, it requests it from the [<b>DAO</b>] layer
+  <li>if the [métier] layer needs data to process this request, it requests it from the [dao] layer
   </li>
-  <li>each queried layer returns its response to the layer to its left until the final response reaches the user.
+  <li>Each queried layer returns its response to the layer to its left until the final response is sent to the user.
   </li>
 </ul>
 
-<p>The [business] and [DAO] layers are normally accessed via Java interfaces. Thus, the [business] layer knows only the interface(s) of the [DAO] layer and is unaware of the classes implementing them. This is what ensures the independence of the layers from one another: changing the implementation of the [DAO] layer has no impact on the [business] layer as long as the definition of the [DAO] layer’s interface remains unchanged. The same applies between the [user interface] and [business] layers.</p>
-<p>The MVC (Model–View–Controller) architecture is implemented in the [<strong>user interface</strong>] layer when it is a web interface:</p>
+<p>The [métier] and [dao] layers are normally used via Java interfaces. Thus, the [métier] layer knows only the interface(s) of the [dao] layer and does not know the classes implementing them. This is what ensures the independence of the layers from one another: changing the implementation of the [dao] layer has no effect on the [métier] layer as long as the definition of the [dao] layer’s interface remains unchanged. The same applies to the [interface utilisateur] and [métier] layers.</p>
+<p>The MVC architecture (Model–View–Controller) is implemented in the [interface utilisateur] layer when it is a web interface:</p>
 <p><img src="images/100000000000044A000001096FF0D59E.png" width="549" height="133" style="width:14.526cm;height:3.507cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000044A000001096FF0D59E.png" /></p>
-<p>Processing a client request follows these steps:</p>
+<p>The processing of a client request follows these steps:</p>
 <ol>
-  <li>The client sends a request to the controller. The controller handles all client requests. It is the application’s entry point. It is the <b>C </b>in MVC.
+  <li>The client sends a request to the controller. The controller handles all requests from clients. This is the application’s entry point. It is the <b>C </b>in MVC.
   </li>
-  <li>The <b>C</b> controller processes this request. To do so, it may need assistance from the business layer. Once the client’s request has been processed, it can trigger various responses. A classic example is:
+  <li>Controller <b>C </b>processes this request. To do so, it may need assistance from the business layer. Once the client’s request has been processed, it may trigger various responses. A classic example is:
     <ul>
       <li>an error page if the request could not be processed correctly
       </li>
@@ -957,52 +959,52 @@
       </li>
     </ul>
   </li>
-  <li>The controller chooses the response (= view) to send to the client. Choosing the response to send to the client involves several steps:
+  <li>the controller chooses the response (= view) to send to the client. Choosing the response to send to the client involves several steps:
     <ul>
       <li>selecting the object that will generate the response. This is called the view <b>V</b>, the <b>V </b>in MVC. This choice generally depends on the result of executing the action requested by the user.
       </li>
-      <li>providing it with the data it needs to generate this response. Indeed, this response most often contains information calculated by the controller. This information forms what is called the view’s <b>M</b> model, the <b>M </b>in MVC.
+      <li>Providing it with the data it needs to generate this response. Indeed, this response most often contains information calculated by the controller. This information forms what is called the view’s model <b>M</b>, the <b>M </b>in MVC.
       </li>
-      <li>Step 3 therefore consists of selecting a view (<b>V) </b>and constructing the model (<b>M) </b>required for it.
+      <li>Step 3 therefore consists of selecting a view <b>V </b>and constructing the model <b>M </b>required for it.
       </li>
     </ul>
   </li>
-  <li>The controller <b>C </b>instructs the selected view to display itself. This usually involves executing a specific method of the view <b>V </b>responsible for generating the response to the client. In this document, we will refer to both the object that generates the response to the client and the response itself as the view. MVC literature is not explicit on this point. If it were the response that were to be called the view, we could call the object that generates this response the view generator.
+  <li>The controller <b>C </b>instructs the selected view to display itself. This usually involves executing a specific method of the view <b>V </b>responsible for generating the response to the client. In this document, we will refer to both the object that generates the response to the client and the response itself as a view. The MVC documentation is not explicit on this point. If the response were to be called a view, we could call the object that generates this response a view generator.
   </li>
-  <li>The view generator <b>V </b>uses the model <b>M </b>prepared by the controller <b>C </b>to initialize the dynamic parts of the response it must send to the client.
+  <li>The view generator <b>V </b>uses the template <b>M </b>prepared by the controller <b>C </b>to initialize the dynamic parts of the response it must send to the client.
   </li>
-  <li>The response is sent to the client. Its exact form depends on the view generator. It can be an HTML stream, PDF, Excel, etc.
+  <li>The response is sent to the client. Its exact form depends on the view generator. It can be a HTML stream, PDF, Excel, ...
   </li>
 </ol>
 
-<p>The MVC web development methodology does not necessarily require external tools. Thus, a Java web application with an MVC architecture can be developed using a simple JDK and basic web development libraries. A method suitable for simple applications is as follows:</p>
+<p>The MVC web development methodology does not necessarily require external tools. Thus, a Java web application with a MVC architecture can be developed using a simple JDK and basic web development libraries. A method suitable for simple applications is as follows:</p>
 <ul>
   <li>The controller is handled by a single servlet. This is the <b>C </b>in MVC.
   </li>
-  <li>All client requests contain an <b>&quot;action</b>&quot; attribute, for example (<b>http://.../appli?action=liste</b>).
+  <li>All client requests contain an <b>action</b> attribute, for example (http://.../app?<b>action=list</b>).
   </li>
-  <li>Depending on the value of the <b>action</b> attribute, the servlet executes an internal method of type [<b>doAction</b>(...)].
+  <li>Depending on the value of the <b>action</b> attribute, the servlet executes an internal method of type [doAction(...)].
   </li>
-  <li>The [<b>doAction</b>] method executes the action requested by the user. To do this, it uses the [business] layer if necessary.
+  <li>The [doAction] method executes the action requested by the user. To do this, if necessary, it uses the [métier] layer.
   </li>
-  <li>Depending on the result of the execution, the [<b>doAction</b>] method decides which JSP page to display. This is the View (<b>V) </b>in the MVC model.
+  <li>Based on the result of the execution, the method [doAction] determines which JSP page to display. This is view <b>V </b>of the MVC model.
   </li>
-  <li>The JSP page contains dynamic elements that must be provided by the servlet. The [<b>doAction</b>] method will provide these elements. This is the view model, the <b>M </b>in MVC. This model is most often placed in the request context (request.setAttribute(&quot;key&quot;, &quot;value&quot;), or, less frequently, in the session or application context. A JSP page has access to these three contexts.
+  <li>The page JSP has dynamic elements that must be provided by the servlet. The method [doAction] will provide these elements. This is the model of the view, the <b>M </b>in MVC. This model is most often placed in the request context (request.setAttribute(&quot;key&quot;, &quot;value&quot;), or less frequently, in the session or application context. A JSP page has access to all three contexts.
   </li>
-  <li>The [<b>doAction</b>] method renders the view by passing the execution flow to the selected JSP page. To do this, it uses a statement such as [getServletContext()    .getRequestDispatcher(&quot;JSP page&quot;).forward(request, response)].
+  <li>The [doAction] method displays the view by passing the execution flow to the selected JSP page. To do this, it  uses a statement of the form [getServletContext() .getRequestDispatcher(&quot; pageJSP &quot;).forward(request, response)]    .
   </li>
 </ul>
 
-<p>This MVC design pattern is called the &quot;Front Controller&quot; pattern or single-controller pattern. A single servlet handles all requests from all users.</p>
+<p>This design pattern, MVC, is called the &quot;Front Controller&quot; pattern or single-controller pattern. A single servlet handles all requests from all users.</p>
 <p>Let’s return to the architecture of the previous web application:</p>
 <p><img src="images/100000000000039C00000162A72C5060.png" width="462" height="177" style="width:12.224cm;height:4.683cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000039C00000162A72C5060.png" /></p>
 <p>This architecture corresponds to the following n-tier architecture:</p>
 <p><img src="images/10000000000001DE000000B47F9D7A03.png" width="239" height="90" style="width:6.324cm;height:2.381cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001DE000000B47F9D7A03.png" /></p>
-<p>There is actually only one layer: the web interface layer. Generally speaking, an MVC web application based on servlets and JSP pages will have the following architecture:</p>
+<p>There is actually only one layer: the web interface layer. Generally speaking, a web application MVC based on servlets and pages JSP will have the following architecture:</p>
 <p><img src="images/10000000000004740000015E370B9BE9.png" width="570" height="175" style="width:15.081cm;height:4.63cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004740000015E370B9BE9.png" /></p>
-<p>For simple applications, this architecture is sufficient. When you have written several applications of this type, you realize that the servlets of two different applications:</p>
+<p>For simple applications, this architecture is sufficient. Once you’ve written several applications of this type, you’ll notice that the servlets in two different applications:</p>
 <ol>
-  <li>use the same mechanism to determine which method [doAction] to execute to handle the action requested by the user
+  <li>use the same mechanism to determine which [doAction] method to execute to handle the action requested by the user
   </li>
   <li>in fact differ only in the content of these [doAction] methods
   </li>
@@ -1010,7 +1012,7 @@
 
 <p>The temptation is then strong to:</p>
 <ul>
-  <li>factorize the processing (1) into a generic servlet that is unaware of the application using it
+  <li>factor out the processing (1) into a generic servlet that is unaware of the application using it
   </li>
   <li>delegate the processing (2) to external classes since the generic servlet does not know in which application it is being used
   </li>
@@ -1020,7 +1022,7 @@
 
 <p>Tools, often called &quot;frameworks,&quot; have emerged to provide developers with these capabilities. The oldest and probably best-known of these is <strong>Struts</strong> (http://struts.apache.org/). <strong>Jakarta Struts</strong> is a project of <strong>the Apache Software Foundation</strong> (www.apache.org). This framework is described in (http://tahe.developpez.com/java/struts/).</p>
 <p>The <strong>Spring</strong> framework (http://www.springframework.org/), which appeared more recently, offers features similar to those of Struts. Its use has been described in several articles (http://tahe.developpez.com/java/springmvc-part1/).</p>
-<p>We now present an example of an MVC architecture based on servlets and JSP pages.</p>
+<p>We now present an example of a MVC architecture based on servlets and JSP pages.</p>
 
 
 

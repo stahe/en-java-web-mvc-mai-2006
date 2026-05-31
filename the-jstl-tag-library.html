@@ -15,10 +15,10 @@
         <link rel="canonical" href="https://stahe.github.io/en-java-web-mvc-mai-2006/the-jstl-tag-library.html">
       
       
-        <link rel="prev" href="mvc-web-application-person---version-3.html">
+        <link rel="prev" href="web-application-mvc-personne---version-3.html">
       
       
-        <link rel="next" href="mvc-web-application-person---version-4.html">
+        <link rel="next" href="web-application-mvc-personne---version-4.html">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>8. The JSTL Tag Library - The basics of MVC web development in Java: a practical guide</title>
+        <title>8. The JSTL tag library - The basics of MVC web development in Java: a practical guide</title>
       
     
     
@@ -56,6 +56,8 @@
     
     
       <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -128,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              8. The JSTL Tag Library
+              8. The JSTL tag library
             
           </span>
         </div>
@@ -337,7 +339,7 @@
   <span class="md-ellipsis">
     
   
-    2. Tools used in this document
+    2. Tools Used in This Document
   
 
     
@@ -384,14 +386,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-model-view-controller-development.html" class="md-nav__link">
+      <a href="mvc-development-model-view-controller.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. MVC (Model–View–Controller) Development
+    4. MVC Development (Model–View–Controller)
   
 
     
@@ -411,14 +413,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-1.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-1.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    5. MVC Web Application [person] – Version 1
+    5. Web application MVC [personne] – version 1
   
 
     
@@ -438,14 +440,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-2.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-2.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6. MVC Web Application [person] – Version 2
+    6. Web application MVC [personne] – version 2
   
 
     
@@ -465,14 +467,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-3.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-3.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. MVC Web Application [person] – Version 3
+    7. Web application MVC [personne] – version 3
   
 
     
@@ -508,7 +510,7 @@
   <span class="md-ellipsis">
     
   
-    8. The JSTL Tag Library
+    8. The JSTL tag library
   
 
     
@@ -526,7 +528,7 @@
   <span class="md-ellipsis">
     
   
-    8. The JSTL Tag Library
+    8. The JSTL tag library
   
 
     
@@ -563,10 +565,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#802-installing-and-exploring-the-jstl-library" class="md-nav__link">
+  <a href="#802-install-and-explore-the-jstl-library" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8.0.2. Installing and Exploring the JSTL Library
+        8.0.2. Install and explore the JSTL library
       
     </span>
   </a>
@@ -577,7 +579,7 @@
   <a href="#803-using-jstl-in-a-web-application" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8.0.3. Using JSTL in a Web Application
+        8.0.3. Using JSTL in a web application
       
     </span>
   </a>
@@ -599,14 +601,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-4.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-4.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    9. MVC Web Application [person] – Version 4
+    9. Web application MVC [personne] – version 4
   
 
     
@@ -626,14 +628,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-5.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-5.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    10. MVC Web Application [person] – Version 5
+    10. Web application MVC [personne] – version 5
   
 
     
@@ -653,14 +655,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-6.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-6.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    11. MVC Web Application [person] – Version 6
+    11. Web application MVC [personne] – version 6
   
 
     
@@ -680,14 +682,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-7.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-7.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. MVC Web Application [person] – Version 7
+    12. Web application MVC [personne] – version 7
   
 
     
@@ -707,14 +709,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-8.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-8.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    13. MVC Web Application [person] – Version 8
+    13. Web application MVC [personne] – version 8
   
 
     
@@ -822,7 +824,7 @@
   <span class="md-ellipsis">
     
   
-    17. MVC Web Application in a 3-Tier Architecture – Example 3 – Firebird DBMS
+    17. MVC web application in a 3-tier architecture – Example 3 – Firebird DBMS
   
 
     
@@ -849,7 +851,7 @@
   <span class="md-ellipsis">
     
   
-    18. MVC Web Application in a 3-Tier Architecture – Example 4, Postgres
+    18. MVC web application in a 3-tier architecture – Example 4, Postgres
   
 
     
@@ -869,14 +871,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-in-a-3-tier-architecture---example-5-mysql.html" class="md-nav__link">
+      <a href="web-application-mvc-in-a-3-tier-architecture---example-5-mysql.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    19. MVC Web Application in a 3-Tier Architecture – Example 5, MySQL
+    19. Web application MVC in a 3-tier architecture – Example 5, MySQL
   
 
     
@@ -896,14 +898,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-in-a-3-tier-architecture---example-6-sql-server-express.html" class="md-nav__link">
+      <a href="web-application-mvc-in-a-3-tier-architecture---example-6-sql-server-express.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    20. MVC Web Application in a 3-Tier Architecture – Example 6, SQL Server Express
+    20. Web application MVC in a 3-tier architecture – Example 6, SQL Server Express
   
 
     
@@ -950,14 +952,14 @@
   
   
     <li class="md-nav__item">
-      <a href="the-code-from-the-article.html" class="md-nav__link">
+      <a href="the-code-for-this-article.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    22. The code from the article
+    22. The code for this article
   
 
     
@@ -987,11 +989,11 @@
 
 
 
-<h1 id="8-the-jstl-tag-library">8. <span style="color: #365f91"><strong>The JSTL Tag Library</strong></span></h1>
+<h1 id="8-the-jstl-tag-library">8. <span style="color: #365f91">The JSTL tag library</span></h1>
 <h3 id="801-introduction">8.0.1. <span style="color: #4f81bd">Introduction</span></h3>
 <p>Consider the [erreurs.jsp] view, which displays a list of errors:</p>
 <p><img src="images/100000000000019D000000E0A74E030E.png" width="289" height="157" style="width:7.65cm;height:4.149cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000019D000000E0A74E030E.png" /></p>
-<p>There are several ways to write such a page. Here, we are only interested in the error display portion. One solution is to use Java code as was done:</p>
+<p>There are several ways to write such a page. Here, we are only interested in the error display portion. One solution is to use Java code as shown:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#bf5f3f">&lt;%@ </span><span style="color:#3f7f7f">page </span><span style="color:#7f007f">language</span><span style="color:#000000">=</span><span style="color:#2a00ff">&quot;java&quot; </span><span style="color:#7f007f">contentType</span><span style="color:#000000">=</span><span style="color:#2a00ff">&quot;text/html; charset=ISO-8859-1&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#2a00ff">    </span><span style="color:#7f007f">pageEncoding</span><span style="color:#000000">=</span><span style="color:#2a00ff">&quot;ISO-8859-1&quot;</span><span style="color:#bf5f3f">%&gt;</span></span></span>
@@ -999,7 +1001,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#bf5f3f">&lt;%@ </span><span style="color:#3f7f7f">page </span><span style="color:#7f007f">import</span><span style="color:#000000">=</span><span style="color:#2a00ff">&quot;java.util.ArrayList&quot; </span><span style="color:#bf5f3f">%&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;%</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// on récupère les données du modèle</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// retrieve data from the model</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  ArrayList erreurs=(ArrayList)request.getAttribute(</span><span style="color:#2a00ff">&quot;erreurs&quot;</span><span style="color:#000000">); </span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  String lienRetourFormulaire=(String)request.getAttribute(</span><span style="color:#2a00ff">&quot;lienRetourFormulaire&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">%&gt;</span></span>
@@ -1014,7 +1016,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#bf5f3f">&lt;%</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">          </span><span style="font-weight:bold;color:#7f0055">for</span><span style="color:#000000">(</span><span style="font-weight:bold;color:#7f0055">int</span><span style="color:#000000"> i=0;i&lt;erreurs.size();i++){</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">            out.println(</span><span style="color:#2a00ff">&quot;&lt;li&gt;&quot;</span><span style="color:#000000"> + (String) erreurs.get(i) + </span><span style="color:#2a00ff">&quot;&lt;/li&gt;\n&quot;</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        }</span><span style="color:#3f7f5f">//for</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        }//for</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#bf5f3f">%&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">ul</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">br</span><span style="color:#008080">&gt;</span></span></span>
@@ -1029,7 +1031,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 </code></pre></div>
 
-<p>The JSP page retrieves the list of errors from the request (line 8) and displays it using a Java loop (lines 19–23). The page mixes HTML and Java code, which can be problematic if the page needs to be maintained by a web designer who generally won’t understand the Java code. To avoid this mixing, tag libraries are used to bring new capabilities to JSP pages. With the JSTL (Java Standard Tag Library) tag library, the previous view becomes the following:</p>
+<p>The JSP page retrieves the list of errors from the query (line 8) and displays it using a Java loop (lines 19–23). The page mixes HTML code and Java code, which can be problematic if the page needs to be maintained by a web designer who generally won’t understand Java code. To avoid this mixing, tag libraries are used to bring new capabilities to JSP pages. With the JSTL tag library (Java Standard Tag Library), the previous view becomes the following:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#bf5f3f">&lt;%@ </span><span style="color:#3f7f7f">page </span><span style="color:#7f007f">language</span><span style="color:#000000">=</span><span style="color:#2a00ff">&quot;java&quot; </span><span style="color:#7f007f">contentType</span><span style="color:#000000">=</span><span style="color:#2a00ff">&quot;text/html; charset=ISO-8859-1&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#2a00ff">    </span><span style="color:#7f007f">pageEncoding</span><span style="color:#000000">=</span><span style="color:#2a00ff">&quot;ISO-8859-1&quot;</span><span style="color:#bf5f3f">%&gt;</span></span></span>
@@ -1061,9 +1063,9 @@
 <p>The tag (line 4)</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&lt;%@ taglib uri=&quot;/WEB-INF/c.tld&quot; prefix=&quot;c&quot; %&gt;
 </code></pre></div>
-<p>indicates the use of a tag library defined in the file [/WEB-INF/c.tld]. These tags will be used in the page code, prefixed with the letter <strong>c</strong> (prefix=&quot;c&quot;). You can use any prefix of your choice. Here, <strong>c</strong> stands for [core]. Prefixes allow you to use tag libraries that might have the same names for certain tags. Using a prefix resolves any ambiguity. The new page <strong>no longer has Java code</strong> in the two places where it previously did:</p>
+<p>indicates the use of a tag library defined in the file [/WEB-INF/c.tld]. These tags will be used in the page code, prefixed with the letter <strong>c</strong> (prefix=&quot;c&quot;). You can use any prefix of your choice. Here, <strong>c</strong> stands for [core]. Prefixes allow you to use tag libraries that might have the same names for certain tags. Using the prefix resolves the ambiguity. The new page <strong>no longer has Java code</strong> in the two places where it previously did:</p>
 <ul>
-  <li>retrieving the page template [errors, returnFormLink] (removed section)
+  <li>retrieving the template for page [erreurs, lienRetourFormulaire] (removed section)
   </li>
   <li>displaying the list of errors (lines 13–15)
   </li>
@@ -1077,7 +1079,7 @@
 </code></pre></div>
 
 <ul>
-  <li>The <b>&lt;forEach&gt; </b>tag is used to define a loop
+  <li>The <b>&lt;forEach&gt; </b>tag is used to delimit a loop
   </li>
   <li>The <b>${variable} </b>notation is used to display the value of a variable
   </li>
@@ -1089,28 +1091,28 @@
     <ul>
       <li>the [request] object, which represents the request sent by the controller: <b>request.getAttribute(&quot;errors&quot;)</b>
       </li>
-      <li>the [session] object, which represents the client&#x27;s session: <b>session.getAttribute(&quot;errors&quot;)</b>
+      <li>the object [session], which represents the client’s session: <b>session.getAttribute(&quot;errors&quot;)</b>
       </li>
-      <li>the [application] object, which represents the web application context: <b>application.getAttribute(&quot;errors&quot;)</b>
+      <li>the object [application], which represents the web application context: <b>application.getAttribute(&quot;errors&quot;)</b>
       </li>
     </ul>
   </li>
 </ul>
 
-<p>The collection designated by the <strong>items</strong> attribute can take various forms: <em>array</em>, <em>ArrayList</em>, object implementing the <em>List</em> interface, etc.</p>
+<p>The collection designated by the <strong>items</strong> attribute can take various forms: <em>array</em>, <em>ArrayList</em>, object implementing the <em>List</em> interface, ...</p>
 <ul>
   <li><b>var=&quot;error&quot; </b>is used to name the current element of the collection being processed. The &lt;forEach&gt; loop will be executed successively for each element of the <b>items</b> collection. Inside the loop, the element of the collection being processed will therefore be referred to here as <b>error</b>.
   </li>
 </ul>
 
-<p>The <strong>${error}</strong> syntax inserts the value of the <strong>error</strong> variable into the text. This variable is not necessarily a string. JSTL uses the <strong>error.toString()</strong> method to insert the value of the <strong>error</strong> variable. Instead of the <strong>${error}</strong> syntax, you can also use the <strong>&lt;c:out value=&quot;${error}&quot;/&gt;</strong> tag.</p>
+<p>The notation <strong>${error}</strong> inserts the value of the <strong>error</strong> variable into the text. This variable is not necessarily a string. JSTL uses the <strong>error.toString()</strong> method to insert the value of the <strong>error</strong> variable. Instead of the <strong>${error}</strong> notation, you can also use the <strong>&lt;c:out value=&quot;${error}&quot;/&gt;</strong> tag.</p>
 <p>Returning to our example of displaying errors:</p>
 <ul>
-  <li>the controller will place an <i>ArrayList </i>of error messages—that is, an <i>ArrayList </i>of <i>String</i> objects—in the request sent to the JSP page: <b>request.setAttribute(&quot;errors&quot;, errors)</b>, where <b>errors </b>is the <i>ArrayList</i>;
+  <li>The controller will include a <i>ArrayList </i>containing error messages in the request sent to the JSP page, which in turn contains a <i>ArrayList </i>of <i>String</i> objects: <b>request.setAttribute(&quot;errors&quot;, errors) </b>where <b>errors </b>is the <i>ArrayList</i>;
   </li>
   <li>because of the attribute <b>items=&quot;${errors}&quot;</b>, the JSP page will look for an attribute named <b>errors</b>, successively in the <b>request</b>, the <b>session</b>, and <b>the application</b>. It will find it in the request: <b>request.getAttribute(&quot;errors&quot;) </b>will return the <i>ArrayList </i>placed in the request by the controller;
   </li>
-  <li>The <i>error</i> variable of the <b>var=&quot;error&quot; </b>attribute will therefore refer to the current element of <i>the ArrayList</i>, which is a <i>String</i> object. The <b>error.toString() </b>method will insert the value of this <i>String</i>—in this case, an error message—into the page’s HTML output.
+  <li>the <i>&quot;error</i><b>&quot; </b>variable of the <b>var=&quot;error&quot; </b>attribute will therefore refer to the current element of <i>ArrayList</i>, which is a <i>String</i> object. The <b>error.toString() </b>method will insert the value of this <i>String</i>—in this case, an error message—into the HTML stream of the page.
   </li>
 </ul>
 
@@ -1129,7 +1131,7 @@
 <a id="__codelineno-1-6" name="__codelineno-1-6"></a>                <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
 <a id="__codelineno-1-7" name="__codelineno-1-7"></a>     <span class="p">&lt;/</span><span class="nt">c:forEach</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
-<p>where [listarticles] is an <em>ArrayList</em> of objects of type [Article], which we assume to be a JavaBean with the fields [id, name, price, currentStock, minimumStock], each of these fields having its own <strong>get</strong> and <strong>set</strong> methods. The [listarticles] object was placed in the request by the controller. The preceding JSP page retrieves it from the <strong>items</strong> attribute of the <strong>forEach</strong> tag. The current <strong>article</strong> object (var=&quot;article&quot;) therefore refers to an object of type [Article]. Consider the tag on line 3:</p>
+<p>where [listarticles] is a <em>ArrayList</em> of objects of type [Article], which is assumed to be a JavaBean with fields [id, nom, prix, stockActuel, stockMinimum], each of these fields being accompanied by its <strong>get</strong> and <strong>set</strong> methods. The [listarticles] object was placed in the request by the controller. The preceding page JSP will retrieve it from the <strong>items</strong> attribute of the <strong>forEach</strong> tag. The current object <strong>article</strong> (var=&quot;article&quot;) therefore refers to an object of type [Article]. Consider the tag on line 3:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>&lt;c:out value=&quot;${article.nom}&quot;/&gt;
 </code></pre></div>
 <p>What does <em>${article.nom}</em> mean? Actually, various things depending on the nature of the <strong>article</strong> object. To obtain the value of <strong>article.nom</strong>, the JSP page will try two things:</p>
@@ -1140,31 +1142,31 @@
   </li>
 </ol>
 
-<p>The [article] object can therefore be a bean with a &quot;<strong>name&quot; field</strong>, or a dictionary with a &quot;<strong>name&quot; key</strong>.</p>
-<p>There are no limits to the depth of the object being processed. Thus, the tag </p>
+<p>The [article] object can therefore be a bean with a &quot;<strong>name</strong>&quot; <strong>field</strong>, or a dictionary with a &quot;<strong>name&quot; key</strong>.</p>
+<p>There are no limits to the hierarchy of the processed object. Thus, the tag </p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>&lt;c:out value=&quot;${individu.enfants[1].nom}&quot;/&gt;
 </code></pre></div>
-<p>allows you to process an object [individu] of the following type:</p>
+<p>allows you to process a [individu] object of the following type:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>class Individu{
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    private String nom;
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    private String prénom;
 <a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    private Individu[] enfants;
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    // méthodes de la norme Javabean
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    // javabean standard methods
 <a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    public String getNom(){ return nom;}
 <a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    public String getPrénom(){ return prénom;}
 <a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>    public Individu getEnfants(int i){ return enfants[i];}
 <a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>}
 </code></pre></div>
-<p>To obtain the value of <strong>${person.children[1].lastName}</strong>, the JSP page will try various methods, including this one, which will succeed:</p>
-<p><strong>person.getChildren(1).getLastName()</strong> where <strong>person</strong> refers to an object of type <strong>Person</strong>.</p>
-<h3 id="802-installing-and-exploring-the-jstl-library">8.0.2. <span style="color: #4f81bd">Installing and Exploring the JSTL Library</span></h3>
+<p>To obtain the value of <strong>${individu.enfants[1].lastName}</strong>, the page JSP will try various methods, including this one, which will succeed:</p>
+<p><strong>individu.getEnfants(1).getNom()</strong> where <strong>individual</strong> refers to an object of type <strong>Individual</strong>.</p>
+<h3 id="802-install-and-explore-the-jstl-library">8.0.2. <span style="color: #4f81bd">Install and explore the JSTL library</span></h3>
 <p>The explanations provided above will suffice for the application we are interested in, but the JSTL tag library offers other tags besides those presented. To explore them, you can run a tutorial included in the library package.</p>
-<p>We will use the JSTL 1.1 implementation of the [Jakarta Taglibs] project available at the URL [http://jakarta.apache.org/taglibs/] (May 2006):</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000186000001C4E7F0C560.png" width="273" height="316" style="display:inline-block; margin:4px;width:7.22cm;height:8.368cm;" class="odt-zoomable" data-zoom-src="images/1000000000000186000001C4E7F0C560.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000023D00000165B503AE20.png" width="340" height="212" style="display:inline-block; margin:4px;width:8.999cm;height:5.607cm;" class="odt-zoomable" data-zoom-src="images/100000000000023D00000165B503AE20.png" /></td></tr></table>
+<p>We will use the JSTL 1.1 implementation of the [Jakarta Taglibs] project, available at Url [http://jakarta.apache.org/taglibs/] (May 2006):</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/1000000000000186000001C4E7F0C560.png" width="273" height="316" style="display:inline-block; margin:4px;width:7.22cm;height:8.368cm;" class="odt-zoomable" data-zoom-src="images/1000000000000186000001C4E7F0C560.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000023D00000165B503AE20.png" width="340" height="212" style="display:inline-block; margin:4px;width:8.999cm;height:5.607cm;" class="odt-zoomable" data-zoom-src="images/100000000000023D00000165B503AE20.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000239000000CBD3AD20D0.png" width="313" height="112" style="display:inline-block; margin:4px;width:8.28cm;height:2.955cm;" class="odt-zoomable" data-zoom-src="images/1000000000000239000000CBD3AD20D0.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000018B000000B72CDDEBBD.png" width="276" height="128" style="display:inline-block; margin:4px;width:7.31cm;height:3.387cm;" class="odt-zoomable" data-zoom-src="images/100000000000018B000000B72CDDEBBD.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/1000000000000239000000CBD3AD20D0.png" width="313" height="112" style="display:inline-block; margin:4px;width:8.28cm;height:2.955cm;" class="odt-zoomable" data-zoom-src="images/1000000000000239000000CBD3AD20D0.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000018B000000B72CDDEBBD.png" width="276" height="128" style="display:inline-block; margin:4px;width:7.31cm;height:3.387cm;" class="odt-zoomable" data-zoom-src="images/100000000000018B000000B72CDDEBBD.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001660000009A06C1020D.png" width="251" height="108" style="display:inline-block; margin:4px;width:6.63cm;height:2.852cm;" class="odt-zoomable" data-zoom-src="images/10000000000001660000009A06C1020D.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000018F000000A52D565636.png" width="279" height="116" style="display:inline-block; margin:4px;width:7.391cm;height:3.057cm;" class="odt-zoomable" data-zoom-src="images/100000000000018F000000A52D565636.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000001660000009A06C1020D.png" width="251" height="108" style="display:inline-block; margin:4px;width:6.63cm;height:2.852cm;" class="odt-zoomable" data-zoom-src="images/10000000000001660000009A06C1020D.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000018F000000A52D565636.png" width="279" height="116" style="display:inline-block; margin:4px;width:7.391cm;height:3.057cm;" class="odt-zoomable" data-zoom-src="images/100000000000018F000000A52D565636.png" /></td></tr></table>
 
 <p>The downloaded ZIP file contains the following:</p>
 <p><img src="images/10000000000000C0000000CC673C6073.png" width="135" height="143" style="width:3.56cm;height:3.784cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000C0000000CC673C6073.png" /></p>
@@ -1176,46 +1178,46 @@
   </li>
 </ul>
 
-<p><a id="jstl-deploiement-doc"></a>We will deploy this application within Tomcat. We launch Tomcat using the appropriate option in the [Start] menu, then enter the URL [http://localhost:8080] and follow the [Tomcat Manager] link:</p>
+<p><span id="jstl-deploiement-doc" name="jstl-deploiement-doc" class="odt-bookmark-anchor"></span>We will deploy this last application within Tomcat. We start Tomcat via theappropriate option from the [Démarrer] menu, then request the Url [http://localhost:8080] and follow the [Tomcat Manager] link:</p>
 <p><img src="images/10000000000001530000012EC9798919.png" width="237" height="211" style="width:6.279cm;height:5.593cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001530000012EC9798919.png" /></p>
-<p>We are then presented with an authentication page. We log in as <em>manager/manager</em> <strong><em>or</em></strong> <em>admin/admin</em>, as shown in section<a href="#tomcat-manager"><u><span style="color: #0563c1"> 2.3.3</span></u></a>.</p>
+<p>We are then presented with an authentication page. We log in as <em>manager/manager</em> <strong><em>or</em></strong> <em>admin/admin</em>, as shown in section<a href="tools-used-in-this-document.html#tomcat-manager"><u><span style="color: #0563c1"> 2.3.3</span></u></a>.</p>
 <p><img src="images/10000000000001F8000000D67A462871.png" width="353" height="150" style="width:9.329cm;height:3.962cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001F8000000D67A462871.png" /></p>
 <p>We are presented with a page listing the applications currently deployed in Tomcat:</p>
 <p><img src="images/100000000000039F0000016C59E0553F.png" width="649" height="255" style="width:17.17cm;height:6.742cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000039F0000016C59E0553F.png" /></p>
 <p>We can add a new application using the forms at the bottom of the page:</p>
 <p><img src="images/100000000000024D0000007303A3AD27.png" width="412" height="81" style="width:10.91cm;height:2.131cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000024D0000007303A3AD27.png" /></p>
-<p>We use the [Browse] button to select a .war file to deploy.</p>
+<p>We use the [Parcourir] button to select a .war file to deploy.</p>
 <p><img src="images/100000000000024F0000006B8D265A8B.png" width="413" height="75" style="width:10.94cm;height:1.981cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000024F0000006B8D265A8B.png" /></p>
-<p>The screenshot does not show it, but we have selected the [standard-examples.war] file from the downloaded JSTL distribution. The [Deploy] button saves and deploys this application within Tomcat.</p>
+<p>The screenshot does not show it, but we have selected the file [standard-examples.war] from the downloaded distribution JSTL. The [Deploy] button saves and deploys this application within Tomcat.</p>
 <p><img src="images/10000000000002D200000072144A90DD.png" width="505" height="80" style="width:13.37cm;height:2.111cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002D200000072144A90DD.png" /></p>
 <p>The [/standard-examples] application has been successfully deployed. We launch it:</p>
 <p><img src="images/10000000000001D30000019D2D8DA0CD.png" width="327" height="289" style="width:8.65cm;height:7.65cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001D30000019D2D8DA0CD.png" /></p>
-<p>Readers are encouraged to follow the various links provided on this page when looking for examples of how to use JSTL tags.</p>
+<p>Readers are encouraged to follow the various links provided on this page when looking for examples of how to use the JSTL tags.</p>
 <p>The [standard-doc] application can be deployed in the same way from the [standard-doc.war] file. It provides access to fairly technical information about the JSTL library. It is of less interest to beginners.</p>
-<h3 id="803-using-jstl-in-a-web-application">8.0.3. <span style="color: #4f81bd">Using JSTL in a Web Application</span></h3>
+<h3 id="803-using-jstl-in-a-web-application">8.0.3. <span style="color: #4f81bd">Using JSTL in a web application</span></h3>
 <p>In the examples provided with the JSTL 1.2 library, JSP pages begin with the following tag:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>&lt;%@ taglib prefix=&quot;c&quot; uri=&quot;http://java.sun.com/jsp/jstl/core&quot; %&gt;
 </code></pre></div>
 <p>We have already encountered this tag in Section<a href="#balise-taglib"><u><span style="color: #0563c1"> 8.1.1</span></u></a>, and we provided a brief explanation:</p>
 <ul>
-  <li>[uri]: URI (Uniform Resource Identifier) where the definitions of the tags used in the page are located. This URI will be used by the web server when the JSP page is translated into Java code to become a servlet. It is also used by web page development tools to verify the correct syntax of the tags used in the page or to provide autocomplete suggestions. When you start typing a tag, a tool familiar with the library can then suggest possible attributes for that tag to the user.
+  <li>[uri]: URI (Uniform Resource Identifier), where the definitions of the tags used in the page are found. This URI will be used by the web server when the JSP page is translated into Java code to become a servlet. It is also used by web page development tools to verify the correct syntax of the tags used in the page or to provide autocomplete suggestions. When you start typing a tag, a tool familiar with the library can then suggest possible attributes for that tag to the user.
   </li>
   <li>[prefix]: prefix that identifies these tags on the page
   </li>
 </ul>
 
-<p>The URI [http://java.sun.com/jsp/jstl/core] cannot be used if you are not connected to the public internet. In this case, you can place the tag definition file locally. Several such files are provided with the JSTL 1.2 distribution in the [tld] (Tag Language Definition) folder:</p>
+<p>The uri [http://java.sun.com/jsp/jstl/core] cannot be used if you are not connected to the public internet. In this case, you can place the tag definition file locally. Several such files are provided with the JSTL 1.2 distribution in the [tld] (Tag Language Definition) folder:</p>
 <p><img src="images/10000000000000C90000012E11247D3A.png" width="141" height="211" style="width:3.72cm;height:5.59cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000C90000012E11247D3A.png" /></p>
 <p>JSTL is actually a collection of tag libraries. We will only use the [c.tld] library, known as the &quot;core&quot; library. We will place the [c.tld] file mentioned above in the [WEB-INF] folder of our applications:</p>
 <p><img src="images/1000000000000076000000440B082809.png" width="82" height="47" style="width:2.18cm;height:1.256cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000076000000440B082809.png" /></p>
-<p>and include the following tag in our JSP pages to declare the use of the &quot;core&quot; library:</p>
+<p>and add the following tag to our JSP pages to declare the use of the &quot;core&quot; library:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>&lt;%@ taglib uri=&quot;/WEB-INF/c.tld&quot; prefix=&quot;c&quot; %&gt;
 </code></pre></div>
-<p>While using tag libraries allows us to avoid putting Java code in JSP pages, these tags are of course translated into Java code when the JSP page is compiled into a Java servlet. They use classes defined in two JAR files [jstl.jar, standard.jar] found in the [lib] folder of the JSTL distribution:</p>
+<p>While using tag libraries allows us to avoid putting Java code in the JSP pages, these tags are of course translated into Java code when the JSP page is translated into a Java servlet. They use classes defined in two [jstl.jar, standard.jar] archives found in the [lib] folder of the JSTL distribution:</p>
 <p><img src="images/10000000000000760000005B7B91247B.png" width="83" height="64" style="width:2.191cm;height:1.69cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000760000005B7B91247B.png" /></p>
-<p>These two JAR files are placed in the [WEB-INF/lib] folder of our applications:</p>
+<p>These two archives are placed in the [WEB-INF/lib] folder of our applications:</p>
 <p><img src="images/100000000000009D000000613B95D366.png" width="110" height="68" style="width:2.91cm;height:1.797cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000009D000000613B95D366.png" /></p>
-<p>We now have the basics to tackle the next version of our sample application.</p>
+<p>We now have the basics to tackle the next version in our example application.</p>
 
 
 

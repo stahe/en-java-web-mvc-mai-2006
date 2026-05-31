@@ -12,13 +12,13 @@
         <meta name="author" content="Serge Tahé">
       
       
-        <link rel="canonical" href="https://stahe.github.io/en-java-web-mvc-mai-2006/mvc-web-application-person---version-7.html">
+        <link rel="canonical" href="https://stahe.github.io/en-java-web-mvc-mai-2006/web-application-mvc-personne---version-7.html">
       
       
-        <link rel="prev" href="mvc-web-application-person---version-6.html">
+        <link rel="prev" href="web-application-mvc-personne---version-6.html">
       
       
-        <link rel="next" href="mvc-web-application-person---version-8.html">
+        <link rel="next" href="web-application-mvc-personne---version-8.html">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>12. MVC Web Application [person] – Version 7 - The basics of MVC web development in Java: a practical guide</title>
+        <title>12. Web application MVC [personne] – version 7 - The basics of MVC web development in Java: a practical guide</title>
       
     
     
@@ -56,6 +56,8 @@
     
     
       <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -92,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#12-mvc-web-application-person-version-7" class="md-skip">
+        <a href="#12-web-application-mvc-personne-version-7" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              12. MVC Web Application [person] – Version 7
+              12. Web application MVC [personne] – version 7
             
           </span>
         </div>
@@ -337,7 +339,7 @@
   <span class="md-ellipsis">
     
   
-    2. Tools used in this document
+    2. Tools Used in This Document
   
 
     
@@ -384,14 +386,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-model-view-controller-development.html" class="md-nav__link">
+      <a href="mvc-development-model-view-controller.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. MVC (Model–View–Controller) Development
+    4. MVC Development (Model–View–Controller)
   
 
     
@@ -411,14 +413,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-1.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-1.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    5. MVC Web Application [person] – Version 1
+    5. Web application MVC [personne] – version 1
   
 
     
@@ -438,14 +440,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-2.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-2.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6. MVC Web Application [person] – Version 2
+    6. Web application MVC [personne] – version 2
   
 
     
@@ -465,14 +467,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-3.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-3.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. MVC Web Application [person] – Version 3
+    7. Web application MVC [personne] – version 3
   
 
     
@@ -499,7 +501,7 @@
   <span class="md-ellipsis">
     
   
-    8. The JSTL Tag Library
+    8. The JSTL tag library
   
 
     
@@ -519,14 +521,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-4.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-4.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    9. MVC Web Application [person] – Version 4
+    9. Web application MVC [personne] – version 4
   
 
     
@@ -546,14 +548,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-5.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-5.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    10. MVC Web Application [person] – Version 5
+    10. Web application MVC [personne] – version 5
   
 
     
@@ -573,14 +575,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-6.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-6.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    11. MVC Web Application [person] – Version 6
+    11. Web application MVC [personne] – version 6
   
 
     
@@ -616,7 +618,7 @@
   <span class="md-ellipsis">
     
   
-    12. MVC Web Application [person] – Version 7
+    12. Web application MVC [personne] – version 7
   
 
     
@@ -627,14 +629,14 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="mvc-web-application-person---version-7.html" class="md-nav__link md-nav__link--active">
+      <a href="web-application-mvc-personne---version-7.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. MVC Web Application [person] – Version 7
+    12. Web application MVC [personne] – version 7
   
 
     
@@ -705,10 +707,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1241-the-form-view" class="md-nav__link">
+  <a href="#1241-the-formulaire-view" class="md-nav__link">
     <span class="md-ellipsis">
       
-        12.4.1. The [form] view
+        12.4.1. The [formulaire] view
       
     </span>
   </a>
@@ -716,10 +718,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#1242-the-response-view" class="md-nav__link">
+  <a href="#1242-the-view-reponse" class="md-nav__link">
     <span class="md-ellipsis">
       
-        12.4.2. The [response] view
+        12.4.2. The view [réponse]
       
     </span>
   </a>
@@ -727,10 +729,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#1243-the-errors-view" class="md-nav__link">
+  <a href="#1243-the-view-erreurs" class="md-nav__link">
     <span class="md-ellipsis">
       
-        12.4.3. The [errors] view
+        12.4.3. The view [erreurs]
       
     </span>
   </a>
@@ -779,14 +781,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-8.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-8.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    13. MVC Web Application [person] – Version 8
+    13. Web application MVC [personne] – version 8
   
 
     
@@ -894,7 +896,7 @@
   <span class="md-ellipsis">
     
   
-    17. MVC Web Application in a 3-Tier Architecture – Example 3 – Firebird DBMS
+    17. MVC web application in a 3-tier architecture – Example 3 – Firebird DBMS
   
 
     
@@ -921,7 +923,7 @@
   <span class="md-ellipsis">
     
   
-    18. MVC Web Application in a 3-Tier Architecture – Example 4, Postgres
+    18. MVC web application in a 3-tier architecture – Example 4, Postgres
   
 
     
@@ -941,14 +943,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-in-a-3-tier-architecture---example-5-mysql.html" class="md-nav__link">
+      <a href="web-application-mvc-in-a-3-tier-architecture---example-5-mysql.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    19. MVC Web Application in a 3-Tier Architecture – Example 5, MySQL
+    19. Web application MVC in a 3-tier architecture – Example 5, MySQL
   
 
     
@@ -968,14 +970,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-in-a-3-tier-architecture---example-6-sql-server-express.html" class="md-nav__link">
+      <a href="web-application-mvc-in-a-3-tier-architecture---example-6-sql-server-express.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    20. MVC Web Application in a 3-Tier Architecture – Example 6, SQL Server Express
+    20. Web application MVC in a 3-tier architecture – Example 6, SQL Server Express
   
 
     
@@ -1022,14 +1024,14 @@
   
   
     <li class="md-nav__item">
-      <a href="the-code-from-the-article.html" class="md-nav__link">
+      <a href="the-code-for-this-article.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    22. The code from the article
+    22. The code for this article
   
 
     
@@ -1059,19 +1061,19 @@
 
 
 
-<h1 id="12-mvc-web-application-person-version-7">12. <span style="color: #365f91">MVC Web Application [person] – Version 7</span></h1>
-<p><a id="personne3-introduction111"></a></p>
+<h1 id="12-web-application-mvc-personne-version-7">12. <span style="color: #365f91">Web application MVC [personne] – version 7</span></h1>
+<p><span id="personne3-introduction111" name="personne3-introduction111" class="odt-bookmark-anchor"></span></p>
 <h2 id="121-introduction">12.1. <span style="color: #4f81bd">Introduction</span></h2>
-<p>In this version, we assume that there may be client browsers that have disabled:</p>
+<p>In this version, we assume that there may be browsers clients that have disabled:</p>
 <ol>
-  <li>the sending of cookies from the server
+  <li>the sending of cookies sent by the server
   </li>
-  <li>the execution of JavaScript code embedded in the displayed HTML pages
+  <li>the execution of Javascript code embedded in the displayed HTML pages
   </li>
 </ol>
 
-<p>Nevertheless, we want this type of browser to be able to use our application. Point 2 takes us back to version 2 of our application, as JavaScript was introduced starting with version 3. Version 2 ran the application without JavaScript, so point 2 is resolved.</p>
-<p>Point 1 may or may not be difficult to handle. Version 6 of our application worked without cookies. By merging versions 2 and 6, we achieve the desired result. We will add an additional constraint: the application must manage a session. This is not a meaningless constraint. In an application where users must authenticate, the server must store the user’s username and password to prevent them from having to authenticate on every page they request.</p>
+<p>However, we want this type of browser to be able to use our application. Point 2 brings us back to version 2 of our application, as version 1 was used starting from version 3. version 2 ran the application without Javascript, so point 2 is resolved.</p>
+<p>Point 1 may or may not be difficult to handle. Version 6 of our application (version) worked without cookies. By merging versions 2 and 6, we achieve the desired result. We will add an additional constraint: the application must manage a session. This is not a meaningless constraint. In an application where users must authenticate, the server must store the user’s username and password to prevent them from having to authenticate on every page they request.</p>
 <p>So far, we have used three solutions to store information during client/server exchanges: </p>
 <ol>
   <li>the session
@@ -1082,9 +1084,9 @@
   </li>
 </ol>
 
-<p>Solution 2 can be ruled out since the client browser may have disabled cookies.</p>
-<p>Solution 3 is the one from version 6, which we examined earlier. It cannot be used for security reasons. If the login/password pair is embedded in every page sent to the browser, that means it travels over the network with every client-server exchange. This is not good for the application’s security. We could then consider using the HTTPS protocol, which encrypts client-server exchanges. However, using it for every page of the application will increase the server’s load.</p>
-<p>You might want to rule out Solution 1 because it also relies on cookies. During the first client-server exchange, the server sends the client a session token, which the client then sends back to the server with every new request. Thanks to this token, the server can recognize the client and provide it with information it had stored during a previous exchange. The session token is sent by the server in a cookie. A browser that has not disabled cookies can send this cookie back to the server in subsequent requests. If cookies are disabled, there is another solution: the browser can include the session token in the URL it requests. This is what we see now as we revisit the [index.jsp] file from version 4:</p>
+<p>Solution 2 can be ruled out since the client browser may have disabled the use of cookies.</p>
+<p>Solution 3 is the version 6 method previously discussed. It cannot be used for security reasons. If the login/password pair is embedded in every page sent to the browser, this means it travels over the network with every client-server exchange. This is not good for the application’s security. We could then consider using the HTTPS protocol, which encrypts client/server exchanges. However, using it for every page of the application will increase the server load.</p>
+<p>One might want to eliminate Solution 1 because it also relies on cookies. During the first client-server exchange, the server sends the client a session token, which the client will send back to the server with each new request. Thanks to this token, the server can recognize the client and assign it information it had stored during a previous exchange. The session token is sent by the server in a cookie. A browser that has not disabled cookies can send this cookie back to the server during subsequent requests. If cookies are disabled, there is another solution: the browser can include the session token in the Url request it sends. This is what we see now as we resume our examination of the [index.jsp] file from version 4:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;%@ <span style="color:#3f7f7f">page </span><span style="color:#7f007f">language</span><span style="color:#000000">=</span><span style="color:#2a00ff">&quot;java&quot; </span><span style="color:#7f007f">contentType</span><span style="color:#000000">=</span><span style="color:#2a00ff">&quot;text/html; charset=ISO-8859-1&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#2a00ff">    </span><span style="color:#7f007f">pageEncoding</span><span style="color:#000000">=</span><span style="color:#2a00ff">&quot;ISO-8859-1&quot;</span><span style="color:#bf5f3f">%&gt;</span></span></span>
@@ -1093,13 +1095,13 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">c:redirect </span><span style="color:#7f007f">url</span><span style="color:#000000">=</span><span style="color:#2a00ff">&quot;/main&quot;</span><span style="color:#008080">/&gt;</span></span></span>
 </code></pre></div>
 
-<p>Recall that line 5 above redirects the client to the URL [/personne4/main?jsessionid=XX], where XX is the session token, as shown in the screenshot below obtained after requesting the URL [http://localhost:8080/personne4]:</p>
+<p>Note that line 5 above redirects the client to Url [/personne4/main?jsessionid=XX], where XX is the session token, as shown in the screenshot below obtained after requestingUrl [http://localhost:8080/personne4]:</p>
 <p><img src="images/10000000000001C900000100E465AB41.png" width="320" height="179" style="width:8.46cm;height:4.74cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001C900000100E465AB41.png" /></p>
-<p>Let’s take a closer look at how the &lt;c:redirect&gt; tag works with regard to the session token. Let’s use a browser that accepts cookies. Below, we configure the Firefox browser:</p>
+<p>Let’s take a closer look at how the &lt;c:redirect&gt; tag works with the session token. Let’s consider a browser that accepts cookies. Below, we configure the Firefox browser:</p>
 <p><img src="images/100000000000033A000001E591BFB416.png" width="413" height="242" style="width:10.927cm;height:6.415cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000033A000001E591BFB416.png" /></p>
-<p>In [1], we enable cookies, and in [2] we delete any existing ones to start from a known state. Then we request the URL [http://localhost:8080/personne4]. We receive the following response:</p>
+<p>In [1], we enable cookies, and in [2] we delete existing cookies to start from a known state. Then we request Url [http://localhost:8080/personne4]. We receive the following response:</p>
 <p><img src="images/10000000000001DC000000EA780B084E.png" width="333" height="164" style="width:8.819cm;height:4.336cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001DC000000EA780B084E.png" /></p>
-<p>The client’s initial HTTP request was as follows:</p>
+<p>The client&#x27;s initial HTTP request was as follows:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span>
@@ -1118,7 +1120,7 @@
 <a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="n">Keep</span><span class="o">-</span><span class="n">Alive</span><span class="p">:</span> <span class="mi">300</span>
 <a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="n">Connection</span><span class="p">:</span> <span class="n">keep</span><span class="o">-</span><span class="n">alive</span>
 </code></pre></div></td></tr></table></div>
-<p>Note that the client does not send a session cookie. The HTTP response sent by the server is as follows:</p>
+<p>Note that the client does not send a session cookie. The response HTTP sent by the server is as follows:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
@@ -1138,11 +1140,11 @@
   </li>
   <li>line 3: the server sends a session token associated with the [JSESSIONID] attribute
   </li>
-  <li>line 4: the redirect URL contains the session token. The &lt;c:redirect&gt; tag placed it there because the client had not sent a session cookie.
+  <li>line 4: the Url redirect contains the session token. The &lt;c:redirect&gt; tag placed it there because the client had not sent a session cookie.
   </li>
 </ul>
 
-<p>The browser, which was asked to redirect, then made the following request:</p>
+<p>The browser, which was instructed to redirect, then made the following request:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
@@ -1164,7 +1166,7 @@
 <a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="n">Cookie</span><span class="p">:</span> <span class="n">JSESSIONID</span><span class="o">=</span><span class="mi">1</span><span class="n">ACA010A6BA28FB9E30A1D3184F574BC</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-  <li>Line 1: It requests the redirect URL, including the session token. This is why the browser displays this URL in the screenshot.
+  <li>Line 1: It requests the Url redirect, including the session token. This is why the browser displays this Url in the screenshot.
   </li>
   <li>Line 10: The browser sends back the session token that the server sent to it in the previous exchange. This is how cookies normally work when they are enabled on the client browser. If they are not enabled, the received cookies are not sent back.
   </li>
@@ -1181,10 +1183,10 @@
 <a id="__codelineno-3-4" name="__codelineno-3-4"></a>Content-Length: 2376
 <a id="__codelineno-3-5" name="__codelineno-3-5"></a>Date: Tue, 23 May 2006 09:10:05 GMT
 </code></pre></div></td></tr></table></div>
-<p>It found the requested page and is sending it. Note that it no longer sends the session token. This is how session tokens normally work: the server sends it to the browser once in the form of a cookie, and the browser then sends it back with every request to be recognized.</p>
-<p>Now, using the same browser, let’s request the URL [http://localhost:8080/personne4] again by typing it in manually. We then get the following page:</p>
+<p>It found the requested page and is sending it. Note that it no longer sends the session token. This is how session tokens normally work: they are sent to the browser once by the server in the form of a cookie, and the browser then sends it back with every request to be recognized.</p>
+<p>Now, using the same browser, let’s request Url [http://localhost:8080/personne4] again by typing it in manually. We then get the following page:</p>
 <p><img src="images/10000000000001B7000000EA876CF963.png" width="307" height="164" style="width:8.13cm;height:4.334cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001B7000000EA876CF963.png" /></p>
-<p>We can see that the URL displayed by the browser no longer contains the session token. Let’s look at the first client/server exchange:</p>
+<p>We can see that the Url displayed by the browser no longer contains the session token. Let’s look at the first client/server exchange:</p>
 <p>The browser made the following request:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
@@ -1206,7 +1208,7 @@
 <a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="n">Connection</span><span class="p">:</span> <span class="n">keep</span><span class="o">-</span><span class="n">alive</span>
 <a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="n">Cookie</span><span class="p">:</span> <span class="n">JSESSIONID</span><span class="o">=</span><span class="mi">1</span><span class="n">ACA010A6BA28FB9E30A1D3184F574BC</span>
 </code></pre></div></td></tr></table></div>
-<p>This is exactly the same request as the previous one, with one difference: on line 10, the browser sends back the session token it received during the very first exchange. Again, this is normal behavior if the browser&#x27;s cookies are enabled.</p>
+<p>This is exactly the same request as the previous one, with one difference: on line 10, the browser sends back the session token it received during the very first exchange. Once again, this is normal behavior if the browser’s cookies are enabled.</p>
 <p>The server sent the following response:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
 <span class="normal"><a href="#__codelineno-5-2">2</a></span>
@@ -1214,18 +1216,18 @@
 <span class="normal"><a href="#__codelineno-5-4">4</a></span>
 <span class="normal"><a href="#__codelineno-5-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>HTTP/1.x 302 Déplacé Temporairement
 <a id="__codelineno-5-2" name="__codelineno-5-2"></a>Server: Apache-Coyote/1.1
-<a id="__codelineno-5-3" name="__codelineno-5-3"></a>Location: http://localhost:8080/personne4/
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>Location: http://localhost:8080/person4/
 <a id="__codelineno-5-4" name="__codelineno-5-4"></a>Transfer-Encoding: chunked
 <a id="__codelineno-5-5" name="__codelineno-5-5"></a>Date: Tue, 23 May 2006 09:24:39 GMT
 </code></pre></div></td></tr></table></div>
-<p>It instructs the client to redirect. Since it received a session token from the client, it continues the session and does not send a new session token. For the same reason, the &lt;c:redirect&gt; tag does not include this session token in the redirect URL. This is why the URL shown in the screenshot above does not contain a session token.</p>
-<p>The key takeaway from all this is the following rule: the &lt;c:redirect&gt; tag only includes the session token in the redirect URL if the client has not sent the HTTP header: </p>
+<p>It asks the client to redirect. Since it received a session token from the client, it continues the session and does not send a new session token. For the same reason, the &lt;c:redirect&gt; tag does not include this session token in the redirection URL. This is why the URL displayed in the screenshot above does not have a session token.</p>
+<p>The key takeaway from all this is the following rule: the &lt;c:redirect&gt; tag includes the session token in the Url redirect URL only if the client has not sent the HTTP header: </p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Cookie: JSESSIONID=1ACA010A6BA28FB9E30A1D3184F574BC
 </code></pre></div>
 <p>This rule also applies to the &lt;c:url&gt; tag, which we will encounter later.</p>
-<p>What happens with a browser on which cookies have been disabled? Let’s try it. First, we reset the browser:</p>
+<p>What happens with a browser where cookies have been disabled? Let’s try it. First, we reset the browser:</p>
 <p><img src="images/1000000000000318000001327098B904.png" width="396" height="153" style="width:10.478cm;height:4.048cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000318000001327098B904.png" /></p>
-<p>In [1], we disable cookies, and in [2] we delete any existing ones to start from a known state. Then we request the URL [http://localhost:8080/personne4]. We get the following response:</p>
+<p>In [1], we disable cookies, and in [2] we delete existing ones to start from a known state. Then we request Url [http://localhost:8080/personne4]. We receive the following response:</p>
 <p><img src="images/10000000000001DB000000EA884B8A2A.png" width="333" height="164" style="width:8.8cm;height:4.336cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001DB000000EA884B8A2A.png" /></p>
 <p>We get the same result as before. However, the HTTP exchanges are not exactly the same:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
@@ -1295,43 +1297,43 @@
 <a id="__codelineno-7-33" name="__codelineno-7-33"></a><span class="n">Date</span><span class="p">:</span> <span class="n">Tue</span><span class="p">,</span> <span class="mi">23</span> <span class="n">May</span> <span class="mi">2006</span> <span class="mi">09</span><span class="p">:</span><span class="mi">39</span><span class="p">:</span><span class="mi">55</span> <span class="n">GMT</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-  <li>Lines 1–9: The browser’s first request. It does not send a session cookie.
+  <li>Lines 1-9: Request #1 from the browser. It does not send a session cookie.
   </li>
-  <li>Lines 11–17: The server’s response, which instructs the browser to redirect to another URL. It sends a session cookie. Line 13: The &lt;c:redirect&gt; tag has included the token in the redirect URL on line 14.
+  <li>lines 11-17: the server&#x27;s response asking it to redirect to another Url. It sends a session cookie line 13: the &lt;c:redirect&gt; tag has included the token in the Url redirect line 14.
   </li>
-  <li>Lines 19–27: The browser’s second request. It does not send back the session cookie that the server just sent because its cookies are disabled.
+  <li>Lines 19–27: The browser’s second request. It does not send back the session cookie that the server just sent it because its cookies are disabled.
   </li>
-  <li>Lines 29–33: The server’s response. We can see that although the browser did not send a session cookie, the server does not start a new session as one might expect. This is evident from the fact that it does not send the [Set-Cookie] HTTP header as it did in line 13. This means it continues the previous session. It was able to retrieve this session thanks to the session token present in the URL requested by the browser in line 19.
+  <li>Lines 29–33: the server’s response. We can see that although the browser did not send a session cookie, the server does not restart a new session as one might have expected. This is evident from the fact that it does not send the header HTTP [Set-Cookie] as it did in line 13. This means that it is continuing the previous session. It was able to retrieve this session thanks to the session token present in the Url requested by the browser on line 19.
   </li>
 </ul>
 
 <p>Note that the server tracks a session by retrieving the session token sent by the client in two possible ways:</p>
 <ul>
-  <li>in the [Set-Cookie] HTTP header sent by the client
+  <li>in the HTTP [Set-Cookie] header sent by the client
   </li>
-  <li>in the URL requested by the client
+  <li>in the Url requested by the client
   </li>
 </ul>
 
-<p>Now, using the same browser, let’s request the URL [http://localhost:8080/personne4] again by typing it in manually, just as we did when cookies were enabled. We then get the following page:</p>
+<p>Now, using the same browser, let’s request the Url [http://localhost:8080/personne4] again by typing it in manually, as was done when cookies were enabled. We then get the following page:</p>
 <p><img src="images/10000000000001DD000000E82DD0E474.png" width="334" height="162" style="width:8.83cm;height:4.295cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001DD000000E82DD0E474.png" /></p>
-<p>The result is different from what we saw when cookies were allowed: the session token is in the URL displayed by the browser. Let’s explain this result without examining the HTTP exchanges that took place:</p>
-<p><strong>[cookies enabled]</strong></p>
+<p>The result is different from the one obtained  when cookies were allowed: the session token is in the Url displayed by the browser. Let’s explain this result without examining the HTTP exchanges that took place:</p>
+<p><strong>[cookies autorisés]</strong></p>
 <ul>
-  <li>During the second request for the URL [http://localhost:8080/personne4], the client browser sent back the session cookie it had received from the server during the first request for that same URL. The &lt;c:redirect&gt; tag therefore did not include the session token in the redirect address.
+  <li>During the second request for Url [http://localhost:8080/personne4], the client browser sent back the session cookie it had received from the server during the first request for that same Url. The &lt;c:redirect&gt; tag therefore did not include the session token in the redirect URL.
   </li>
 </ul>
 
-<p><strong>[cookies disabled]</strong></p>
+<p><strong>[cookies inhibés]</strong></p>
 <ul>
-  <li>During the second request for the URL [http://localhost:8080/personne4], the client browser does not send the session cookie it received from the server during the first request for that same URL, since its cookies are disabled. The &lt;c:redirect&gt; tag therefore includes the session token in the redirect URL. This is why it appears in the screenshot above.
+  <li>During the second request for Url [http://localhost:8080/personne4], the client browser does not send the session cookie it received from the server during the first request for this same Url, since its cookies are disabled. The &lt;c:redirect&gt; tag therefore includes the session token in the redirect URL. This is why it appears in the screenshot above.
   </li>
 </ul>
 
-<p>The <strong>&lt;c:redirect&gt;</strong> and <strong>&lt;c:url&gt;</strong> tags allow you to include the session token in URLs. This is the solution proposed here.</p>
+<p>The <strong>&lt;c:redirect&gt;</strong> and <strong>&lt;c:url&gt;</strong> tags allow the session token to be included in the Url. This is the solution proposed here.</p>
 <h2 id="122-the-eclipse-project">12.2. <span style="color: #4f81bd">The Eclipse Project</span></h2>
-<p>To create the Eclipse project [mvc-personne-07] for the web application [/personne7], duplicate the project [mvc-personne-06] by following the procedure described in section<a href="#personne2-eclipse"><u><span style="color: #0563c1"> 6.2</span></u></a>.</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000E200000170B908DED8.png" width="158" height="258" style="display:inline-block; margin:4px;width:4.189cm;height:6.821cm;" class="odt-zoomable" data-zoom-src="images/10000000000000E200000170B908DED8.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000012F0000005D4DF8005A.png" width="211" height="65" style="display:inline-block; margin:4px;width:5.59cm;height:1.716cm;" class="odt-zoomable" data-zoom-src="images/100000000000012F0000005D4DF8005A.png" /></td></tr></table>
+<p>To create the Eclipse project [mvc-personne-07] for the web application [/personne7], duplicate the project [mvc-personne-06] by following the procedure described in section<a href="web-application-mvc-personne---version-2.html#personne2-eclipse"><u><span style="color: #0563c1"> 6.2</span></u></a>.</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000000E200000170B908DED8.png" width="158" height="258" style="display:inline-block; margin:4px;width:4.189cm;height:6.821cm;" class="odt-zoomable" data-zoom-src="images/10000000000000E200000170B908DED8.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000012F0000005D4DF8005A.png" width="211" height="65" style="display:inline-block; margin:4px;width:5.59cm;height:1.716cm;" class="odt-zoomable" data-zoom-src="images/100000000000012F0000005D4DF8005A.png" /></td></tr></table>
 
 <h2 id="123-configuring-the-personne7-web-application">12.3. <span style="color: #4f81bd">Configuring the [personne7] Web Application</span></h2>
 <p>The <strong>web.xml</strong> file for the <strong>/personne7</strong> application is as follows:</p>
@@ -1342,18 +1344,18 @@
 <span class="odt-code-line"><span class="odt-code-line-content">...</span></span>
 </code></pre></div>
 
-<p>This file is identical to the one in the previous version except for line 3, where the display name of the web application has changed to [mvc-personne-07]. The home page [index.jsp] remains unchanged.</p>
+<p>This file is identical to the previous version file except for line 3, where the display name of the web application has changed to [mvc-personne-07]. The [index.jsp] home page remains unchanged.</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content">...</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">c:redirect </span><span style="color:#7f007f">url</span><span style="color:#000000">=</span><span style="color:#2a00ff">&quot;/do/formulaire&quot;</span><span style="color:#008080">/&gt;</span></span></span>
 </code></pre></div>
 
 <h2 id="124-the-view-code">12.4. <span style="color: #4f81bd">The view code</span></h2>
-<p>The views [form, response, errors] revert to what they were in version 2, i.e., without JavaScript. However, they retain the JSTL tags from the latest versions.</p>
-<h3 id="1241-the-form-view">12.4.1. <span style="color: #4f81bd">The [form] view</span></h3>
+<p>The [formulaire, réponse, erreurs] views revert to what they were in version 2, c.a.d, without Javascript. However, they retain the JSTL tags from the latest versions.</p>
+<h3 id="1241-the-formulaire-view">12.4.1. <span style="color: #4f81bd">The [formulaire] view</span></h3>
 <p><img src="images/100000000000014E000000EBEA15BD02.png" width="234" height="165" style="width:6.189cm;height:4.355cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000014E000000EBEA15BD02.png" /></p>
-<p>The buttons associated with JavaScript code have been removed.</p>
-<p>[form.jsp]:</p>
+<p>The buttons associated with Javascript have been removed.</p>
+<p>[formulaire.jsp]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#bf5f3f">&lt;%@ </span><span style="color:#3f7f7f">page </span><span style="color:#7f007f">language</span><span style="color:#000000">=</span><span style="color:#2a00ff">&quot;java&quot; </span><span style="color:#7f007f">contentType</span><span style="color:#000000">=</span><span style="color:#2a00ff">&quot;text/html; charset=ISO-8859-1&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#2a00ff">  </span><span style="color:#7f007f">pageEncoding</span><span style="color:#000000">=</span><span style="color:#2a00ff">&quot;ISO-8859-1&quot;</span><span style="color:#bf5f3f">%&gt;</span></span></span>
@@ -1394,9 +1396,9 @@
 </code></pre></div>
 
 <ul>
-  <li>Line 14: The POST target URL is written using the &lt;c:url&gt; tag so that the session token is included in case the client is a browser that does not send the [Cookie] HTTP header.
+  <li>line 14: the Url target of POST is written with the &lt;c:url&gt; so that the session token is included in case the client is a browser that does not send the HTTP [Cookie] header.
   </li>
-  <li>The form has two [submit] buttons: [Submit] (line 28) and [Clear] (line 30). Both buttons have the same name: <i>button</i>. When the POST is triggered, the browser will send the parameter:
+  <li>The form has two buttons of type [submit]: [Envoyer] (line 28) and [Effacer] (line 30). Both buttons have the same name: <i>button</i>. When the POST occurs, the browser will send the parameter:
   </li>
   <li><i>button=Submit </i>if the POST was triggered by the [Submit] button
   </li>
@@ -1404,10 +1406,10 @@
   </li>
 </ul>
 
-<p>This parameter will help us determine the exact action to take, as the URL [/do/validationFormulaire] now corresponds to two distinct actions.</p>
-<h3 id="1242-the-response-view">12.4.2. <span style="color: #4f81bd">The [response] view</span></h3>
+<p>This parameter will help us determine the exact action to take, as Url and [/do/validationFormulaire] now correspond to two distinct actions.</p>
+<h3 id="1242-the-view-reponse">12.4.2. <span style="color: #4f81bd">The view [réponse]</span></h3>
 <p><img src="images/10000000000000FC000000DF7959044F.png" width="177" height="156" style="width:4.671cm;height:4.133cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000FC000000DF7959044F.png" /></p>
-<p>[response.jsp]:</p>
+<p>[réponse.jsp]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#bf5f3f">&lt;%@ </span><span style="color:#3f7f7f">page </span><span style="color:#7f007f">language</span><span style="color:#000000">=</span><span style="color:#2a00ff">&quot;java&quot; </span><span style="color:#7f007f">contentType</span><span style="color:#000000">=</span><span style="color:#2a00ff">&quot;text/html; charset=ISO-8859-1&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#2a00ff">    </span><span style="color:#7f007f">pageEncoding</span><span style="color:#000000">=</span><span style="color:#2a00ff">&quot;ISO-8859-1&quot;</span><span style="color:#bf5f3f">%&gt;</span></span></span>
@@ -1439,13 +1441,13 @@
 </code></pre></div>
 
 <ul>
-  <li>Line 24: The target URL of the HREF is written using the &lt;c:url&gt; tag so that the session token is included in case the client is a browser that does not send the [Cookie] HTTP header.
+  <li>line 24: the Url target of HREF is written with the &lt;c:url&gt; so that the session token is included in case the client is a browser that does not send the HTTP [Cookie] header.
   </li>
 </ul>
 
-<h3 id="1243-the-errors-view">12.4.3. <span style="color: #4f81bd">The [errors] view</span></h3>
+<h3 id="1243-the-view-erreurs">12.4.3. <span style="color: #4f81bd">The view [erreurs]</span></h3>
 <p><img src="images/100000000000020C000000CF2FE8287F.png" width="367" height="145" style="width:9.7cm;height:3.831cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000020C000000CF2FE8287F.png" /></p>
-<p>[errors.jsp]:</p>
+<p>[erreurs.jsp]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#bf5f3f">&lt;%@ </span><span style="color:#3f7f7f">page </span><span style="color:#7f007f">language</span><span style="color:#000000">=</span><span style="color:#2a00ff">&quot;java&quot; </span><span style="color:#7f007f">contentType</span><span style="color:#000000">=</span><span style="color:#2a00ff">&quot;text/html; charset=ISO-8859-1&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#2a00ff">    </span><span style="color:#7f007f">pageEncoding</span><span style="color:#000000">=</span><span style="color:#2a00ff">&quot;ISO-8859-1&quot;</span><span style="color:#bf5f3f">%&gt;</span></span></span>
@@ -1471,7 +1473,7 @@
 </code></pre></div>
 
 <ul>
-  <li>Line 18: The HREF target URL is written using the &lt;c:url&gt; tag so that the session token is included in case the client is a browser that does not send the [Cookie] HTTP header.
+  <li>line 18: the Url target of HREF is written with the &lt;c:url&gt; so that the session token is included in case the client is a browser that does not send the HTTP [Cookie] header.
   </li>
 </ul>
 
@@ -1725,20 +1727,20 @@
 <a id="__codelineno-8-123" name="__codelineno-8-123"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-  <li>line 35: the [/retourFormulaire] action is performed via a GET request rather than a POST request as in the previous version.
+  <li>line 35: action [/retourFormulaire] is performed by a GET and no longer by a POST as in the previous version.
   </li>
-  <li>lines 70–87: The [/validationFormulaire] action is triggered by a POST request caused by clicking one of the [Envoyer] or [Effacer] buttons on the [form] view. The [doValidationFormulaire] method handles these two cases using two different methods.
+  <li>lines 70–87:  the [/validationFormulaire] action is triggered by a POST caused by clicking onone of the [Envoyer] or [Effacer] buttons in the [formulaire] view. The [doValidationFormulaire] method handles these two cases using two different methods.
   </li>
-  <li>lines 90–103: The [doEnvoyer] method corresponds to the [doValidationFormulaire] method from the previous version. The entered data is stored in the session (lines 96–98), whereas in the previous version it was placed in the request.
+  <li>Lines 90–103: The method [doEnvoyer] corresponds to the method [doValidationFormulaire] from the previous version. The entered data is placed in the session (lines 96–98), whereas in the previous version it was placed in the query.
   </li>
-  <li>Lines 58–67: The new [doEffacer] method must display an empty form. We could call the [doInit] method, which already performs this task. Here, we take the opportunity to also clear the [name, age] elements from the session so that it continues to reflect the form’s latest state.
+  <li>Lines 58–67: The new method [doEffacer] must display an empty form. We could use the method [doInit], which already performs this task. Here, we also take the opportunity to clear the [nom, age] elements from the session so that it continues to reflect the form’s latest state.
   </li>
-  <li>lines 50-55: request the display of the [form] view without any apparent initialization of the view’s model. This model is actually composed of the [name, age] elements already in the session. No further action is required.
+  <li>Lines 50–55: Request the display of the [formulaire] view without apparently initializing the view’s template. This template is actually composed of the [nom, age] elements already in the session. No further action is required.
   </li>
 </ul>
 
 <h2 id="126-tests">12.6. <span style="color: #4f81bd">Tests</span></h2>
-<p>Start or restart Tomcat after integrating the Eclipse project [personne-mvc-07] into it, then request the URL [http://localhost:8080/personne7] using a browser with cookies disabled and existing cookies deleted. The following response is obtained:</p>
+<p>Start or restart Tomcat after integrating the Eclipse project [personne-mvc-07], then request url and [http://localhost:8080/personne7] using a browser with cookies disabled and existing cookies deleted. The following response is obtained:</p>
 <p><img src="images/10000000000001F1000000F0D47059AE.png" width="348" height="168" style="width:9.2cm;height:4.443cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001F1000000F0D47059AE.png" /></p>
 <p>The source code received by the browser is as follows:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
@@ -1747,8 +1749,8 @@
 <a id="__codelineno-9-2" name="__codelineno-9-2"></a>...
 <a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
-<p>Line 1: The session token is in the POST target URL.</p>
-<p>Let’s fill out the form and submit it:</p>
+<p>Line 1: The session token is in the Url target of POST.</p>
+<p>Let&#x27;s fill out the form and submit it:</p>
 <p><img src="images/10000000000002F2000000E1E74EB734.png" width="528" height="157" style="width:13.959cm;height:4.165cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002F2000000E1E74EB734.png" /></p>
 <p>The source code received by the browser is as follows:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
@@ -1759,7 +1761,7 @@
 <a id="__codelineno-10-3" name="__codelineno-10-3"></a>    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;retourFormulaire;jsessionid=9D4CC83FEFB51AE78B1FD71EC66F9EF3&quot;</span><span class="p">&gt;</span>Retour au formulaire<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 <a id="__codelineno-10-4" name="__codelineno-10-4"></a>  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
-<p>Line 3: The session token is in the link&#x27;s target URL.</p>
+<p>Line 3: The session token is in the Url link target.</p>
 
 
 

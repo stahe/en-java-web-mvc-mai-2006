@@ -12,10 +12,10 @@
         <meta name="author" content="Serge Tahé">
       
       
-        <link rel="canonical" href="https://stahe.github.io/en-java-web-mvc-mai-2006/mvc-web-application-person---version-8.html">
+        <link rel="canonical" href="https://stahe.github.io/en-java-web-mvc-mai-2006/web-application-mvc-personne---version-8.html">
       
       
-        <link rel="prev" href="mvc-web-application-person---version-7.html">
+        <link rel="prev" href="web-application-mvc-personne---version-7.html">
       
       
         <link rel="next" href="mvc-web-application-in-a-3-tier-architecture---example-1.html">
@@ -29,7 +29,7 @@
     
     
       
-        <title>13. MVC Web Application [person] – Version 8 - The basics of MVC web development in Java: a practical guide</title>
+        <title>13. Web application MVC [personne] – version 8 - The basics of MVC web development in Java: a practical guide</title>
       
     
     
@@ -56,6 +56,8 @@
     
     
       <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -92,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#13-mvc-web-application-person-version-8" class="md-skip">
+        <a href="#13-web-application-mvc-personne-version-8" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              13. MVC Web Application [person] – Version 8
+              13. Web application MVC [personne] – version 8
             
           </span>
         </div>
@@ -337,7 +339,7 @@
   <span class="md-ellipsis">
     
   
-    2. Tools used in this document
+    2. Tools Used in This Document
   
 
     
@@ -384,14 +386,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-model-view-controller-development.html" class="md-nav__link">
+      <a href="mvc-development-model-view-controller.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. MVC (Model–View–Controller) Development
+    4. MVC Development (Model–View–Controller)
   
 
     
@@ -411,14 +413,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-1.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-1.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    5. MVC Web Application [person] – Version 1
+    5. Web application MVC [personne] – version 1
   
 
     
@@ -438,14 +440,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-2.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-2.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6. MVC Web Application [person] – Version 2
+    6. Web application MVC [personne] – version 2
   
 
     
@@ -465,14 +467,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-3.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-3.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. MVC Web Application [person] – Version 3
+    7. Web application MVC [personne] – version 3
   
 
     
@@ -499,7 +501,7 @@
   <span class="md-ellipsis">
     
   
-    8. The JSTL Tag Library
+    8. The JSTL tag library
   
 
     
@@ -519,14 +521,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-4.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-4.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    9. MVC Web Application [person] – Version 4
+    9. Web application MVC [personne] – version 4
   
 
     
@@ -546,14 +548,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-5.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-5.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    10. MVC Web Application [person] – Version 5
+    10. Web application MVC [personne] – version 5
   
 
     
@@ -573,14 +575,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-6.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-6.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    11. MVC Web Application [person] – Version 6
+    11. Web application MVC [personne] – version 6
   
 
     
@@ -600,14 +602,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-person---version-7.html" class="md-nav__link">
+      <a href="web-application-mvc-personne---version-7.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. MVC Web Application [person] – Version 7
+    12. Web application MVC [personne] – version 7
   
 
     
@@ -636,14 +638,14 @@
         
       
       
-      <a href="mvc-web-application-person---version-8.html" class="md-nav__link md-nav__link--active">
+      <a href="web-application-mvc-personne---version-8.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    13. MVC Web Application [person] – Version 8
+    13. Web application MVC [personne] – version 8
   
 
     
@@ -752,7 +754,7 @@
   <span class="md-ellipsis">
     
   
-    17. MVC Web Application in a 3-Tier Architecture – Example 3 – Firebird DBMS
+    17. MVC web application in a 3-tier architecture – Example 3 – Firebird DBMS
   
 
     
@@ -779,7 +781,7 @@
   <span class="md-ellipsis">
     
   
-    18. MVC Web Application in a 3-Tier Architecture – Example 4, Postgres
+    18. MVC web application in a 3-tier architecture – Example 4, Postgres
   
 
     
@@ -799,14 +801,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-in-a-3-tier-architecture---example-5-mysql.html" class="md-nav__link">
+      <a href="web-application-mvc-in-a-3-tier-architecture---example-5-mysql.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    19. MVC Web Application in a 3-Tier Architecture – Example 5, MySQL
+    19. Web application MVC in a 3-tier architecture – Example 5, MySQL
   
 
     
@@ -826,14 +828,14 @@
   
   
     <li class="md-nav__item">
-      <a href="mvc-web-application-in-a-3-tier-architecture---example-6-sql-server-express.html" class="md-nav__link">
+      <a href="web-application-mvc-in-a-3-tier-architecture---example-6-sql-server-express.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    20. MVC Web Application in a 3-Tier Architecture – Example 6, SQL Server Express
+    20. Web application MVC in a 3-tier architecture – Example 6, SQL Server Express
   
 
     
@@ -880,14 +882,14 @@
   
   
     <li class="md-nav__item">
-      <a href="the-code-from-the-article.html" class="md-nav__link">
+      <a href="the-code-for-this-article.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    22. The code from the article
+    22. The code for this article
   
 
     
@@ -917,40 +919,40 @@
 
 
 
-<h1 id="13-mvc-web-application-person-version-8">13. <span style="color: #365f91">MVC Web Application [person] – Version 8</span></h1>
-<p>Version 8 will be identical to version 7 but deployed in a WAR (Web Archive) file. In Eclipse, right-click on the project [mvc-personne-07] and select the [Export] option:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000017C00000155172CF8CE.png" width="266" height="239" style="display:inline-block; margin:4px;width:7.04cm;height:6.316cm;" class="odt-zoomable" data-zoom-src="images/100000000000017C00000155172CF8CE.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001C9000000D1FAE5C0C3.png" width="320" height="146" style="display:inline-block; margin:4px;width:8.46cm;height:3.868cm;" class="odt-zoomable" data-zoom-src="images/10000000000001C9000000D1FAE5C0C3.png" /><img src="images/10000000000002F6000000C8D2EAC76A.png" width="379" height="100" style="display:inline-block; margin:4px;width:10.028cm;height:2.646cm;" class="odt-zoomable" data-zoom-src="images/10000000000002F6000000C8D2EAC76A.png" /></td></tr></table>
+<h1 id="13-web-application-mvc-personne-version-8">13. <span style="color: #365f91">Web application MVC [personne] – version 8</span></h1>
+<p>version 8 will be identical to version 7 but deployed in a WAR archive (Web ARchive). In Eclipse, right-click on the [mvc-personne-07] project and select option [export]:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000017C00000155172CF8CE.png" width="266" height="239" style="display:inline-block; margin:4px;width:7.04cm;height:6.316cm;" class="odt-zoomable" data-zoom-src="images/100000000000017C00000155172CF8CE.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000001C9000000D1FAE5C0C3.png" width="320" height="146" style="display:inline-block; margin:4px;width:8.46cm;height:3.868cm;" class="odt-zoomable" data-zoom-src="images/10000000000001C9000000D1FAE5C0C3.png" /><img src="images/10000000000002F6000000C8D2EAC76A.png" width="379" height="100" style="display:inline-block; margin:4px;width:10.028cm;height:2.646cm;" class="odt-zoomable" data-zoom-src="images/10000000000002F6000000C8D2EAC76A.png" /></td></tr></table>
 
-<p>From the drop-down list [1], select the name of the module to export, in this case [mvc-personne-07], and use the [Browse] button to specify the .war file to be generated, in this case [personne8.war]. Complete the process by clicking [Finish], then use Windows Explorer to view the generated file:</p>
+<p>From the [1] drop-down list, select the name of the module to export, in this case [mvc-personne-07], and use the [Browse] button to specify the .war file to be generated, in this case [personne8.war]. Finish the process by clicking the [Finish] button, and use Windows Explorer to view the generated file:</p>
 <p><img src="images/10000000000001580000004D4BC1677D.png" width="241" height="54" style="width:6.369cm;height:1.425cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001580000004D4BC1677D.png" /></p>
 <p>A .war file is similar to a .zip file and can be extracted using the same tools. Let’s extract it and review all the elements in its directory structure:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000D3000000BC520BAA39.png" width="148" height="132" style="display:inline-block; margin:4px;width:3.911cm;height:3.485cm;" class="odt-zoomable" data-zoom-src="images/10000000000000D3000000BC520BAA39.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000580000005F37F71800.png" width="62" height="67" style="display:inline-block; margin:4px;width:1.63cm;height:1.76cm;" class="odt-zoomable" data-zoom-src="images/10000000000000580000005F37F71800.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000D800000049372F9BB4.png" width="151" height="51" style="display:inline-block; margin:4px;width:4.001cm;height:1.351cm;" class="odt-zoomable" data-zoom-src="images/10000000000000D800000049372F9BB4.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000BA00000056D2FE540B.png" width="130" height="60" style="display:inline-block; margin:4px;width:3.44cm;height:1.591cm;" class="odt-zoomable" data-zoom-src="images/10000000000000BA00000056D2FE540B.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000000D3000000BC520BAA39.png" width="148" height="132" style="display:inline-block; margin:4px;width:3.911cm;height:3.485cm;" class="odt-zoomable" data-zoom-src="images/10000000000000D3000000BC520BAA39.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000000580000005F37F71800.png" width="62" height="67" style="display:inline-block; margin:4px;width:1.63cm;height:1.76cm;" class="odt-zoomable" data-zoom-src="images/10000000000000580000005F37F71800.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000000D800000049372F9BB4.png" width="151" height="51" style="display:inline-block; margin:4px;width:4.001cm;height:1.351cm;" class="odt-zoomable" data-zoom-src="images/10000000000000D800000049372F9BB4.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000000BA00000056D2FE540B.png" width="130" height="60" style="display:inline-block; margin:4px;width:3.44cm;height:1.591cm;" class="odt-zoomable" data-zoom-src="images/10000000000000BA00000056D2FE540B.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000A3000000863DB8B380.png" width="114" height="94" style="display:inline-block; margin:4px;width:3.02cm;height:2.484cm;" class="odt-zoomable" data-zoom-src="images/10000000000000A3000000863DB8B380.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000CA00000069AACD289B.png" width="141" height="73" style="display:inline-block; margin:4px;width:3.739cm;height:1.944cm;" class="odt-zoomable" data-zoom-src="images/10000000000000CA00000069AACD289B.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000000A3000000863DB8B380.png" width="114" height="94" style="display:inline-block; margin:4px;width:3.02cm;height:2.484cm;" class="odt-zoomable" data-zoom-src="images/10000000000000A3000000863DB8B380.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000000CA00000069AACD289B.png" width="141" height="73" style="display:inline-block; margin:4px;width:3.739cm;height:1.944cm;" class="odt-zoomable" data-zoom-src="images/10000000000000CA00000069AACD289B.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;">&nbsp;</td></tr></table>
 
-<p>We can see that all the elements of the [mvc-personne-07] project are present, with the source code having been replaced by their compiled equivalents located in [WEB-INF/classes] as required by the servlet deployment standard.</p>
-<p>We will deploy the [personne8.war] web application within Tomcat by following the procedure described in Section<a href="#jstl-deploiement-doc"><u><span style="color: #0563c1"> 8.1.2</span></u></a> for deploying the JSTL library documentation.</p>
-<p>We launch Tomcat using the appropriate option in the [Start] menu, then enter the URL [http://localhost:8080] and follow the [Tomcat Manager] link:</p>
+<p>We can see that all the elements of the [mvc-personne-07] project are present, with the source code having been replaced by their compiled equivalents placed in [WEB-INF/classes], as required by the servlet deployment standard.</p>
+<p>We will deploy the [personne8.war] web application within Tomcat by following the procedure described in section<a href="the-jstl-tag-library.html#jstl-deploiement-doc"><u><span style="color: #0563c1"> 8.1.2</span></u></a> for deploying the JSTL library documentation.</p>
+<p>We start Tomcat via theappropriate option from the [Démarrer] menu, then request the Url [http://localhost:8080] and follow the [Tomcat Manager] link:</p>
 <p><img src="images/10000000000001530000012EC9798919.png" width="237" height="211" style="width:6.279cm;height:5.593cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001530000012EC9798919.png" /></p>
-<p>We are then presented with an authentication page. We log in as <em>manager/manager</em> <strong><em>or</em></strong> <em>admin/admin</em>, as shown in Section<a href="#tomcat-manager"><u><span style="color: #0563c1"> 2.3.3</span></u></a>.</p>
+<p>We are then presented with an authentication page. We log in as <em>manager/manager</em> <strong><em>or</em></strong> <em>admin/admin</em>, as shown in section<a href="tools-used-in-this-document.html#tomcat-manager"><u><span style="color: #0563c1"> 2.3.3</span></u></a>.</p>
 <p><img src="images/10000000000001F8000000D67A462871.png" width="353" height="150" style="width:9.329cm;height:3.962cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001F8000000D67A462871.png" /></p>
 <p>We are presented with a page listing the applications currently deployed in Tomcat:</p>
 <p><img src="images/100000000000031E000000DDC90F62BA.png" width="559" height="155" style="width:14.78cm;height:4.092cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000031E000000DDC90F62BA.png" /></p>
 <p>We can add a new application using the forms at the bottom of the page:</p>
 <p><img src="images/100000000000024D0000007303A3AD27.png" width="412" height="81" style="width:10.91cm;height:2.131cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000024D0000007303A3AD27.png" /></p>
-<p>We use the [Browse] button to select a .war file to deploy.</p>
+<p>We use the [Parcourir] button to select a .war file to deploy.</p>
 <p><img src="images/10000000000002710000006C91D6CEA8.png" width="437" height="76" style="width:11.569cm;height:1.998cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002710000006C91D6CEA8.png" /></p>
 <p>The screenshot does not show it, but we have selected the [personne8.war] file created earlier. The [Deploy] button saves and deploys this application within Tomcat.</p>
 <p><img src="images/10000000000004C400000068ECBBB264.png" width="610" height="52" style="width:16.14cm;height:1.376cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004C400000068ECBBB264.png" /></p>
-<p>If we deploy a [XX.war] file, the application context (or application name) will be XX. This is shown in [1]. Column [2] shows the application’s display name. This name is set in the [web.xml] file using the &lt;display-name&gt; tag. In the [mvc-personne-07] application archived in [personne8.jar], we had:</p>
+<p>If we deploy a [XX.war] file, the application context (or application name) will be XX. This is what [1] shows. The [2] column shows the application’s display name. This name is set in the file [web.xml] by the tag &lt;display-name&gt;. In the application [mvc-personne-07] archived in [personne8.jar], we had:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">display-name</span><span style="color:#008080">&gt;</span><span style="color:#000000">mvc-personne-07</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">display-name</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
-<p>The application&#x27;s display name is therefore [mvc-personne-07], as shown in [2].</p>
-<p>Let’s open a browser and request the URL [http://localhost:8080/personne8]:</p>
+<p>The display name of the application is therefore [mvc-personne-07], as shown by [2].</p>
+<p>Let’s open a browser and request url [http://localhost:8080/personne8]:</p>
 <p><img src="images/100000000000019E000001091AE08DF9.png" width="290" height="186" style="width:7.669cm;height:4.909cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000019E000001091AE08DF9.png" /></p>
-<p>Readers are encouraged to continue testing. Packaging a web application into a .war file is the standard method for distributing and deploying a web application.</p>
+<p>The reader is invited to continue testing. Archiving a web application in a .war file is the standard method for distributing and deploying a web application.</p>
 
 
 
